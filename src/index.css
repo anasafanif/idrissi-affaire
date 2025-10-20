@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    /* Idrissi Affaire Brand Colors */
+    --idrissi-blue: 212 71% 15%; /* #0A2342 */
+    --idrissi-gold: 43 91% 38%; /* #B8860B */
+    --idrissi-bg: 210 17% 98%; /* #F8F9FA */
+    --idrissi-text: 210 8% 23%; /* #343A40 */
+    /* Shadcn/ui Theme */
+    --background: var(--idrissi-bg);
+    --foreground: var(--idrissi-text);
+    --primary: var(--idrissi-blue);
+    --primary-foreground: 210 17% 98%;
+    --secondary: 210 17% 95%;
+    --secondary-foreground: var(--idrissi-text);
+    --accent: 210 17% 93%;
+    --accent-foreground: var(--idrissi-text);
+    --muted: 210 17% 90%;
+    --muted-foreground: 210 8% 45%;
+    --border: 210 17% 88%;
+    --input: 210 17% 88%;
+    --ring: var(--idrissi-blue);
+    --card: 0 0% 100%;
+    --card-foreground: var(--idrissi-text);
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--idrissi-text);
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    /* Idrissi Affaire Brand Colors (Dark) */
+    --idrissi-blue: 212 71% 85%;
+    --idrissi-gold: 43 91% 68%;
+    --idrissi-bg: 210 8% 12%;
+    --idrissi-text: 210 17% 95%;
+    /* Shadcn/ui Theme (Dark) */
+    --background: 210 8% 12%;
+    --foreground: 210 17% 95%;
+    --primary: 212 71% 85%;
+    --primary-foreground: 212 71% 15%;
+    --secondary: 210 8% 18%;
+    --secondary-foreground: 210 17% 95%;
+    --accent: 210 8% 22%;
+    --accent-foreground: 210 17% 95%;
+    --muted: 210 8% 25%;
+    --muted-foreground: 210 17% 75%;
+    --border: 210 8% 22%;
+    --input: 210 8% 22%;
+    --ring: 212 71% 85%;
+    --card: 210 8% 15%;
+    --card-foreground: 210 17% 95%;
+    --popover: 210 8% 12%;
+    --popover-foreground: 210 17% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+  }
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    text-rendering: optimizeLegibility;
+  }
+}
+@layer components {
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
