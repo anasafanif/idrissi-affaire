@@ -34,25 +34,25 @@
     /* Idrissi Affaire Brand Colors (Dark) */
     --idrissi-blue: 212 71% 85%;
     --idrissi-gold: 43 91% 68%;
-    --idrissi-bg: 210 8% 12%;
+    --idrissi-bg: 210 8% 8%;
     --idrissi-text: 210 17% 95%;
     /* Shadcn/ui Theme (Dark) */
-    --background: 210 8% 12%;
+    --background: 210 8% 8%;
     --foreground: 210 17% 95%;
     --primary: 212 71% 85%;
     --primary-foreground: 212 71% 15%;
-    --secondary: 210 8% 18%;
+    --secondary: 210 8% 15%;
     --secondary-foreground: 210 17% 95%;
-    --accent: 210 8% 22%;
+    --accent: 210 8% 20%;
     --accent-foreground: 210 17% 95%;
-    --muted: 210 8% 25%;
-    --muted-foreground: 210 17% 75%;
-    --border: 210 8% 22%;
-    --input: 210 8% 22%;
+    --muted: 210 8% 18%;
+    --muted-foreground: 210 17% 70%;
+    --border: 210 8% 20%;
+    --input: 210 8% 20%;
     --ring: 212 71% 85%;
-    --card: 210 8% 15%;
+    --card: 210 8% 12%;
     --card-foreground: 210 17% 95%;
-    --popover: 210 8% 12%;
+    --popover: 210 8% 10%;
     --popover-foreground: 210 17% 95%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;

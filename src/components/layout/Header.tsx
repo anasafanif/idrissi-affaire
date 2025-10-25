@@ -12,6 +12,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { cn } from '@/lib/utils';
 const services: { title: string; href: string; description: string, icon: React.ElementType }[] = [
   {
@@ -82,6 +83,7 @@ export function Header() {
             </NavigationMenuList>
           </NavigationMenu>
           <div className="hidden md:flex items-center space-x-2">
+            <ThemeToggle />
             <Button asChild variant="ghost">
                 <Link to="/contact">Schedule Consultation</Link>
             </Button>
@@ -103,10 +105,13 @@ export function Header() {
                     <Link to="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
                         <span className="font-display text-xl font-bold text-idrissi-blue">Idrissi Affaire</span>
                     </Link>
-                    <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
-                        <X className="h-6 w-6" />
-                        <span className="sr-only">Close menu</span>
-                    </Button>
+                    <div className="flex items-center gap-2">
+                        <ThemeToggle />
+                        <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
+                            <X className="h-6 w-6" />
+                            <span className="sr-only">Close menu</span>
+                        </Button>
+                    </div>
                 </div>
                 <nav className="flex flex-col space-y-4 text-lg">
                   <NavLinks className="py-2 border-b" />
