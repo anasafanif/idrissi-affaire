@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "ourStory": "Notre Histoire",
+    "blog": "Blog",
+    "contact": "Contactez-nous",
+    "services": "Services",
+    "scheduleConsultation": "Planifier une Consultation",
+    "startJourney": "Commencer Votre Voyage"
+  },
+  "services": {
+    "businessFinancial": {
+      "title": "Business & Financier",
+      "description": "Lancez votre entreprise avec une base légale et financière solide."
+    },
+    "digitalGrowth": {
+      "title": "Croissance Numérique",
+      "description": "Amplifiez votre présence en ligne avec un branding, web et marketing experts."
+    },
+    "internationalMobility": {
+      "title": "Mobilité Internationale",
+      "description": "Élargissez vos horizons avec un soutien stratégique pour les opportunités mondiales."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "De l'Idée à l'Impact.",
+      "subtitle": "Nous Construisons Votre Projet de Rêve.",
+      "description": "Votre partenaire de bout en bout à Kénitra pour la création d'entreprise, la croissance numérique et la mobilité internationale.",
+      "getStarted": "Commencer",
+      "learnMore": "En Savoir Plus"
+    },
+    "services": {
+      "title": "Nos Services",
+      "subtitle": "Solutions complètes pour votre parcours entrepreneurial",
+      "pillars": {
+        "title": "Les Trois Piliers de Votre Succès",
+        "foundation": {
+          "title": "Lancez Votre Fondation",
+          "description": "Nous gérons toutes les complexités légales et financières du démarrage de votre entreprise, de la création d'entreprise à la comptabilité méticuleuse, pour que vous puissiez vous concentrer sur votre vision."
+        },
+        "presence": {
+          "title": "Amplifiez Votre Présence",
+          "description": "Votre vision mérite d'être vue. Nos experts numériques construisent votre marque, développent votre site web et lancent des campagnes publicitaires ciblées pour vous connecter avec votre audience."
+        },
+        "horizons": {
+          "title": "Élargissez Vos Horizons",
+          "description": "Le monde est votre marché. Nous vous guidons à travers l'expansion internationale, des demandes de visa aux stratégies commerciales mondiales."
+        }
+      }
+    },
+    "whyChoose": {
+      "title": "Pourquoi Choisir Idrissi Affaire ?",
+      "subtitle": "Votre succès est notre engagement",
+      "localExpertise": {
+        "title": "Expertise Locale",
+        "description": "Compréhension approfondie du paysage commercial marocain et des réglementations."
+      },
+      "endToEnd": {
+        "title": "Support de Bout en Bout",
+        "description": "Du concept initial à l'expansion internationale, nous sommes avec vous à chaque étape."
+      },
+      "provenTrack": {
+        "title": "Bilan Éprouvé",
+        "description": "Plus de 50 entreprises lancées avec succès dans diverses industries."
+      }
+    },
+    "cta": {
+      "title": "Prêt à Transformer Votre Idée en Réalité ?",
+      "description": "Rejoignez les entrepreneurs qui font confiance à Idrissi Affaire pour leur parcours commercial.",
+      "button": "Commencez Votre Voyage Aujourd'hui"
+    }
+  },
+  "blog": {
+    "title": "Insights pour Entrepreneurs Ambitieux",
+    "subtitle": "Votre centre de ressources pour la stratégie commerciale, la croissance numérique et la mobilité mondiale.",
+    "categories": {
+      "all": "Tout",
+      "businessFinance": "Finance d'Entreprise",
+      "digitalMarketing": "Marketing Numérique",
+      "immigrationTips": "Conseils d'Immigration"
+    },
+    "readMore": "Lire Plus",
+    "relatedArticles": "Articles Connexes",
+    "cta": {
+      "title": "Prêt à Faire Passer Votre Entreprise au Niveau Supérieur ?",
+      "description": "Notre équipe d'experts est là pour vous aider à mettre en œuvre les stratégies discutées dans cet article et atteindre vos objectifs commerciaux.",
+      "getStarted": "Commencer Aujourd'hui",
+      "viewServices": "Voir Nos Services"
+    }
+  },
+  "blogPost": {
+    "backToBlog": "Retour au Blog",
+    "readTime": "min de lecture",
+    "publishedOn": "Publié le"
+  },
+  "ourStory": {
+    "title": "Notre Histoire",
+    "subtitle": "Construire des Rêves, Créer un Impact"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Commençons Votre Voyage Ensemble"
+  },
+  "footer": {
+    "tagline": "De l'Idée à l'Impact. Nous construisons votre rêve, de Kénitra au monde.",
+    "services": "Services",
+    "company": "Entreprise",
+    "contact": "Contact",
+    "rightsReserved": "Tous droits réservés.",
+    "builtWith": "Construit avec ❤️ chez Cloudflare"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "retry": "Réessayer"
+  }
+}

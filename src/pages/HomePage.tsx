@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Rocket, Building, Globe, ArrowRight, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: (i: number = 0) => ({
@@ -16,6 +17,8 @@ const fadeIn = {
   }),
 };
 export function HomePage() {
+  const { t } = useTranslation();
+  
   return (
     <MainLayout>
       {/* Hero Section */}
@@ -28,9 +31,9 @@ export function HomePage() {
               initial="hidden"
               animate="visible"
             >
-              From Idea to Impact.
+              {t('home.hero.title')}
               <br />
-              We Build Your Dream Project.
+              {t('home.hero.subtitle')}
             </motion.h1>
             <motion.p 
               className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground text-balance"
@@ -39,7 +42,7 @@ export function HomePage() {
               animate="visible"
               custom={1}
             >
-              Your end-to-end partner in Kenitra for business creation, digital growth, and international mobility.
+              {t('home.hero.description')}
             </motion.p>
             <motion.div 
               className="mt-8 flex justify-center"
@@ -49,7 +52,7 @@ export function HomePage() {
               custom={2}
             >
               <Button asChild size="lg" className="bg-idrissi-blue hover:bg-idrissi-blue/90 text-white text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <Link to="/contact">Start Your Journey</Link>
+                <Link to="/contact">{t('home.hero.getStarted')}</Link>
               </Button>
             </motion.div>
           </div>
@@ -59,7 +62,7 @@ export function HomePage() {
       <section className="bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-16 md:py-24">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-idrissi-blue mb-12">The Three Pillars of Your Success</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-idrissi-blue mb-12">{t('home.services.pillars.title')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Pillar 1 */}
               <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} custom={0}>
@@ -68,12 +71,12 @@ export function HomePage() {
                     <div className="mx-auto bg-idrissi-gold/10 p-4 rounded-full w-fit">
                       <Building className="h-8 w-8 text-idrissi-gold" />
                     </div>
-                    <CardTitle className="mt-4 text-idrissi-blue">Launch Your Foundation</CardTitle>
+                    <CardTitle className="mt-4 text-idrissi-blue">{t('home.services.pillars.foundation.title')}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">We handle all the legal and financial complexities of starting your business, from company creation to meticulous accounting, so you can focus on your vision.</p>
+                    <p className="text-muted-foreground">{t('home.services.pillars.foundation.description')}</p>
                     <Button asChild variant="link" className="mt-4 text-idrissi-gold">
-                      <Link to="/services/business-financial">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                      <Link to="/services/business-financial">{t('home.hero.learnMore')} <ArrowRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -85,12 +88,12 @@ export function HomePage() {
                     <div className="mx-auto bg-idrissi-gold/10 p-4 rounded-full w-fit">
                       <Rocket className="h-8 w-8 text-idrissi-gold" />
                     </div>
-                    <CardTitle className="mt-4 text-idrissi-blue">Amplify Your Presence</CardTitle>
+                    <CardTitle className="mt-4 text-idrissi-blue">{t('home.services.pillars.presence.title')}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Your vision deserves to be seen. Our digital experts build your brand, develop your website, and run targeted ad campaigns to connect you with your audience.</p>
+                    <p className="text-muted-foreground">{t('home.services.pillars.presence.description')}</p>
                     <Button asChild variant="link" className="mt-4 text-idrissi-gold">
-                      <Link to="/services/digital-growth">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                      <Link to="/services/digital-growth">{t('home.hero.learnMore')} <ArrowRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -102,12 +105,12 @@ export function HomePage() {
                     <div className="mx-auto bg-idrissi-gold/10 p-4 rounded-full w-fit">
                       <Globe className="h-8 w-8 text-idrissi-gold" />
                     </div>
-                    <CardTitle className="mt-4 text-idrissi-blue">Expand Your Horizons</CardTitle>
+                    <CardTitle className="mt-4 text-idrissi-blue">{t('home.services.pillars.horizons.title')}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Dream of taking your business global? We specialize in creating the perfect business case and handling all the logistics for successful visa applications.</p>
+                    <p className="text-muted-foreground">{t('home.services.pillars.horizons.description')}</p>
                     <Button asChild variant="link" className="mt-4 text-idrissi-gold">
-                      <Link to="/services/international-mobility">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                      <Link to="/services/international-mobility">{t('home.hero.learnMore')} <ArrowRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
                   </CardContent>
                 </Card>

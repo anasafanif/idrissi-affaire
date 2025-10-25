@@ -13,35 +13,40 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
-const services: { title: string; href: string; description: string, icon: React.ElementType }[] = [
-  {
-    title: 'Business & Financial',
-    href: '/services/business-financial',
-    description: 'Launch your venture with a rock-solid legal and financial foundation.',
-    icon: Building,
-  },
-  {
-    title: 'Digital Growth',
-    href: '/services/digital-growth',
-    description: 'Amplify your online presence with expert branding, web, and marketing.',
-    icon: Rocket,
-  },
-  {
-    title: 'International Mobility',
-    href: '/services/international-mobility',
-    description: 'Expand your horizons with strategic support for global opportunities.',
-    icon: Globe,
-  },
-];
 export function Header() {
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
+  const services = [
+    {
+      title: t('services.businessFinancial.title'),
+      href: '/services/business-financial',
+      description: t('services.businessFinancial.description'),
+      icon: Building,
+    },
+    {
+      title: t('services.digitalGrowth.title'),
+      href: '/services/digital-growth',
+      description: t('services.digitalGrowth.description'),
+      icon: Rocket,
+    },
+    {
+      title: t('services.internationalMobility.title'),
+      href: '/services/international-mobility',
+      description: t('services.internationalMobility.description'),
+      icon: Globe,
+    },
+  ];
+
   const NavLinks = ({ className }: { className?: string }) => (
     <>
-      <NavLink to="/" className={({ isActive }) => cn(className, isActive && 'text-idrissi-gold font-semibold')}>Home</NavLink>
-      <NavLink to="/our-story" className={({ isActive }) => cn(className, isActive && 'text-idrissi-gold font-semibold')}>Our Story</NavLink>
-      <NavLink to="/blog" className={({ isActive }) => cn(className, isActive && 'text-idrissi-gold font-semibold')}>Blog</NavLink>
-      <NavLink to="/contact" className={({ isActive }) => cn(className, isActive && 'text-idrissi-gold font-semibold')}>Contact Us</NavLink>
+      <NavLink to="/" className={({ isActive }) => cn(className, isActive && 'text-idrissi-gold font-semibold')}>{t('nav.home')}</NavLink>
+      <NavLink to="/our-story" className={({ isActive }) => cn(className, isActive && 'text-idrissi-gold font-semibold')}>{t('nav.ourStory')}</NavLink>
+      <NavLink to="/blog" className={({ isActive }) => cn(className, isActive && 'text-idrissi-gold font-semibold')}>{t('nav.blog')}</NavLink>
+      <NavLink to="/contact" className={({ isActive }) => cn(className, isActive && 'text-idrissi-gold font-semibold')}>{t('nav.contact')}</NavLink>
     </>
   );
   return (
@@ -56,7 +61,7 @@ export function Header() {
             <NavigationMenuList>
               <NavLinks className={navigationMenuTriggerStyle()} />
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                <NavigationMenuTrigger>{t('nav.services')}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                     {services.map((service) => (
@@ -83,12 +88,13 @@ export function Header() {
             </NavigationMenuList>
           </NavigationMenu>
           <div className="hidden md:flex items-center space-x-2">
+            <LanguageSwitcher />
             <ThemeToggle />
             <Button asChild variant="ghost">
-                <Link to="/contact">Schedule Consultation</Link>
+                <Link to="/contact">{t('nav.scheduleConsultation')}</Link>
             </Button>
             <Button asChild className="bg-idrissi-blue hover:bg-idrissi-blue/90 text-white">
-                <Link to="/contact">Start Your Journey</Link>
+                <Link to="/contact">{t('nav.startJourney')}</Link>
             </Button>
           </div>
           {/* Mobile Navigation */}
@@ -106,6 +112,7 @@ export function Header() {
                         <span className="font-display text-xl font-bold text-idrissi-blue">Idrissi Affaire</span>
                     </Link>
                     <div className="flex items-center gap-2">
+                        <LanguageSwitcher />
                         <ThemeToggle />
                         <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
                             <X className="h-6 w-6" />
@@ -116,7 +123,7 @@ export function Header() {
                 <nav className="flex flex-col space-y-4 text-lg">
                   <NavLinks className="py-2 border-b" />
                   <div className="py-2 border-b">
-                    <p className="font-semibold text-idrissi-blue">Services</p>
+                    <p className="font-semibold text-idrissi-blue">{t('nav.services')}</p>
                     <div className="flex flex-col space-y-2 mt-2 pl-4">
                       {services.map((service) => (
                         <Link key={service.href} to={service.href} onClick={() => setMobileMenuOpen(false)} className="hover:text-idrissi-gold">{service.title}</Link>
@@ -124,7 +131,7 @@ export function Header() {
                     </div>
                   </div>
                   <Button asChild className="bg-idrissi-blue hover:bg-idrissi-blue/90 text-white mt-6">
-                    <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Start Your Journey</Link>
+                    <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>{t('nav.startJourney')}</Link>
                   </Button>
                 </nav>
               </SheetContent>

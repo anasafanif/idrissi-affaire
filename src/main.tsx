@@ -1,4 +1,5 @@
 import '@/lib/errorReporter';
+import '@/lib/i18n';
 import { enableMapSet } from "immer";
 enableMapSet();
 import { StrictMode } from 'react'

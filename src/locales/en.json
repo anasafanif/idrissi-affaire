@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Home",
+    "ourStory": "Our Story",
+    "blog": "Blog",
+    "contact": "Contact Us",
+    "services": "Services",
+    "scheduleConsultation": "Schedule Consultation",
+    "startJourney": "Start Your Journey"
+  },
+  "services": {
+    "businessFinancial": {
+      "title": "Business & Financial",
+      "description": "Launch your venture with a rock-solid legal and financial foundation."
+    },
+    "digitalGrowth": {
+      "title": "Digital Growth",
+      "description": "Amplify your online presence with expert branding, web, and marketing."
+    },
+    "internationalMobility": {
+      "title": "International Mobility",
+      "description": "Expand your horizons with strategic support for global opportunities."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "From Idea to Impact.",
+      "subtitle": "We Build Your Dream Project.",
+      "description": "Your end-to-end partner in Kenitra for business creation, digital growth, and international mobility.",
+      "getStarted": "Get Started",
+      "learnMore": "Learn More"
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive solutions for your entrepreneurial journey",
+      "pillars": {
+        "title": "The Three Pillars of Your Success",
+        "foundation": {
+          "title": "Launch Your Foundation",
+          "description": "We handle all the legal and financial complexities of starting your business, from company creation to meticulous accounting, so you can focus on your vision."
+        },
+        "presence": {
+          "title": "Amplify Your Presence",
+          "description": "Your vision deserves to be seen. Our digital experts build your brand, develop your website, and run targeted ad campaigns to connect you with your audience."
+        },
+        "horizons": {
+          "title": "Expand Your Horizons",
+          "description": "The world is your market. We guide you through international expansion, from visa applications to global business strategies."
+        }
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose Idrissi Affaire?",
+      "subtitle": "Your success is our commitment",
+      "localExpertise": {
+        "title": "Local Expertise",
+        "description": "Deep understanding of Moroccan business landscape and regulations."
+      },
+      "endToEnd": {
+        "title": "End-to-End Support",
+        "description": "From initial concept to international expansion, we're with you every step."
+      },
+      "provenTrack": {
+        "title": "Proven Track Record",
+        "description": "Successfully launched 50+ businesses across various industries."
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Idea into Reality?",
+      "description": "Join the entrepreneurs who trust Idrissi Affaire for their business journey.",
+      "button": "Start Your Journey Today"
+    }
+  },
+  "blog": {
+    "title": "Insights for Ambitious Entrepreneurs",
+    "subtitle": "Your resource hub for business strategy, digital growth, and global mobility.",
+    "categories": {
+      "all": "All",
+      "businessFinance": "Business Finance",
+      "digitalMarketing": "Digital Marketing",
+      "immigrationTips": "Immigration Tips"
+    },
+    "readMore": "Read More",
+    "relatedArticles": "Related Articles",
+    "cta": {
+      "title": "Ready to Take Your Business to the Next Level?",
+      "description": "Our team of experts is here to help you implement the strategies discussed in this article and achieve your business goals.",
+      "getStarted": "Get Started Today",
+      "viewServices": "View Our Services"
+    }
+  },
+  "blogPost": {
+    "backToBlog": "Back to Blog",
+    "readTime": "min read",
+    "publishedOn": "Published on"
+  },
+  "ourStory": {
+    "title": "Our Story",
+    "subtitle": "Building Dreams, Creating Impact"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Let's Start Your Journey Together"
+  },
+  "footer": {
+    "tagline": "From Idea to Impact. We build your dream, from Kenitra to the world.",
+    "services": "Services",
+    "company": "Company",
+    "contact": "Contact",
+    "rightsReserved": "All rights reserved.",
+    "builtWith": "Built with ❤️ at Cloudflare"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry"
+  }
+}
