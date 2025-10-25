@@ -65,10 +65,26 @@
         "description": "Plus de 50 entreprises lancées avec succès dans diverses industries."
       }
     },
+    "approach": {
+      "title": "Votre Vision, Notre Mission",
+      "subtitle": "Une approche rationalisée et intégrée pour construire votre histoire de succès.",
+      "step1": {
+        "title": "Stratégie et Plan",
+        "description": "Nous traçons le chemin complet vers le succès, alignant chaque étape avec vos objectifs ultimes."
+      },
+      "step2": {
+        "title": "Création et Exécution",
+        "description": "Nos équipes intégrées construisent votre entreprise, marque et plateformes numériques avec précision."
+      },
+      "step3": {
+        "title": "Croissance et Expansion",
+        "description": "Nous restons à vos côtés, gérant les finances et optimisant le marketing pour vous aider à atteindre de nouveaux sommets."
+      }
+    },
     "cta": {
-      "title": "Prêt à Transformer Votre Idée en Réalité ?",
+      "title": "Prêt à transformer votre ambition en réalité ?",
       "description": "Rejoignez les entrepreneurs qui font confiance à Idrissi Affaire pour leur parcours commercial.",
-      "button": "Commencez Votre Voyage Aujourd'hui"
+      "button": "Planifier une Consultation Gratuite"
     }
   },
   "blog": {

@@ -6,16 +6,18 @@ import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Tag } from 'lucide-react';
 import { mockPosts } from '@/data/blog';
+import { useTranslation } from 'react-i18next';
 
-const categories = ["All", "Business Finance", "Digital Marketing", "Immigration Tips"];
 export function BlogPage() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const { t } = useTranslation();
+  const categories = [t('blog.categories.all'), t('blog.categories.businessFinance'), t('blog.categories.digitalMarketing'), t('blog.categories.immigrationTips')];
+  const [selectedCategory, setSelectedCategory] = useState(t('blog.categories.all'));
   const filteredPosts = useMemo(() => {
-    if (selectedCategory === "All") {
+    if (selectedCategory === t('blog.categories.all')) {
       return mockPosts;
     }
     return mockPosts.filter(post => post.category === selectedCategory);
-  }, [selectedCategory]);
+  }, [selectedCategory, t]);
   return (
     <MainLayout>
       {/* Hero Section */}
@@ -28,7 +30,7 @@ export function BlogPage() {
               transition={{ duration: 0.5 }}
               className="text-4xl md:text-5xl font-display font-bold text-idrissi-blue text-balance"
             >
-              Insights for Ambitious Entrepreneurs
+              {t('blog.title')}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -36,7 +38,7 @@ export function BlogPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground"
             >
-              Your resource hub for business strategy, digital growth, and global mobility.
+              {t('blog.subtitle')}
             </motion.p>
           </div>
         </div>
@@ -83,7 +85,7 @@ export function BlogPage() {
                     <CardFooter>
                       <Button asChild variant="link" className="p-0 text-idrissi-gold font-semibold">
                         <Link to={`/blog/${post.slug}`}>
-                          Read More <ArrowRight className="ml-2 h-4 w-4" />
+                          {t('blog.readMore')} <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
                     </CardFooter>

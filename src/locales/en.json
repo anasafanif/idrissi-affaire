@@ -65,10 +65,26 @@
         "description": "Successfully launched 50+ businesses across various industries."
       }
     },
+    "approach": {
+      "title": "Your Vision, Our Mission",
+      "subtitle": "A streamlined, integrated approach to building your success story.",
+      "step1": {
+        "title": "Strategy & Blueprint",
+        "description": "We map out the entire path to success, aligning every step with your ultimate goals."
+      },
+      "step2": {
+        "title": "Creation & Execution",
+        "description": "Our integrated teams build your company, brand, and digital platforms with precision."
+      },
+      "step3": {
+        "title": "Growth & Scaling",
+        "description": "We stay by your side, managing finances and optimizing marketing to help you reach new heights."
+      }
+    },
     "cta": {
-      "title": "Ready to Transform Your Idea into Reality?",
+      "title": "Ready to turn your ambition into reality?",
       "description": "Join the entrepreneurs who trust Idrissi Affaire for their business journey.",
-      "button": "Start Your Journey Today"
+      "button": "Schedule a Free Consultation"
     }
   },
   "blog": {

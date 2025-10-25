@@ -124,24 +124,24 @@ export function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-16 md:py-24">
             <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-idrissi-blue">Your Vision, Our Mission</h2>
-              <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">A streamlined, integrated approach to building your success story.</p>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-idrissi-blue">{t('home.approach.title')}</h2>
+              <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">{t('home.approach.subtitle')}</p>
             </div>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div className="flex flex-col items-center">
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-idrissi-blue text-white font-bold text-2xl">1</div>
-                <h3 className="mt-4 text-xl font-semibold text-foreground">Strategy & Blueprint</h3>
-                <p className="mt-2 text-muted-foreground">We map out the entire path to success, aligning every step with your ultimate goals.</p>
+                <h3 className="mt-4 text-xl font-semibold text-foreground">{t('home.approach.step1.title')}</h3>
+                <p className="mt-2 text-muted-foreground">{t('home.approach.step1.description')}</p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-idrissi-blue text-white font-bold text-2xl">2</div>
-                <h3 className="mt-4 text-xl font-semibold text-foreground">Creation & Execution</h3>
-                <p className="mt-2 text-muted-foreground">Our integrated teams build your company, brand, and digital platforms with precision.</p>
+                <h3 className="mt-4 text-xl font-semibold text-foreground">{t('home.approach.step2.title')}</h3>
+                <p className="mt-2 text-muted-foreground">{t('home.approach.step2.description')}</p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-idrissi-blue text-white font-bold text-2xl">3</div>
-                <h3 className="mt-4 text-xl font-semibold text-foreground">Growth & Scaling</h3>
-                <p className="mt-2 text-muted-foreground">We stay by your side, managing finances and optimizing marketing to help you reach new heights.</p>
+                <h3 className="mt-4 text-xl font-semibold text-foreground">{t('home.approach.step3.title')}</h3>
+                <p className="mt-2 text-muted-foreground">{t('home.approach.step3.description')}</p>
               </div>
             </div>
           </div>
@@ -151,10 +151,10 @@ export function HomePage() {
       <section className="bg-idrissi-blue text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-16 md:py-20 text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold">Ready to turn your ambition into reality?</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold">{t('home.cta.title')}</h2>
             <div className="mt-8">
               <Button asChild size="lg" variant="secondary" className="bg-white text-idrissi-blue hover:bg-gray-100 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <Link to="/contact">Schedule a Free Consultation</Link>
+                <Link to="/contact">{t('home.cta.button')}</Link>
               </Button>
             </div>
           </div>

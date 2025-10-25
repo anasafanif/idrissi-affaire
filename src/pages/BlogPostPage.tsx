@@ -5,8 +5,10 @@ import { motion } from 'framer-motion';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
 import { mockPosts } from '@/data/blog';
+import { useTranslation } from 'react-i18next';
 
 export function BlogPostPage() {
+  const { t } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
   
   // Find the blog post by slug
@@ -31,7 +33,7 @@ export function BlogPostPage() {
             <Button asChild variant="ghost" className="text-idrissi-gold hover:text-idrissi-gold/80">
               <Link to="/blog" className="flex items-center gap-2">
                 <ArrowLeft className="h-4 w-4" />
-                Back to Blog
+                {t('blogPost.backToBlog')}
               </Link>
             </Button>
           </div>
@@ -60,7 +62,7 @@ export function BlogPostPage() {
               </p>
               
               {/* Article Meta */}
-              <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
+                <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <User className="h-4 w-4" />
                   <span>{post.author}</span>
@@ -75,7 +77,7 @@ export function BlogPostPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />
-                  <span>{post.readTime}</span>
+                  <span>{post.readTime} {t('blogPost.readTime')}</span>
                 </div>
               </div>
             </motion.div>
@@ -134,7 +136,7 @@ export function BlogPostPage() {
                 transition={{ duration: 0.5 }}
               >
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-idrissi-blue text-center mb-12">
-                  Related Articles
+                  {t('blog.relatedArticles')}
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {relatedPosts.map((relatedPost, index) => (
@@ -166,7 +168,7 @@ export function BlogPostPage() {
                           </p>
                           <Button asChild variant="link" className="p-0 text-idrissi-gold font-semibold">
                             <Link to={`/blog/${relatedPost.slug}`}>
-                              Read More
+                              {t('blog.readMore')}
                             </Link>
                           </Button>
                         </CardContent>
@@ -191,20 +193,20 @@ export function BlogPostPage() {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">
-                Ready to Take Your Business to the Next Level?
+                {t('blog.cta.title')}
               </h2>
               <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-                Our team of experts is here to help you implement the strategies discussed in this article and achieve your business goals.
+                {t('blog.cta.description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-idrissi-gold hover:bg-idrissi-gold/90 text-idrissi-blue">
                   <Link to="/contact">
-                    Get Started Today
+                    {t('blog.cta.getStarted')}
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-idrissi-blue">
                   <Link to="/services">
-                    View Our Services
+                    {t('blog.cta.viewServices')}
                   </Link>
                 </Button>
               </div>
