@@ -53,11 +53,11 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2 rtl:order-2">
             <span className="font-display text-xl font-bold text-idrissi-blue">Idrissi Affaire</span>
           </Link>
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden md:flex">
+          <NavigationMenu className="hidden md:flex rtl:order-3">
             <NavigationMenuList>
               <NavLinks className={navigationMenuTriggerStyle()} />
               <NavigationMenuItem>
@@ -87,7 +87,7 @@ export function Header() {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          <div className="hidden md:flex items-center space-x-2">
+          <div className="hidden md:flex items-center space-x-2 rtl:order-1">
             <LanguageSwitcher />
             <ThemeToggle />
             <Button asChild variant="ghost">

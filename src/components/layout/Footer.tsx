@@ -10,7 +10,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About Section */}
-          <div className="md:col-span-1">
+          <div className="md:col-span-1 rtl:order-4">
             <h3 className="font-display text-lg font-bold text-foreground">Idrissi Affaire</h3>
             <p className="mt-2 text-sm">{t('footer.tagline')}</p>
             <div className="flex space-x-4 mt-4">
@@ -20,7 +20,7 @@ export function Footer() {
             </div>
           </div>
           {/* Services Links */}
-          <div>
+          <div className="rtl:order-3">
             <h4 className="font-semibold text-foreground">{t('footer.services')}</h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link to="/services/business-financial" className="hover:text-foreground">{t('services.businessFinancial.title')}</Link></li>
@@ -29,7 +29,7 @@ export function Footer() {
             </ul>
           </div>
           {/* Company Links */}
-          <div>
+          <div className="rtl:order-2">
             <h4 className="font-semibold text-foreground">{t('footer.company')}</h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link to="/our-story" className="hover:text-foreground">{t('nav.ourStory')}</Link></li>
@@ -38,7 +38,7 @@ export function Footer() {
             </ul>
           </div>
           {/* Contact Info */}
-          <div>
+          <div className="rtl:order-1">
             <h4 className="font-semibold text-foreground">{t('footer.contact')}</h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li><a href="mailto:contact@idrissi-affaire.ma" className="hover:text-foreground">contact@idrissi-affaire.ma</a></li>
