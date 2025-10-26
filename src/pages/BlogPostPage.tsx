@@ -27,10 +27,10 @@ export function BlogPostPage() {
   return (
     <MainLayout>
       {/* Back Navigation */}
-      <section className="bg-muted/30">
+      <section className="bg-pattern">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-8">
-            <Button asChild variant="ghost" className="text-idrissi-gold hover:text-idrissi-gold/80">
+            <Button asChild variant="ghost" className="btn-premium text-idrissi-gold hover:text-idrissi-gold/80 hover:bg-idrissi-gold/10">
               <Link to="/blog" className="flex items-center gap-2">
                 <ArrowLeft className="h-4 w-4" />
                 {t('blogPost.backToBlog')}
@@ -41,7 +41,7 @@ export function BlogPostPage() {
       </section>
 
       {/* Article Header */}
-      <section className="bg-muted/50">
+      <section className="bg-pattern">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-16">
             <motion.div
@@ -54,8 +54,8 @@ export function BlogPostPage() {
                 <Tag className="h-4 w-4 text-idrissi-gold" />
                 <span className="text-sm font-semibold text-idrissi-gold">{post.category}</span>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-idrissi-blue text-balance mb-6">
-                {post.title}
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-balance mb-6">
+                <span className="text-gradient">{post.title}</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
                 {post.excerpt}
@@ -135,8 +135,8 @@ export function BlogPostPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-2xl md:text-3xl font-display font-bold text-idrissi-blue text-center mb-12">
-                  {t('blog.relatedArticles')}
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-center mb-12">
+                  <span className="text-gradient">{t('blog.relatedArticles')}</span>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {relatedPosts.map((relatedPost, index) => (
@@ -147,7 +147,7 @@ export function BlogPostPage() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
-                      <Card className="h-full overflow-hidden group">
+                      <Card className="h-full overflow-hidden group card-premium shadow-premium">
                         <div className="aspect-video overflow-hidden">
                           <img 
                             src={relatedPost.imageUrl} 

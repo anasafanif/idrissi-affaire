@@ -6,12 +6,14 @@ export function Footer() {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-muted text-muted-foreground">
+    <footer className="bg-pattern text-muted-foreground border-t border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About Section */}
           <div className="md:col-span-1 rtl:order-4">
-            <h3 className="font-display text-lg font-bold text-foreground">Idrissi Affaire</h3>
+            <h3 className="font-display text-lg font-bold">
+              <span className="text-gradient">Idrissi Affaire</span>
+            </h3>
             <p className="mt-2 text-sm">{t('footer.tagline')}</p>
             <div className="flex space-x-4 mt-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground"><Facebook size={20} /></a>

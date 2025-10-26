@@ -155,39 +155,51 @@ export function HomePage() {
               animate="visible"
               custom={3}
             >
-              <div className="text-center">
+              <motion.div 
+                className="text-center card-premium p-8 rounded-2xl"
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <motion.div
-                  className="text-3xl md:text-4xl font-bold text-idrissi-blue mb-2"
+                  className="text-3xl md:text-4xl font-bold text-gradient mb-2"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 1, type: "spring", stiffness: 200 }}
                 >
                   50+
                 </motion.div>
-                <p className="text-muted-foreground">Successful Projects</p>
-              </div>
-              <div className="text-center">
+                <p className="text-muted-foreground font-medium">Successful Projects</p>
+              </motion.div>
+              <motion.div 
+                className="text-center card-premium p-8 rounded-2xl"
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <motion.div
-                  className="text-3xl md:text-4xl font-bold text-idrissi-gold mb-2"
+                  className="text-3xl md:text-4xl font-bold text-gradient mb-2"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
                 >
                   3
                 </motion.div>
-                <p className="text-muted-foreground">Core Services</p>
-              </div>
-              <div className="text-center">
+                <p className="text-muted-foreground font-medium">Core Services</p>
+              </motion.div>
+              <motion.div 
+                className="text-center card-premium p-8 rounded-2xl"
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <motion.div
-                  className="text-3xl md:text-4xl font-bold text-idrissi-blue mb-2"
+                  className="text-3xl md:text-4xl font-bold text-gradient mb-2"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 1.4, type: "spring", stiffness: 200 }}
                 >
                   100%
                 </motion.div>
-                <p className="text-muted-foreground">Client Satisfaction</p>
-              </div>
+                <p className="text-muted-foreground font-medium">Client Satisfaction</p>
+              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -345,7 +357,7 @@ export function HomePage() {
         </div>
       </section>
       {/* Our Approach Section */}
-      <section className="relative bg-gradient-to-br from-background to-muted/20 overflow-hidden">
+      <section className="relative bg-pattern overflow-hidden">
         {/* Connecting Lines */}
         <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-idrissi-blue/20 to-transparent hidden md:block"></div>
         
@@ -358,8 +370,8 @@ export function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-idrissi-blue mb-4">
-                {t('home.approach.title')}
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
+                <span className="text-gradient">{t('home.approach.title')}</span>
               </h2>
               <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground leading-relaxed">
                 {t('home.approach.subtitle')}
@@ -370,12 +382,12 @@ export function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
               {/* Step 1 */}
               <motion.div 
-                className="flex flex-col items-center text-center group"
+                className="flex flex-col items-center text-center group card-premium p-8 rounded-2xl"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -8, scale: 1.02 }}
               >
                 <motion.div 
                   className="relative flex items-center justify-center h-20 w-20 rounded-full bg-gradient-to-br from-idrissi-blue to-idrissi-blue/80 text-white font-bold text-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
@@ -398,12 +410,12 @@ export function HomePage() {
               
               {/* Step 2 */}
               <motion.div 
-                className="flex flex-col items-center text-center group"
+                className="flex flex-col items-center text-center group card-premium p-8 rounded-2xl"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -8, scale: 1.02 }}
               >
                 <motion.div 
                   className="relative flex items-center justify-center h-20 w-20 rounded-full bg-gradient-to-br from-idrissi-gold to-idrissi-gold/80 text-white font-bold text-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
@@ -426,12 +438,12 @@ export function HomePage() {
               
               {/* Step 3 */}
               <motion.div 
-                className="flex flex-col items-center text-center group"
+                className="flex flex-col items-center text-center group card-premium p-8 rounded-2xl"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -8, scale: 1.02 }}
               >
                 <motion.div 
                   className="relative flex items-center justify-center h-20 w-20 rounded-full bg-gradient-to-br from-idrissi-blue to-idrissi-blue/80 text-white font-bold text-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"

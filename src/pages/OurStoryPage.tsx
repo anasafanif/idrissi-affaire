@@ -41,16 +41,16 @@ export function OurStoryPage() {
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section className="bg-muted/50">
+      <section className="bg-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-24 md:py-32 text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl md:text-5xl font-display font-bold text-idrissi-blue text-balance"
+              className="text-4xl md:text-5xl font-display font-bold text-balance"
             >
-              More Than an Agency, We're Your Growth Partner.
+              <span className="text-gradient">More Than an Agency, We're Your Growth Partner.</span>
             </motion.h1>
           </div>
         </div>
@@ -80,10 +80,12 @@ export function OurStoryPage() {
         </div>
       </section>
       {/* Team Section */}
-      <section className="bg-muted/50">
+      <section className="bg-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-16 md:py-24">
-            <h2 className="text-3xl font-display font-bold text-center text-idrissi-blue mb-12">Meet Our Experts</h2>
+            <h2 className="text-3xl font-display font-bold text-center mb-12">
+              <span className="text-gradient">Meet Our Experts</span>
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {teamMembers.map((member, index) => (
                 <motion.div
@@ -93,7 +95,7 @@ export function OurStoryPage() {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="h-full text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                  <Card className="h-full text-center card-premium shadow-premium">
                     <CardHeader className="items-center">
                       <Avatar className="h-24 w-24">
                         <AvatarImage src={member.image} alt={member.name} />

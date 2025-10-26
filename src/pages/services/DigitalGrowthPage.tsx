@@ -35,7 +35,7 @@ export function DigitalGrowthPage() {
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section className="bg-muted/50">
+      <section className="bg-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-24 md:py-32 text-center">
             <motion.h1
@@ -91,7 +91,7 @@ export function DigitalGrowthPage() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="bg-idrissi-blue text-white">
+      <section className="gradient-hero text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-16 md:py-20 text-center">
             <h2 className="text-3xl md:text-4xl font-display font-bold">Build Your Digital Presence</h2>

@@ -30,16 +30,16 @@ export function BusinessFinancialPage() {
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section className="bg-muted/50">
+      <section className="bg-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-24 md:py-32 text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl md:text-5xl font-display font-bold text-idrissi-blue text-balance"
+              className="text-4xl md:text-5xl font-display font-bold text-balance"
             >
-              Building a Rock-Solid Foundation for Your Success.
+              <span className="text-gradient">Building a Rock-Solid Foundation for Your Success.</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -56,7 +56,9 @@ export function BusinessFinancialPage() {
       <section>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-16 md:py-24">
-            <h2 className="text-3xl font-display font-bold text-center text-idrissi-blue mb-12">Our Financial & Business Services</h2>
+            <h2 className="text-3xl font-display font-bold text-center mb-12">
+              <span className="text-gradient">Our Financial & Business Services</span>
+            </h2>
             <Accordion type="single" collapsible className="w-full">
               {services.map((service, index) => (
                 <motion.div
@@ -84,13 +86,13 @@ export function BusinessFinancialPage() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="bg-idrissi-blue text-white">
+      <section className="gradient-hero text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-16 md:py-20 text-center">
             <h2 className="text-3xl md:text-4xl font-display font-bold">Secure Your Financial Future</h2>
             <p className="mt-4 text-lg text-blue-200">Let's build a compliant and profitable business together.</p>
             <div className="mt-8">
-              <Button asChild size="lg" variant="secondary" className="bg-white text-idrissi-blue hover:bg-gray-100 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Button asChild size="lg" className="btn-premium gradient-gold hover:shadow-gold text-idrissi-blue text-lg px-8 py-6 font-semibold">
                 <Link to="/contact">Get Started Today <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
             </div>

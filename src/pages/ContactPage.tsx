@@ -51,16 +51,16 @@ export function ContactPage() {
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section className="bg-muted/50">
+      <section className="bg-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-24 md:py-32 text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl md:text-5xl font-display font-bold text-idrissi-blue text-balance"
+              className="text-4xl md:text-5xl font-display font-bold text-balance"
             >
-              Let's Build Your Dream.
+              <span className="text-gradient">Let's Build Your Dream.</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -85,9 +85,11 @@ export function ContactPage() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6 }}
               >
-                <Card>
+                <Card className="card-premium shadow-premium">
                   <CardContent className="p-8">
-                    <h2 className="text-2xl font-bold font-display text-idrissi-blue mb-6">Send us a Message</h2>
+                    <h2 className="text-2xl font-bold font-display mb-6">
+                      <span className="text-gradient">Send us a Message</span>
+                    </h2>
                     <Form {...form}>
                       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                         <FormField
@@ -155,7 +157,7 @@ export function ContactPage() {
                             </FormItem>
                           )}
                         />
-                        <Button type="submit" className="w-full bg-idrissi-blue hover:bg-idrissi-blue/90" disabled={form.formState.isSubmitting}>
+                        <Button type="submit" className="w-full btn-premium gradient-primary hover:shadow-gold" disabled={form.formState.isSubmitting}>
                           {form.formState.isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                           Send Message
                         </Button>
@@ -173,7 +175,9 @@ export function ContactPage() {
                 className="space-y-8"
               >
                 <div>
-                  <h3 className="text-2xl font-bold font-display text-idrissi-blue mb-4">Contact Details</h3>
+                  <h3 className="text-2xl font-bold font-display mb-4">
+                    <span className="text-gradient">Contact Details</span>
+                  </h3>
                   <div className="space-y-4 text-lg text-muted-foreground">
                     <div className="flex items-center gap-4">
                       <MapPin className="h-6 w-6 text-idrissi-gold" />
