@@ -3,41 +3,36 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { Linkedin, Twitter } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 const teamMembers = [
   {
-    name: "Yassine Idrissi",
-    title: "Founder & Lead Consultant",
-    bio: "With a decade of experience in Moroccan business law and finance, Yassine founded Idrissi Affaire to provide a unified, seamless path to success for entrepreneurs.",
+    key: "yassine",
     image: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
     linkedin: "#",
     twitter: "#",
   },
   {
-    name: "Fatima Zahra",
-    title: "Head of Digital Growth",
-    bio: "A digital native with a passion for storytelling, Fatima leads our creative team to build compelling brands and high-performance websites that drive results.",
+    key: "fatima",
     image: "https://i.pravatar.cc/150?u=a042581f4e29026705e",
     linkedin: "#",
     twitter: "#",
   },
   {
-    name: "Ahmed Bennani",
-    title: "Lead Accountant",
-    bio: "Ahmed is a master of numbers and compliance. He ensures our clients' financial health is robust, optimized, and perfectly aligned with Moroccan regulations.",
+    key: "ahmed",
     image: "https://i.pravatar.cc/150?u=a042581f4e29026706f",
     linkedin: "#",
     twitter: "#",
   },
   {
-    name: "Sofia Alaoui",
-    title: "Immigration Specialist",
-    bio: "Sofia navigates the complexities of international mobility, crafting compelling business cases that open doors to global opportunities for our clients.",
+    key: "sofia",
     image: "https://i.pravatar.cc/150?u=a042581f4e29026707g",
     linkedin: "#",
     twitter: "#",
   },
 ];
 export function OurStoryPage() {
+  const { t } = useTranslation();
+
   return (
     <MainLayout>
       {/* Hero Section */}
@@ -50,7 +45,7 @@ export function OurStoryPage() {
               transition={{ duration: 0.5 }}
               className="text-4xl md:text-5xl font-display font-bold text-balance"
             >
-              <span className="text-gradient">More Than an Agency, We're Your Growth Partner.</span>
+              <span className="text-gradient">{t('ourStory.title')}</span>
             </motion.h1>
           </div>
         </div>
@@ -67,13 +62,13 @@ export function OurStoryPage() {
               className="prose prose-lg max-w-none text-muted-foreground text-pretty"
             >
               <p>
-                Idrissi Affaire was born in Kenitra from a simple observation: entrepreneurs waste too much time, energy, and money running between separate accountants, web developers, and consultants. The process was fragmented, inefficient, and often led to misaligned strategies.
+                {t('ourStory.story.paragraph1')}
               </p>
               <p>
-                We saw a clear need for a unified, integrated approach. Our mission became to provide ambitious entrepreneurs with a single, trusted partner to guide them from the very spark of an idea to a thriving, successful, and globally-connected enterprise.
+                {t('ourStory.story.paragraph2')}
               </p>
               <p>
-                We are more than just service providers; we are co-architects of your vision. We believe in building lasting relationships, offering strategic guidance that transcends simple transactions. Your success is our success, and we are committed to being by your side every step of the way.
+                {t('ourStory.story.paragraph3')}
               </p>
             </motion.div>
           </div>
@@ -84,12 +79,12 @@ export function OurStoryPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-16 md:py-24">
             <h2 className="text-3xl font-display font-bold text-center mb-12">
-              <span className="text-gradient">Meet Our Experts</span>
+              <span className="text-gradient">{t('ourStory.team.title')}</span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {teamMembers.map((member, index) => (
                 <motion.div
-                  key={member.name}
+                  key={member.key}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
@@ -98,14 +93,14 @@ export function OurStoryPage() {
                   <Card className="h-full text-center card-premium shadow-premium">
                     <CardHeader className="items-center">
                       <Avatar className="h-24 w-24">
-                        <AvatarImage src={member.image} alt={member.name} />
-                        <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+                        <AvatarImage src={member.image} alt={t(`ourStory.team.${member.key}.name`)} />
+                        <AvatarFallback>{t(`ourStory.team.${member.key}.name`).charAt(0)}</AvatarFallback>
                       </Avatar>
-                      <CardTitle className="text-idrissi-blue pt-4">{member.name}</CardTitle>
-                      <p className="text-sm text-idrissi-gold font-semibold">{member.title}</p>
+                      <CardTitle className="text-idrissi-blue pt-4">{t(`ourStory.team.${member.key}.name`)}</CardTitle>
+                      <p className="text-sm text-idrissi-gold font-semibold">{t(`ourStory.team.${member.key}.position`)}</p>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground text-sm">{member.bio}</p>
+                      <p className="text-muted-foreground text-sm">{t(`ourStory.team.${member.key}.description`)}</p>
                       <div className="flex justify-center space-x-3 mt-4">
                         <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-idrissi-blue"><Linkedin size={18} /></a>
                         <a href={member.twitter} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-idrissi-blue"><Twitter size={18} /></a>

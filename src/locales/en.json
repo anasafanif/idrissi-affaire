@@ -111,12 +111,64 @@
     "publishedOn": "Published on"
   },
   "ourStory": {
-    "title": "Our Story",
-    "subtitle": "Building Dreams, Creating Impact"
+    "title": "More Than an Agency, We're Your Growth Partner.",
+    "story": {
+      "paragraph1": "Idrissi Affaire was born in Kenitra from a simple observation: entrepreneurs waste too much time, energy, and money running between separate accountants, web developers, and consultants. The process was fragmented, inefficient, and often led to misaligned strategies.",
+      "paragraph2": "We saw a clear need for a unified, integrated approach. Our mission became to provide ambitious entrepreneurs with a single, trusted partner to guide them from the very spark of an idea to a thriving, successful, and globally-connected enterprise.",
+      "paragraph3": "We are more than just service providers; we are co-architects of your vision. We believe in building lasting relationships, offering strategic guidance that transcends simple transactions. Your success is our success, and we are committed to being by your side every step of the way."
+    },
+    "team": {
+      "title": "Meet Our Experts",
+      "yassine": {
+        "name": "Yassine Idrissi",
+        "position": "Founder & Lead Consultant",
+        "description": "With a decade of experience in Moroccan business law and finance, Yassine founded Idrissi Affaire to provide a unified, seamless path to success for entrepreneurs."
+      },
+      "fatima": {
+        "name": "Fatima Zahra",
+        "position": "Head of Digital Growth",
+        "description": "A digital native with a passion for storytelling, Fatima leads our creative team to build compelling brands and high-performance websites that drive results."
+      },
+      "ahmed": {
+        "name": "Ahmed Bennani",
+        "position": "Lead Accountant",
+        "description": "Ahmed is a master of numbers and compliance. He ensures our clients' financial health is robust, optimized, and perfectly aligned with Moroccan regulations."
+      },
+      "sofia": {
+        "name": "Sofia Alaoui",
+        "position": "Immigration Specialist",
+        "description": "Sofia navigates the complexities of international mobility, crafting compelling business cases that open doors to global opportunities for our clients."
+      }
+    }
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Let's Start Your Journey Together"
+    "title": "Let's Build Your Dream.",
+    "subtitle": "We're excited to hear about your project. Reach out and let's start the conversation.",
+    "form": {
+      "title": "Send us a Message",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Your Name",
+      "email": "Email Address",
+      "emailPlaceholder": "your.email@example.com",
+      "phone": "Phone Number (Optional)",
+      "phonePlaceholder": "+212 123 456 789",
+      "subject": "Subject",
+      "subjectPlaceholder": "e.g., Business Creation Inquiry",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "sendButton": "Send Message"
+    },
+    "details": {
+      "title": "Contact Details",
+      "address": "[Placeholder Address], Kenitra, Morocco",
+      "phone": "+212 [Placeholder Phone Number]",
+      "email": "contact@idrissi-affaire.ma"
+    }
+  },
+  "stats": {
+    "successfulProjects": "Successful Projects",
+    "coreServices": "Core Services",
+    "clientSatisfaction": "Client Satisfaction"
   },
   "footer": {
     "tagline": "From Idea to Impact. We build your dream, from Kenitra to the world.",

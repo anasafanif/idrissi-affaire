@@ -11,6 +11,7 @@ import { toast } from 'sonner';
 import { api } from '@/lib/api-client';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Loader2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
@@ -19,6 +20,7 @@ const formSchema = z.object({
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 export function ContactPage() {
+  const { t } = useTranslation();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -60,7 +62,7 @@ export function ContactPage() {
               transition={{ duration: 0.5 }}
               className="text-4xl md:text-5xl font-display font-bold text-balance"
             >
-              <span className="text-gradient">Let's Build Your Dream.</span>
+              <span className="text-gradient">{t('contact.title')}</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -68,7 +70,7 @@ export function ContactPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground"
             >
-              We're excited to hear about your project. Reach out and let's start the conversation.
+              {t('contact.subtitle')}
             </motion.p>
           </div>
         </div>
@@ -88,7 +90,7 @@ export function ContactPage() {
                 <Card className="card-premium shadow-premium">
                   <CardContent className="p-8">
                     <h2 className="text-2xl font-bold font-display mb-6">
-                      <span className="text-gradient">Send us a Message</span>
+                      <span className="text-gradient">{t('contact.form.title')}</span>
                     </h2>
                     <Form {...form}>
                       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -97,9 +99,9 @@ export function ContactPage() {
                           name="name"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Full Name</FormLabel>
+                              <FormLabel>{t('contact.form.fullName')}</FormLabel>
                               <FormControl>
-                                <Input placeholder="Your Name" {...field} />
+                                <Input placeholder={t('contact.form.fullNamePlaceholder')} {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -110,9 +112,9 @@ export function ContactPage() {
                           name="email"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Email Address</FormLabel>
+                              <FormLabel>{t('contact.form.email')}</FormLabel>
                               <FormControl>
-                                <Input type="email" placeholder="your.email@example.com" {...field} />
+                                <Input type="email" placeholder={t('contact.form.emailPlaceholder')} {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -123,9 +125,9 @@ export function ContactPage() {
                           name="phone"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Phone Number (Optional)</FormLabel>
+                              <FormLabel>{t('contact.form.phone')}</FormLabel>
                               <FormControl>
-                                <Input placeholder="+212 123 456 789" {...field} />
+                                <Input placeholder={t('contact.form.phonePlaceholder')} {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -136,9 +138,9 @@ export function ContactPage() {
                           name="subject"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Subject</FormLabel>
+                              <FormLabel>{t('contact.form.subject')}</FormLabel>
                               <FormControl>
-                                <Input placeholder="e.g., Business Creation Inquiry" {...field} />
+                                <Input placeholder={t('contact.form.subjectPlaceholder')} {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -149,9 +151,9 @@ export function ContactPage() {
                           name="message"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Message</FormLabel>
+                              <FormLabel>{t('contact.form.message')}</FormLabel>
                               <FormControl>
-                                <Textarea placeholder="Tell us about your project..." className="min-h-[120px]" {...field} />
+                                <Textarea placeholder={t('contact.form.messagePlaceholder')} className="min-h-[120px]" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -159,7 +161,7 @@ export function ContactPage() {
                         />
                         <Button type="submit" className="w-full btn-premium gradient-primary hover:shadow-gold" disabled={form.formState.isSubmitting}>
                           {form.formState.isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                          Send Message
+{t('contact.form.sendButton')}
                         </Button>
                       </form>
                     </Form>
@@ -176,20 +178,20 @@ export function ContactPage() {
               >
                 <div>
                   <h3 className="text-2xl font-bold font-display mb-4">
-                    <span className="text-gradient">Contact Details</span>
+                    <span className="text-gradient">{t('contact.details.title')}</span>
                   </h3>
                   <div className="space-y-4 text-lg text-muted-foreground">
                     <div className="flex items-center gap-4">
                       <MapPin className="h-6 w-6 text-idrissi-gold" />
-                      <span>[Placeholder Address], Kenitra, Morocco</span>
+                      <span>{t('contact.details.address')}</span>
                     </div>
                     <div className="flex items-center gap-4">
                       <Phone className="h-6 w-6 text-idrissi-gold" />
-                      <a href="tel:+212000000000" className="hover:text-idrissi-blue">+212 [Placeholder Phone Number]</a>
+                      <a href="tel:+212000000000" className="hover:text-idrissi-blue">{t('contact.details.phone')}</a>
                     </div>
                     <div className="flex items-center gap-4">
                       <Mail className="h-6 w-6 text-idrissi-gold" />
-                      <a href="mailto:contact@idrissi-affaire.ma" className="hover:text-idrissi-blue">contact@idrissi-affaire.ma</a>
+                      <a href="mailto:contact@idrissi-affaire.ma" className="hover:text-idrissi-blue">{t('contact.details.email')}</a>
                     </div>
                   </div>
                 </div>

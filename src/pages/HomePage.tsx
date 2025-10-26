@@ -168,7 +168,7 @@ export function HomePage() {
                 >
                   50+
                 </motion.div>
-                <p className="text-muted-foreground font-medium">Successful Projects</p>
+                <p className="text-muted-foreground font-medium">{t('stats.successfulProjects')}</p>
               </motion.div>
               <motion.div 
                 className="text-center card-premium p-8 rounded-2xl"
@@ -183,7 +183,7 @@ export function HomePage() {
                 >
                   3
                 </motion.div>
-                <p className="text-muted-foreground font-medium">Core Services</p>
+                <p className="text-muted-foreground font-medium">{t('stats.coreServices')}</p>
               </motion.div>
               <motion.div 
                 className="text-center card-premium p-8 rounded-2xl"
@@ -198,7 +198,7 @@ export function HomePage() {
                 >
                   100%
                 </motion.div>
-                <p className="text-muted-foreground font-medium">Client Satisfaction</p>
+                <p className="text-muted-foreground font-medium">{t('stats.clientSatisfaction')}</p>
               </motion.div>
             </motion.div>
           </div>
@@ -565,15 +565,15 @@ export function HomePage() {
               >
                 <div className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-idrissi-gold mb-2">50+</div>
-                  <p className="text-blue-100 text-sm">Successful Projects</p>
+                  <p className="text-blue-100 text-sm">{t('stats.successfulProjects')}</p>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-white mb-2">3</div>
-                  <p className="text-blue-100 text-sm">Core Services</p>
+                  <p className="text-blue-100 text-sm">{t('stats.coreServices')}</p>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-idrissi-gold mb-2">100%</div>
-                  <p className="text-blue-100 text-sm">Client Satisfaction</p>
+                  <p className="text-blue-100 text-sm">{t('stats.clientSatisfaction')}</p>
                 </div>
               </motion.div>
             </motion.div>

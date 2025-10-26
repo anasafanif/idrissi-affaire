@@ -111,12 +111,64 @@
     "publishedOn": "Publié le"
   },
   "ourStory": {
-    "title": "Notre Histoire",
-    "subtitle": "Construire des Rêves, Créer un Impact"
+    "title": "Plus qu'une Agence, Nous Sommes Votre Partenaire de Croissance.",
+    "story": {
+      "paragraph1": "Idrissi Affaire est né à Kénitra d'une observation simple : les entrepreneurs perdent trop de temps, d'énergie et d'argent à courir entre différents comptables, développeurs web et consultants. Le processus était fragmenté, inefficace et conduisait souvent à des stratégies mal alignées.",
+      "paragraph2": "Nous avons vu un besoin clair d'une approche unifiée et intégrée. Notre mission est devenue de fournir aux entrepreneurs ambitieux un partenaire unique et de confiance pour les guider de la simple étincelle d'une idée à une entreprise prospère, réussie et connectée mondialement.",
+      "paragraph3": "Nous sommes plus que de simples prestataires de services ; nous sommes les co-architectes de votre vision. Nous croyons en la construction de relations durables, en offrant des conseils stratégiques qui transcendent les simples transactions. Votre succès est notre succès, et nous nous engageons à être à vos côtés à chaque étape."
+    },
+    "team": {
+      "title": "Rencontrez Nos Experts",
+      "yassine": {
+        "name": "Yassine Idrissi",
+        "position": "Fondateur et Consultant Principal",
+        "description": "Avec une décennie d'expérience en droit des affaires et finance marocains, Yassine a fondé Idrissi Affaire pour offrir un chemin unifié et fluide vers le succès aux entrepreneurs."
+      },
+      "fatima": {
+        "name": "Fatima Zahra",
+        "position": "Responsable de la Croissance Numérique",
+        "description": "Native du numérique avec une passion pour la narration, Fatima dirige notre équipe créative pour construire des marques convaincantes et des sites web haute performance qui génèrent des résultats."
+      },
+      "ahmed": {
+        "name": "Ahmed Bennani",
+        "position": "Comptable Principal",
+        "description": "Ahmed est un maître des chiffres et de la conformité. Il s'assure que la santé financière de nos clients soit robuste, optimisée et parfaitement alignée avec les réglementations marocaines."
+      },
+      "sofia": {
+        "name": "Sofia Alaoui",
+        "position": "Spécialiste en Immigration",
+        "description": "Sofia navigue dans les complexités de la mobilité internationale, créant des dossiers commerciaux convaincants qui ouvrent les portes aux opportunités mondiales pour nos clients."
+      }
+    }
   },
   "contact": {
-    "title": "Contactez-nous",
-    "subtitle": "Commençons Votre Voyage Ensemble"
+    "title": "Construisons Votre Rêve.",
+    "subtitle": "Nous sommes ravis d'entendre parler de votre projet. Contactez-nous et commençons la conversation.",
+    "form": {
+      "title": "Envoyez-nous un Message",
+      "fullName": "Nom Complet",
+      "fullNamePlaceholder": "Votre Nom",
+      "email": "Adresse E-mail",
+      "emailPlaceholder": "votre.email@exemple.com",
+      "phone": "Numéro de Téléphone (Optionnel)",
+      "phonePlaceholder": "+212 123 456 789",
+      "subject": "Sujet",
+      "subjectPlaceholder": "ex., Demande de Création d'Entreprise",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-nous de votre projet...",
+      "sendButton": "Envoyer le Message"
+    },
+    "details": {
+      "title": "Détails de Contact",
+      "address": "[Adresse Placeholder], Kénitra, Maroc",
+      "phone": "+212 [Numéro de Téléphone Placeholder]",
+      "email": "contact@idrissi-affaire.ma"
+    }
+  },
+  "stats": {
+    "successfulProjects": "Projets Réussis",
+    "coreServices": "Services Principaux",
+    "clientSatisfaction": "Satisfaction Client"
   },
   "footer": {
     "tagline": "De l'Idée à l'Impact. Nous construisons votre rêve, de Kénitra au monde.",
