@@ -3,24 +3,30 @@
 @tailwind utilities;
 @layer base {
   :root {
-    /* Idrissi Affaire Brand Colors */
-    --idrissi-blue: 212 71% 15%; /* #0A2342 */
-    --idrissi-gold: 43 91% 38%; /* #B8860B */
-    --idrissi-bg: 210 17% 98%; /* #F8F9FA */
-    --idrissi-text: 210 8% 23%; /* #343A40 */
-    /* Shadcn/ui Theme */
+    /* Idrissi Affaire Premium Brand Colors */
+    --idrissi-blue: 220 100% 8%; /* #001122 - Deep navy */
+    --idrissi-blue-light: 220 100% 12%; /* #001a33 */
+    --idrissi-blue-dark: 220 100% 5%; /* #000a14 */
+    --idrissi-gold: 45 100% 50%; /* #FFD700 - Pure gold */
+    --idrissi-gold-dark: 45 100% 40%; /* #CC9900 */
+    --idrissi-gold-light: 45 100% 60%; /* #FFE066 */
+    --idrissi-silver: 210 20% 85%; /* #D1D5DB - Premium silver */
+    --idrissi-bg: 210 20% 99%; /* #FCFCFD - Pure white */
+    --idrissi-text: 220 15% 15%; /* #1F2937 - Rich dark */
+    --idrissi-accent: 220 100% 95%; /* #F0F4FF - Light blue tint */
+    /* Shadcn/ui Premium Theme */
     --background: var(--idrissi-bg);
     --foreground: var(--idrissi-text);
     --primary: var(--idrissi-blue);
-    --primary-foreground: 210 17% 98%;
-    --secondary: 210 17% 95%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--idrissi-silver);
     --secondary-foreground: var(--idrissi-text);
-    --accent: 210 17% 93%;
+    --accent: var(--idrissi-accent);
     --accent-foreground: var(--idrissi-text);
-    --muted: 210 17% 90%;
-    --muted-foreground: 210 8% 45%;
-    --border: 210 17% 88%;
-    --input: 210 17% 88%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 15% 45%;
+    --border: 210 20% 90%;
+    --input: 210 20% 95%;
     --ring: var(--idrissi-blue);
     --card: 0 0% 100%;
     --card-foreground: var(--idrissi-text);
@@ -28,32 +34,38 @@
     --popover-foreground: var(--idrissi-text);
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --radius: 0.5rem;
+    --radius: 0.75rem;
   }
   .dark {
-    /* Idrissi Affaire Brand Colors (Dark) */
-    --idrissi-blue: 212 71% 85%;
-    --idrissi-gold: 43 91% 68%;
-    --idrissi-bg: 210 8% 8%;
-    --idrissi-text: 210 17% 95%;
-    /* Shadcn/ui Theme (Dark) */
-    --background: 210 8% 8%;
-    --foreground: 210 17% 95%;
-    --primary: 212 71% 85%;
-    --primary-foreground: 212 71% 15%;
-    --secondary: 210 8% 15%;
-    --secondary-foreground: 210 17% 95%;
-    --accent: 210 8% 20%;
-    --accent-foreground: 210 17% 95%;
-    --muted: 210 8% 18%;
-    --muted-foreground: 210 17% 70%;
-    --border: 210 8% 20%;
-    --input: 210 8% 20%;
-    --ring: 212 71% 85%;
-    --card: 210 8% 12%;
-    --card-foreground: 210 17% 95%;
-    --popover: 210 8% 10%;
-    --popover-foreground: 210 17% 95%;
+    /* Idrissi Affaire Premium Dark Theme */
+    --idrissi-blue: 220 100% 70%; /* Lighter blue for dark mode */
+    --idrissi-blue-light: 220 100% 80%;
+    --idrissi-blue-dark: 220 100% 20%;
+    --idrissi-gold: 45 100% 60%; /* Brighter gold for dark mode */
+    --idrissi-gold-dark: 45 100% 50%;
+    --idrissi-gold-light: 45 100% 70%;
+    --idrissi-silver: 210 20% 60%;
+    --idrissi-bg: 220 15% 6%; /* Deep dark background */
+    --idrissi-text: 210 20% 95%;
+    --idrissi-accent: 220 100% 10%;
+    /* Shadcn/ui Premium Dark Theme */
+    --background: var(--idrissi-bg);
+    --foreground: var(--idrissi-text);
+    --primary: var(--idrissi-blue);
+    --primary-foreground: var(--idrissi-bg);
+    --secondary: 220 15% 15%;
+    --secondary-foreground: var(--idrissi-text);
+    --accent: var(--idrissi-accent);
+    --accent-foreground: var(--idrissi-text);
+    --muted: 220 15% 12%;
+    --muted-foreground: 210 20% 70%;
+    --border: 220 15% 18%;
+    --input: 220 15% 15%;
+    --ring: var(--idrissi-blue);
+    --card: 220 15% 8%;
+    --card-foreground: var(--idrissi-text);
+    --popover: 220 15% 6%;
+    --popover-foreground: var(--idrissi-text);
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
   }
@@ -236,5 +248,110 @@
 @layer components {
   .text-pretty {
     text-wrap: pretty;
+  }
+  
+  /* Premium Glassmorphism Effects */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .dark .glass {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Premium Gradient Backgrounds */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--idrissi-blue)) 0%, hsl(var(--idrissi-blue-light)) 100%);
+  }
+  
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--idrissi-gold)) 0%, hsl(var(--idrissi-gold-light)) 100%);
+  }
+  
+  .gradient-hero {
+    background: linear-gradient(135deg, 
+      hsl(var(--idrissi-blue)) 0%, 
+      hsl(var(--idrissi-blue-light)) 50%, 
+      hsl(var(--idrissi-blue-dark)) 100%);
+  }
+  
+  /* Premium Shadows */
+  .shadow-premium {
+    box-shadow: 0 20px 40px -12px rgba(0, 17, 34, 0.15), 
+                0 8px 16px -8px rgba(0, 17, 34, 0.1);
+  }
+  
+  .shadow-gold {
+    box-shadow: 0 8px 32px -8px rgba(255, 215, 0, 0.3);
+  }
+  
+  /* Modern Typography */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--idrissi-blue)) 0%, hsl(var(--idrissi-gold)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Premium Button Styles */
+  .btn-premium {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .btn-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  .btn-premium:hover::before {
+    left: 100%;
+  }
+  
+  /* Modern Card Styles */
+  .card-premium {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark .card-premium {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .card-premium:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 17, 34, 0.25);
+  }
+  
+  /* Animated Background Patterns */
+  .bg-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(0, 17, 34, 0.1) 0%, transparent 50%);
+  }
+  
+  /* Premium Navigation */
+  .nav-premium {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 17, 34, 0.1);
+  }
+  
+  .dark .nav-premium {
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 }

@@ -22,7 +22,7 @@ export function HomePage() {
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-background via-background to-muted/30 overflow-hidden">
+      <section className="relative bg-pattern overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -130,7 +130,7 @@ export function HomePage() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button asChild size="lg" className="bg-idrissi-blue hover:bg-idrissi-blue/90 text-white text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <Button asChild size="lg" className="btn-premium gradient-primary hover:shadow-gold text-white text-lg px-8 py-6 font-semibold group">
                   <Link to="/contact" className="flex items-center gap-2">
                     {t('home.hero.getStarted')}
                     <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -225,7 +225,7 @@ export function HomePage() {
                 whileHover={{ y: -8 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <Card className="text-center h-full group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-white to-muted/20">
+                <Card className="text-center h-full group relative overflow-hidden border-0 card-premium shadow-premium">
                   <div className="absolute inset-0 bg-gradient-to-br from-idrissi-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <CardHeader className="relative">
                     <motion.div 
@@ -267,7 +267,7 @@ export function HomePage() {
                 whileHover={{ y: -8 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <Card className="text-center h-full group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-white to-muted/20">
+                <Card className="text-center h-full group relative overflow-hidden border-0 card-premium shadow-premium">
                   <div className="absolute inset-0 bg-gradient-to-br from-idrissi-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <CardHeader className="relative">
                     <motion.div 
@@ -309,7 +309,7 @@ export function HomePage() {
                 whileHover={{ y: -8 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <Card className="text-center h-full group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-white to-muted/20">
+                <Card className="text-center h-full group relative overflow-hidden border-0 card-premium shadow-premium">
                   <div className="absolute inset-0 bg-gradient-to-br from-idrissi-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <CardHeader className="relative">
                     <motion.div 
@@ -456,7 +456,7 @@ export function HomePage() {
         </div>
       </section>
       {/* Final CTA Section */}
-      <section className="relative bg-gradient-to-br from-idrissi-blue via-idrissi-blue to-idrissi-blue/90 text-white overflow-hidden">
+      <section className="relative gradient-hero text-white overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -522,7 +522,7 @@ export function HomePage() {
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Button asChild size="lg" className="bg-white text-idrissi-blue hover:bg-gray-100 text-lg px-10 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 group font-semibold">
+                  <Button asChild size="lg" className="btn-premium gradient-gold hover:shadow-gold text-idrissi-blue text-lg px-10 py-6 font-semibold group">
                     <Link to="/contact" className="flex items-center gap-2">
                       {t('home.cta.button')}
                       <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />

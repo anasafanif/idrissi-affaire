@@ -21,16 +21,16 @@ export function BlogPage() {
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section className="bg-muted/50">
+      <section className="bg-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-24 md:py-32 text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl md:text-5xl font-display font-bold text-idrissi-blue text-balance"
+              className="text-4xl md:text-5xl font-display font-bold text-balance"
             >
-              {t('blog.title')}
+              <span className="text-gradient">{t('blog.title')}</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -71,7 +71,7 @@ export function BlogPage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   layout
                 >
-                  <Card className="h-full flex flex-col overflow-hidden group">
+                  <Card className="h-full flex flex-col overflow-hidden group card-premium shadow-premium">
                     <div className="aspect-video overflow-hidden">
                       <img src={post.imageUrl} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                     </div>
