@@ -52,7 +52,6 @@ export function Footer() {
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm">
           <p>&copy; {currentYear} Idrissi Affaire. {t('footer.rightsReserved')}</p>
-          <p className="mt-1">{t('footer.builtWith')}</p>
         </div>
       </div>
     </footer>

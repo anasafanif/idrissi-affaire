@@ -11,15 +11,107 @@
   "services": {
     "businessFinancial": {
       "title": "Business & Financial",
-      "description": "Launch your venture with a rock-solid legal and financial foundation."
+      "description": "Launch your venture with a rock-solid legal and financial foundation.",
+      "hero": {
+        "title": "Building a Rock-Solid Foundation for Your Success.",
+        "subtitle": "Every great enterprise starts with a solid legal and financial structure. We are the architects of that foundation, ensuring your business is built for stability, compliance, and growth from day one."
+      },
+      "servicesTitle": "Our Financial & Business Services",
+      "services": {
+        "companyCreation": {
+          "title": "Company Creation (Création d'Entreprise)",
+          "description": "From legal form selection to registration, we turn your idea into a legal entity, seamlessly. We handle all paperwork and legal hurdles, ensuring your business is compliant from day one."
+        },
+        "domiciliation": {
+          "title": "Domiciliation",
+          "description": "Establish a professional address in Kenitra, a crucial first step for credibility and compliance. Our domiciliation services provide you with a prestigious business address without the overhead of a physical office."
+        },
+        "accounting": {
+          "title": "Accounting Management (Gestion Comptable)",
+          "description": "We are your financial partners, handling everything from bookkeeping and payroll to tax declarations and financial statements with precision. Stay focused on growth while we ensure your finances are in perfect order."
+        },
+        "consulting": {
+          "title": "Strategic Consulting",
+          "description": "Leverage our expertise to optimize your financial strategy, improve profitability, and navigate the Moroccan business landscape. We provide actionable insights to help you make informed decisions and achieve long-term success."
+        }
+      },
+      "cta": {
+        "title": "Secure Your Financial Future",
+        "subtitle": "Let's build a compliant and profitable business together.",
+        "button": "Get Started Today"
+      }
     },
     "digitalGrowth": {
       "title": "Digital Growth",
-      "description": "Amplify your online presence with expert branding, web, and marketing."
+      "description": "Amplify your online presence with expert branding, web, and marketing.",
+      "hero": {
+        "title": "Bringing Your Vision to Life in the Digital World.",
+        "subtitle": "A brilliant idea needs a powerful voice. Our digital division crafts your online identity and builds the platforms that will connect you with your customers and drive growth."
+      },
+      "servicesTitle": "Our Digital Growth Services",
+      "services": {
+        "branding": {
+          "title": "Branding & Design",
+          "description": "We create your visual identity—logo, colors, and messaging—that tells your story and resonates with your audience."
+        },
+        "webDev": {
+          "title": "Web Development",
+          "description": "We build fast, beautiful, and user-friendly websites that serve as your 24/7 digital storefront and primary conversion tool."
+        },
+        "ads": {
+          "title": "Ads & SMMA",
+          "description": "We craft and execute targeted advertising campaigns on social media and Google to generate leads and build your community."
+        },
+        "video": {
+          "title": "Video Editing",
+          "description": "We produce professional videos that showcase your products, services, and story, engaging your audience on a deeper level."
+        },
+        "ai": {
+          "title": "AI & Automation",
+          "description": "We implement intelligent solutions to automate repetitive tasks, allowing you to work smarter, not harder, and focus on growth."
+        }
+      },
+      "cta": {
+        "title": "Build Your Digital Presence",
+        "subtitle": "Connect with your audience and accelerate your growth online.",
+        "button": "Start Your Project"
+      }
     },
     "internationalMobility": {
       "title": "International Mobility",
-      "description": "Expand your horizons with strategic support for global opportunities."
+      "description": "Expand your horizons with strategic support for global opportunities.",
+      "hero": {
+        "title": "Your Gateway to Global Opportunity.",
+        "subtitle": "Dreaming of expanding to Europe or the UK? A successful visa application is about presenting a compelling story of a legitimate business venture. We don't just fill out forms; we create the business foundation that makes your application undeniable."
+      },
+      "processTitle": "Our Unique Process",
+      "process": {
+        "companyCreation": {
+          "title": "Strategic Company Creation",
+          "description": "We establish a Moroccan company with the specific legal structure and business activity that Schengen and UK authorities look for as a sign of a legitimate enterprise."
+        },
+        "financial": {
+          "title": "Demonstrating Financial Legitimacy",
+          "description": "We guide you in setting up a business bank account and conducting genuine transactions to create a provable money flow, a key factor for visa officers."
+        },
+        "logistics": {
+          "title": "End-to-End Logistical Support",
+          "description": "We handle securing your visa appointment (RDV), arranging compliant travel insurance, and booking the necessary hotels and flights to support your application."
+        },
+        "filePrep": {
+          "title": "File Preparation & Review",
+          "description": "We compile all documents into a professional, compelling file designed to tell a clear story of your business intentions and maximize your chances of approval."
+        }
+      },
+      "whoIsThisFor": {
+        "title": "Who Is This For?",
+        "description": "Our international mobility service is ideal for Moroccan entrepreneurs exploring European/UK markets, freelancers seeking an international presence, and anyone needing to demonstrate strong economic ties for a successful visa application."
+      },
+      "cta": {
+        "title": "Plan Your International Journey",
+        "subtitle": "Take the first step towards global expansion with a partner you can trust.",
+        "button": "Book a Consultation"
+      }
     }
   },
   "home": {
