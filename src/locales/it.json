@@ -1,0 +1,279 @@
+{
+  "nav": {
+    "home": "Home",
+    "ourStory": "La Nostra Storia",
+    "blog": "Blog",
+    "contact": "Contattaci",
+    "services": "Servizi",
+    "scheduleConsultation": "Prenota una Consulenza",
+    "startJourney": "Inizia il Tuo Percorso"
+  },
+  "services": {
+    "businessFinancial": {
+      "title": "Business & Finanziario",
+      "description": "Lancia la tua attività con fondamenta legali e finanziarie solide.",
+      "hero": {
+        "title": "Costruiamo Fondamenta Solide per il Tuo Successo.",
+        "subtitle": "Ogni grande impresa inizia con una struttura legale e finanziaria solida. Siamo gli architetti di quelle fondamenta, garantendo che la tua attività sia costruita per stabilità, conformità e crescita fin dal primo giorno."
+      },
+      "servicesTitle": "I Nostri Servizi Finanziari e Commerciali",
+      "services": {
+        "companyCreation": {
+          "title": "Creazione Aziendale (Création d'Entreprise)",
+          "description": "Dalla selezione della forma legale alla registrazione, trasformiamo la tua idea in un'entità legale, senza problemi. Gestiamo tutta la documentazione e gli ostacoli legali, garantendo che la tua attività sia conforme fin dal primo giorno."
+        },
+        "domiciliation": {
+          "title": "Domiciliazione",
+          "description": "Stabilisci un indirizzo professionale a Kenitra, un passo cruciale per credibilità e conformità. I nostri servizi di domiciliazione ti forniscono un indirizzo aziendale prestigioso senza i costi di un ufficio fisico."
+        },
+        "accounting": {
+          "title": "Gestione Contabile (Gestion Comptable)",
+          "description": "Siamo i tuoi partner finanziari, gestendo tutto dalla contabilità e buste paga alle dichiarazioni fiscali e rendiconti finanziari con precisione. Rimani concentrato sulla crescita mentre noi ci assicuriamo che le tue finanze siano in perfetto ordine."
+        },
+        "consulting": {
+          "title": "Consulenza Strategica",
+          "description": "Sfrutta la nostra esperienza per ottimizzare la tua strategia finanziaria, migliorare la redditività e navigare il panorama commerciale marocchino. Forniamo insights azionabili per aiutarti a prendere decisioni informate e raggiungere il successo a lungo termine."
+        }
+      },
+      "cta": {
+        "title": "Proteggi il Tuo Futuro Finanziario",
+        "subtitle": "Costruiamo insieme un'attività conforme e redditizia.",
+        "button": "Inizia Oggi"
+      }
+    },
+    "digitalGrowth": {
+      "title": "Crescita Digitale",
+      "description": "Amplifica la tua presenza online con branding, web e marketing esperti.",
+      "hero": {
+        "title": "Dare Vita alla Tua Visione nel Mondo Digitale.",
+        "subtitle": "Un'idea brillante ha bisogno di una voce potente. La nostra divisione digitale crea la tua identità online e costruisce le piattaforme che ti collegheranno con i tuoi clienti e guideranno la crescita."
+      },
+      "servicesTitle": "I Nostri Servizi di Crescita Digitale",
+      "services": {
+        "branding": {
+          "title": "Branding & Design",
+          "description": "Creiamo la tua identità visiva—logo, colori e messaggi—che racconta la tua storia e risuona con il tuo pubblico."
+        },
+        "webDev": {
+          "title": "Sviluppo Web",
+          "description": "Costruiamo siti web veloci, belli e user-friendly che fungono da vetrina digitale 24/7 e strumento di conversione primario."
+        },
+        "ads": {
+          "title": "Pubblicità & SMMA",
+          "description": "Creiamo ed eseguiamo campagne pubblicitarie mirate sui social media e Google per generare lead e costruire la tua community."
+        },
+        "video": {
+          "title": "Montaggio Video",
+          "description": "Produciamo video professionali che mettono in mostra i tuoi prodotti, servizi e storia, coinvolgendo il tuo pubblico a un livello più profondo."
+        },
+        "ai": {
+          "title": "AI & Automazione",
+          "description": "Implementiamo soluzioni intelligenti per automatizzare compiti ripetitivi, permettendoti di lavorare in modo più intelligente, non più duro, e concentrarti sulla crescita."
+        }
+      },
+      "cta": {
+        "title": "Costruisci la Tua Presenza Digitale",
+        "subtitle": "Connettiti con il tuo pubblico e accelera la tua crescita online.",
+        "button": "Inizia il Tuo Progetto"
+      }
+    },
+    "internationalMobility": {
+      "title": "Mobilità Internazionale",
+      "description": "Espandi i tuoi orizzonti con supporto strategico per opportunità globali.",
+      "hero": {
+        "title": "La Tua Porta d'Accesso alle Opportunità Globali.",
+        "subtitle": "Sogni di espanderti in Europa o nel Regno Unito? Una domanda di visto di successo riguarda presentare una storia convincente di un'impresa commerciale legittima. Non compiliamo solo moduli; creiamo le fondamenta aziendali che rendono la tua domanda innegabile."
+      },
+      "processTitle": "Il Nostro Processo Unico",
+      "process": {
+        "companyCreation": {
+          "title": "Creazione Aziendale Strategica",
+          "description": "Stabiliamo un'azienda marocchina con la struttura legale e attività commerciale specifica che le autorità Schengen e UK cercano come segno di un'impresa legittima."
+        },
+        "financial": {
+          "title": "Dimostrare la Legittimità Finanziaria",
+          "description": "Ti guidiamo nella configurazione di un conto bancario aziendale e nell'esecuzione di transazioni genuine per creare un flusso di denaro dimostrabile, un fattore chiave per gli ufficiali del visto."
+        },
+        "logistics": {
+          "title": "Supporto Logistico End-to-End",
+          "description": "Gestiamo la prenotazione del tuo appuntamento per il visto (RDV), l'organizzazione di un'assicurazione di viaggio conforme e la prenotazione di hotel e voli necessari per supportare la tua domanda."
+        },
+        "filePrep": {
+          "title": "Preparazione e Revisione del Fascicolo",
+          "description": "Compiliamo tutti i documenti in un fascicolo professionale e convincente progettato per raccontare una storia chiara delle tue intenzioni commerciali e massimizzare le tue possibilità di approvazione."
+        }
+      },
+      "whoIsThisFor": {
+        "title": "Per Chi È Questo Servizio?",
+        "description": "Il nostro servizio di mobilità internazionale è ideale per imprenditori marocchini che esplorano i mercati europei/UK, freelancer che cercano una presenza internazionale e chiunque abbia bisogno di dimostrare forti legami economici per una domanda di visto di successo."
+      },
+      "cta": {
+        "title": "Pianifica il Tuo Percorso Internazionale",
+        "subtitle": "Fai il primo passo verso l'espansione globale con un partner di cui puoi fidarti.",
+        "button": "Prenota una Consulenza"
+      }
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Dall'Idea all'Impatto.",
+      "subtitle": "Costruiamo il Tuo Progetto dei Sogni.",
+      "description": "Il tuo partner end-to-end a Kenitra per la creazione di imprese, crescita digitale e mobilità internazionale.",
+      "getStarted": "Inizia",
+      "learnMore": "Scopri di Più"
+    },
+    "services": {
+      "title": "I Nostri Servizi",
+      "subtitle": "Soluzioni complete per il tuo percorso imprenditoriale",
+      "pillars": {
+        "title": "I Tre Pilastri del Tuo Successo",
+        "foundation": {
+          "title": "Lancia le Tue Fondamenta",
+          "description": "Gestiamo tutte le complessità legali e finanziarie dell'avvio della tua attività, dalla creazione dell'azienda alla contabilità meticolosa, così puoi concentrarti sulla tua visione."
+        },
+        "presence": {
+          "title": "Amplifica la Tua Presenza",
+          "description": "La tua visione merita di essere vista. I nostri esperti digitali costruiscono il tuo brand, sviluppano il tuo sito web e gestiscono campagne pubblicitarie mirate per collegarti con il tuo pubblico."
+        },
+        "horizons": {
+          "title": "Espandi i Tuoi Orizzonti",
+          "description": "Il mondo è il tuo mercato. Ti guidiamo attraverso l'espansione internazionale, dalle domande di visto alle strategie commerciali globali."
+        }
+      }
+    },
+    "whyChoose": {
+      "title": "Perché Scegliere Idrissi Affaire?",
+      "subtitle": "Il tuo successo è il nostro impegno",
+      "localExpertise": {
+        "title": "Competenza Locale",
+        "description": "Comprensione approfondita del panorama commerciale e delle normative marocchine."
+      },
+      "endToEnd": {
+        "title": "Supporto End-to-End",
+        "description": "Dal concetto iniziale all'espansione internazionale, siamo con te ad ogni passo."
+      },
+      "provenTrack": {
+        "title": "Tracciato Comprovato",
+        "description": "Attività lanciate con successo in oltre 50 settori diversi."
+      }
+    },
+    "approach": {
+      "title": "La Tua Visione, La Nostra Missione",
+      "subtitle": "Un approccio snello e integrato per costruire la storia del tuo successo.",
+      "step1": {
+        "title": "Strategia & Progetto",
+        "description": "Tracciamo l'intero percorso verso il successo, allineando ogni passo con i tuoi obiettivi finali."
+      },
+      "step2": {
+        "title": "Creazione & Esecuzione",
+        "description": "I nostri team integrati costruiscono la tua azienda, brand e piattaforme digitali con precisione."
+      },
+      "step3": {
+        "title": "Crescita & Scalabilità",
+        "description": "Rimaniamo al tuo fianco, gestendo le finanze e ottimizzando il marketing per aiutarti a raggiungere nuove vette."
+      }
+    },
+    "cta": {
+      "title": "Pronto a trasformare la tua ambizione in realtà?",
+      "description": "Unisciti agli imprenditori che si fidano di Idrissi Affaire per il loro percorso aziendale.",
+      "button": "Prenota una Consulenza Gratuita"
+    }
+  },
+  "blog": {
+    "title": "Insights per Imprenditori Ambiziosi",
+    "subtitle": "Il tuo hub di risorse per strategia aziendale, crescita digitale e mobilità globale.",
+    "categories": {
+      "all": "Tutti",
+      "businessFinance": "Finanza Aziendale",
+      "digitalMarketing": "Marketing Digitale",
+      "immigrationTips": "Consigli sull'Immigrazione"
+    },
+    "readMore": "Leggi di Più",
+    "relatedArticles": "Articoli Correlati",
+    "cta": {
+      "title": "Pronto a Portare la Tua Azienda al Livello Successivo?",
+      "description": "Il nostro team di esperti è qui per aiutarti a implementare le strategie discusse in questo articolo e raggiungere i tuoi obiettivi aziendali.",
+      "getStarted": "Inizia Oggi",
+      "viewServices": "Visualizza i Nostri Servizi"
+    }
+  },
+  "blogPost": {
+    "backToBlog": "Torna al Blog",
+    "readTime": "min di lettura",
+    "publishedOn": "Pubblicato il"
+  },
+  "ourStory": {
+    "title": "Più di un'Agenzia, Siamo il Tuo Partner di Crescita.",
+    "story": {
+      "paragraph1": "Idrissi Affaire è nato a Kenitra da una semplice osservazione: gli imprenditori perdono troppo tempo, energia e denaro correndo tra contabili, sviluppatori web e consulenti separati. Il processo era frammentato, inefficiente e spesso portava a strategie disallineate.",
+      "paragraph2": "Abbiamo visto un chiaro bisogno di un approccio unificato e integrato. La nostra missione è diventata fornire agli imprenditori ambiziosi un unico partner fidato per guidarli dalla scintilla iniziale di un'idea a un'impresa fiorente, di successo e globalmente connessa.",
+      "paragraph3": "Siamo più che semplici fornitori di servizi; siamo co-architetti della tua visione. Crediamo nella costruzione di relazioni durature, offrendo una guida strategica che trascende le semplici transazioni. Il tuo successo è il nostro successo, e siamo impegnati a essere al tuo fianco ad ogni passo del percorso."
+    },
+    "team": {
+      "title": "Incontra i Nostri Esperti",
+      "moulayMounir": {
+        "name": "Moulay Mounir Moussaid El Idrissi",
+        "position": "Partner Amministratore & Consulente Principale",
+        "description": "Moulay Mounir stabilisce la direzione strategica dello studio. Con un tracciato distinto nella consulenza finanziaria, eccelle nelle negoziazioni di alto livello e nello sviluppo commerciale. Fornisce consulenza esperta sui nostri casi più complessi e coltiva le relazioni chiave che guidano la nostra crescita."
+      },
+      "anas": {
+        "name": "Anas Moussaid El Idrissi",
+        "position": "Direttore della Tecnologia",
+        "description": "Anas guida la nostra innovazione digitale e infrastruttura tecnica. Supervisiona lo sviluppo delle nostre soluzioni tecnologiche proprietarie e orientate al cliente, garantendo prestazioni robuste e sicurezza. Il suo team fornisce supporto tecnico critico ed è dedicato a risolvere le sfide con tecnologia all'avanguardia."
+      },
+      "hajarBouamira": {
+        "name": "Hajar Bouamira",
+        "position": "Liaison Legale & Coordinatrice sul Campo",
+        "description": "Hajar funge da interfaccia principale tra il nostro studio e gli organismi giudiziari e amministrativi esterni. È esperta nel navigare requisiti procedurali complessi e rappresenta gli interessi dei nostri clienti sul campo, gestendo tutte le questioni che richiedono una presenza fisica con precisione e professionalità."
+      },
+      "hajarErahmani": {
+        "name": "Hajar Erahmani",
+        "position": "Responsabile Finanze & Operazioni",
+        "description": "Hajar è la spina dorsale delle operazioni interne del nostro studio. Gestisce tutti gli aspetti dell'amministrazione finanziaria, inclusa contabilità e conformità IVA. Il suo ruolo è critico nel coordinare gli orari dei clienti e ottimizzare il nostro flusso di lavoro operativo per garantire una consegna del servizio eccezionale."
+      }
+    }
+  },
+  "contact": {
+    "title": "Costruiamo il Tuo Sogno.",
+    "subtitle": "Siamo entusiasti di sentire del tuo progetto. Contattaci e iniziamo la conversazione.",
+    "form": {
+      "title": "Inviaci un Messaggio",
+      "fullName": "Nome Completo",
+      "fullNamePlaceholder": "Il Tuo Nome",
+      "email": "Indirizzo Email",
+      "emailPlaceholder": "tua.email@esempio.com",
+      "phone": "Numero di Telefono (Opzionale)",
+      "phonePlaceholder": "+212 123 456 789",
+      "subject": "Oggetto",
+      "subjectPlaceholder": "es., Richiesta di Creazione Aziendale",
+      "message": "Messaggio",
+      "messagePlaceholder": "Raccontaci del tuo progetto...",
+      "sendButton": "Invia Messaggio"
+    },
+    "details": {
+      "title": "Dettagli di Contatto",
+      "address": "3 et 7 Rue Jbala, Ghandi RCE Fatine B Bur 8 - Kénitra",
+      "phoneMobile": "+212 (6) 70 36 89 00",
+      "phoneLandline": "+212 (5) 30 23 83 38",
+      "email": "idrissiaffairs@gmail.com"
+    }
+  },
+  "stats": {
+    "successfulProjects": "Progetti di Successo",
+    "coreServices": "Servizi Principali",
+    "clientSatisfaction": "Soddisfazione del Cliente"
+  },
+  "footer": {
+    "tagline": "Dall'Idea all'Impatto. Costruiamo il tuo sogno, da Kenitra al mondo.",
+    "services": "Servizi",
+    "company": "Azienda",
+    "contact": "Contatto",
+    "rightsReserved": "Tutti i diritti riservati."
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Si è verificato un errore",
+    "retry": "Riprova"
+  }
+}
+
