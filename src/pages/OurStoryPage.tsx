@@ -99,7 +99,14 @@ export function OurStoryPage() {
                         <AvatarImage 
                           src={member.image} 
                           alt={t(`ourStory.team.${member.key}.name`)}
-                          className={member.key === "anas" ? "scale-125 object-cover object-center" : ""}
+                          className={
+                            member.key === "anas" 
+                              ? "scale-125 object-cover object-center" 
+                              : member.key === "hajarErahmani"
+                              ? "scale-150 object-cover"
+                              : ""
+                          }
+                          style={member.key === "hajarErahmani" ? { objectPosition: "75% 25%" } : undefined}
                         />
                         <AvatarFallback>{t(`ourStory.team.${member.key}.name`).charAt(0)}</AvatarFallback>
                       </Avatar>
