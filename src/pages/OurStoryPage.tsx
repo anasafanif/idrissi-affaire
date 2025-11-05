@@ -4,28 +4,31 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { Linkedin, Twitter } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import mounirImage from '@/assets/mounir.png';
+import anasImage from '@/assets/anas.jpg';
+
 const teamMembers = [
   {
     key: "moulayMounir",
-    image: "https://i.pravatar.cc/150?u=moulay-mounir",
+    image: mounirImage,
     linkedin: "#",
     twitter: "#",
   },
   {
     key: "anas",
-    image: "https://i.pravatar.cc/150?u=anas-idrissi",
+    image: anasImage,
     linkedin: "#",
     twitter: "#",
   },
   {
     key: "hajarBouamira",
-    image: "https://i.pravatar.cc/150?u=hajar-bouamira",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
     linkedin: "#",
     twitter: "#",
   },
   {
     key: "hajarErahmani",
-    image: "https://i.pravatar.cc/150?u=hajar-erahmani",
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
     linkedin: "#",
     twitter: "#",
   },
