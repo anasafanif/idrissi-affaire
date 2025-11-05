@@ -6,26 +6,26 @@ import { Linkedin, Twitter } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 const teamMembers = [
   {
-    key: "yassine",
-    image: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+    key: "moulayMounir",
+    image: "https://i.pravatar.cc/150?u=moulay-mounir",
     linkedin: "#",
     twitter: "#",
   },
   {
-    key: "fatima",
-    image: "https://i.pravatar.cc/150?u=a042581f4e29026705e",
+    key: "anas",
+    image: "https://i.pravatar.cc/150?u=anas-idrissi",
     linkedin: "#",
     twitter: "#",
   },
   {
-    key: "ahmed",
-    image: "https://i.pravatar.cc/150?u=a042581f4e29026706f",
+    key: "hajarBouamira",
+    image: "https://i.pravatar.cc/150?u=hajar-bouamira",
     linkedin: "#",
     twitter: "#",
   },
   {
-    key: "sofia",
-    image: "https://i.pravatar.cc/150?u=a042581f4e29026707g",
+    key: "hajarErahmani",
+    image: "https://i.pravatar.cc/150?u=hajar-erahmani",
     linkedin: "#",
     twitter: "#",
   },

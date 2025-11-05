@@ -119,25 +119,25 @@
     },
     "team": {
       "title": "Rencontrez Nos Experts",
-      "yassine": {
-        "name": "Yassine Idrissi",
-        "position": "Fondateur et Consultant Principal",
-        "description": "Avec une décennie d'expérience en droit des affaires et finance marocains, Yassine a fondé Idrissi Affaire pour offrir un chemin unifié et fluide vers le succès aux entrepreneurs."
+      "moulayMounir": {
+        "name": "Moulay Mounir Moussaid El Idrissi",
+        "position": "Associé Directeur et Consultant Principal",
+        "description": "Moulay Mounir définit l'orientation stratégique du cabinet. Avec un palmarès distingué en conseil financier, il excelle dans les négociations de haut niveau et le développement commercial. Il fournit des conseils d'experts sur nos cas les plus complexes et cultive les relations clés qui stimulent notre croissance."
       },
-      "fatima": {
-        "name": "Fatima Zahra",
-        "position": "Responsable de la Croissance Numérique",
-        "description": "Native du numérique avec une passion pour la narration, Fatima dirige notre équipe créative pour construire des marques convaincantes et des sites web haute performance qui génèrent des résultats."
+      "anas": {
+        "name": "Anas Moussaid El Idrissi",
+        "position": "Directeur de la Technologie",
+        "description": "Anas dirige notre innovation numérique et notre infrastructure technique. Il supervise le développement de nos solutions technologiques propriétaires et orientées client, garantissant des performances robustes et la sécurité. Son équipe fournit un support technique critique et se consacre à résoudre les défis avec une technologie de pointe."
       },
-      "ahmed": {
-        "name": "Ahmed Bennani",
-        "position": "Comptable Principal",
-        "description": "Ahmed est un maître des chiffres et de la conformité. Il s'assure que la santé financière de nos clients soit robuste, optimisée et parfaitement alignée avec les réglementations marocaines."
+      "hajarBouamira": {
+        "name": "Hajar Bouamira",
+        "position": "Liaison Juridique et Coordinatrice de Terrain",
+        "description": "Hajar sert d'interface principale entre notre cabinet et les organismes judiciaires et administratifs externes. Elle est experte dans la navigation des exigences procédurales complexes et représente les intérêts de nos clients sur le terrain, gérant toutes les questions nécessitant une présence physique avec précision et professionnalisme."
       },
-      "sofia": {
-        "name": "Sofia Alaoui",
-        "position": "Spécialiste en Immigration",
-        "description": "Sofia navigue dans les complexités de la mobilité internationale, créant des dossiers commerciaux convaincants qui ouvrent les portes aux opportunités mondiales pour nos clients."
+      "hajarErahmani": {
+        "name": "Hajar Erahmani",
+        "position": "Responsable Finance et Opérations",
+        "description": "Hajar est la colonne vertébrale des opérations internes de notre cabinet. Elle gère tous les aspects de l'administration financière, y compris la comptabilité et la conformité TVA. Son rôle est crucial dans la coordination des horaires des clients et l'optimisation de notre flux de travail opérationnel pour assurer une prestation de service exceptionnelle."
       }
     }
   },

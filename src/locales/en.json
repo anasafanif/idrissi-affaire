@@ -211,25 +211,25 @@
     },
     "team": {
       "title": "Meet Our Experts",
-      "yassine": {
-        "name": "Yassine Idrissi",
-        "position": "Founder & Lead Consultant",
-        "description": "With a decade of experience in Moroccan business law and finance, Yassine founded Idrissi Affaire to provide a unified, seamless path to success for entrepreneurs."
+      "moulayMounir": {
+        "name": "Moulay Mounir Moussaid El Idrissi",
+        "position": "Managing Partner & Principal Consultant",
+        "description": "Moulay Mounir sets the strategic direction of the firm. With a distinguished track record in financial consulting, he excels in high-level negotiations and business development. He provides expert counsel on our most complex cases and cultivates the key relationships that drive our growth."
       },
-      "fatima": {
-        "name": "Fatima Zahra",
-        "position": "Head of Digital Growth",
-        "description": "A digital native with a passion for storytelling, Fatima leads our creative team to build compelling brands and high-performance websites that drive results."
+      "anas": {
+        "name": "Anas Moussaid El Idrissi",
+        "position": "Director of Technology",
+        "description": "Anas leads our digital innovation and technical infrastructure. He oversees the development of our proprietary and client-facing technology solutions, ensuring robust performance and security. His team provides critical technical support and is dedicated to solving challenges with cutting-edge technology."
       },
-      "ahmed": {
-        "name": "Ahmed Bennani",
-        "position": "Lead Accountant",
-        "description": "Ahmed is a master of numbers and compliance. He ensures our clients' financial health is robust, optimized, and perfectly aligned with Moroccan regulations."
+      "hajarBouamira": {
+        "name": "Hajar Bouamira",
+        "position": "Legal Liaison & Field Coordinator",
+        "description": "Hajar serves as the primary interface between our firm and external judicial and administrative bodies. She is an expert in navigating complex procedural requirements and represents our clients' interests on the ground, managing all matters that require a physical presence with precision and professionalism."
       },
-      "sofia": {
-        "name": "Sofia Alaoui",
-        "position": "Immigration Specialist",
-        "description": "Sofia navigates the complexities of international mobility, crafting compelling business cases that open doors to global opportunities for our clients."
+      "hajarErahmani": {
+        "name": "Hajar Erahmani",
+        "position": "Finance & Operations Manager",
+        "description": "Hajar is the backbone of our firm's internal operations. She manages all aspects of financial administration, including accounting and VAT compliance. Her role is critical in coordinating client schedules and optimizing our operational workflow to ensure exceptional service delivery."
       }
     }
   },
