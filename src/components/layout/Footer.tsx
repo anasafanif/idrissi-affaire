@@ -43,9 +43,10 @@ export function Footer() {
           <div className="rtl:order-1">
             <h4 className="font-semibold text-foreground">{t('footer.contact')}</h4>
             <ul className="mt-4 space-y-2 text-sm">
-              <li><a href="mailto:contact@idrissi-affaire.ma" className="hover:text-foreground">contact@idrissi-affaire.ma</a></li>
-              <li><a href="tel:+212000000000" className="hover:text-foreground">+212 [Placeholder]</a></li>
-              <li>[Placeholder Address], Kenitra, Morocco</li>
+              <li><a href="mailto:idrissiaffairs@gmail.com" className="hover:text-foreground">idrissiaffairs@gmail.com</a></li>
+              <li><a href="tel:+212670368900" className="hover:text-foreground">{t('contact.details.phoneMobile')}</a></li>
+              <li><a href="tel:+212530238338" className="hover:text-foreground">{t('contact.details.phoneLandline')}</a></li>
+              <li>{t('contact.details.address')}</li>
             </ul>
           </div>
         </div>

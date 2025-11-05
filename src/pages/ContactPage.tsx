@@ -187,11 +187,14 @@ export function ContactPage() {
                     </div>
                     <div className="flex items-center gap-4">
                       <Phone className="h-6 w-6 text-idrissi-gold" />
-                      <a href="tel:+212000000000" className="hover:text-idrissi-blue">{t('contact.details.phone')}</a>
+                      <div className="flex flex-col gap-2">
+                        <a href="tel:+212670368900" className="hover:text-idrissi-blue">{t('contact.details.phoneMobile')}</a>
+                        <a href="tel:+212530238338" className="hover:text-idrissi-blue">{t('contact.details.phoneLandline')}</a>
+                      </div>
                     </div>
                     <div className="flex items-center gap-4">
                       <Mail className="h-6 w-6 text-idrissi-gold" />
-                      <a href="mailto:contact@idrissi-affaire.ma" className="hover:text-idrissi-blue">{t('contact.details.email')}</a>
+                      <a href="mailto:idrissiaffairs@gmail.com" className="hover:text-idrissi-blue">{t('contact.details.email')}</a>
                     </div>
                   </div>
                 </div>

@@ -160,9 +160,10 @@
     },
     "details": {
       "title": "تفاصيل الاتصال",
-      "address": "[عنوان مؤقت]، القنيطرة، المغرب",
-      "phone": "+212 [رقم هاتف مؤقت]",
-      "email": "contact@idrissi-affaire.ma"
+      "address": "3 et 7 Rue Jbala, Ghandi RCE Fatine B Bur 8 - القنيطرة",
+      "phoneMobile": "+212 (6) 70 36 89 00",
+      "phoneLandline": "+212 (5) 30 23 83 38",
+      "email": "idrissiaffairs@gmail.com"
     }
   },
   "stats": {
