@@ -2,7 +2,6 @@ import { MainLayout } from '@/components/layout/MainLayout';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import { Linkedin, Twitter } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import mounirImage from '@/assets/mounir.png';
 import anasImage from '@/assets/anas.jpg';
@@ -108,10 +107,6 @@ export function OurStoryPage() {
                     </CardHeader>
                     <CardContent>
                       <p className="text-muted-foreground text-sm">{t(`ourStory.team.${member.key}.description`)}</p>
-                      <div className="flex justify-center space-x-3 mt-4">
-                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-idrissi-blue"><Linkedin size={18} /></a>
-                        <a href={member.twitter} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-idrissi-blue"><Twitter size={18} /></a>
-                      </div>
                     </CardContent>
                   </Card>
                 </motion.div>
