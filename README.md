@@ -1,10 +1,10 @@
-# Idrissi Affaire
+# Idrissi Affairs
 
 **From Idea to Impact. We build your dream, from Kenitra to the world.**
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/anasafanif/idrissi-affaire)
 
-A professional, modern, and minimalist website for 'Idrissi Affaire', a business services firm based in Kenitra, Morocco. This platform serves as an all-in-one digital presence for entrepreneurs, guiding them from business ideation and legal creation to financial management, digital growth, and international expansion.
+A professional, modern, and minimalist website for 'Idrissi Affairs', a business services firm based in Kenitra, Morocco. This platform serves as an all-in-one digital presence for entrepreneurs, guiding them from business ideation and legal creation to financial management, digital growth, and international expansion.
 
 The entire experience is designed to be inspiring, trustworthy, and results-oriented, speaking directly to the ambitions of Moroccan entrepreneurs.
 

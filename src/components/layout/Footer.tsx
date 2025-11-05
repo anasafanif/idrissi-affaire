@@ -12,7 +12,7 @@ export function Footer() {
           {/* About Section */}
           <div className="md:col-span-1 rtl:order-4">
             <h3 className="font-display text-lg font-bold">
-              <span className="text-gradient">Idrissi Affaire</span>
+              <span className="text-gradient">Idrissi Affairs</span>
             </h3>
             <p className="mt-2 text-sm">{t('footer.tagline')}</p>
             <div className="flex space-x-4 mt-4">
@@ -51,7 +51,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm">
-          <p>&copy; {currentYear} Idrissi Affaire. {t('footer.rightsReserved')}</p>
+          <p>&copy; {currentYear} Idrissi Affairs. {t('footer.rightsReserved')}</p>
         </div>
       </div>
     </footer>
