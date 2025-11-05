@@ -103,10 +103,10 @@ export function OurStoryPage() {
                             member.key === "anas" 
                               ? "scale-125 object-cover object-center" 
                               : member.key === "hajarErahmani"
-                              ? "scale-150 object-cover"
+                              ? "scale-[1.7] object-cover"
                               : ""
                           }
-                          style={member.key === "hajarErahmani" ? { objectPosition: "75% 25%" } : undefined}
+                          style={member.key === "hajarErahmani" ? { objectPosition: "70% 20%" } : undefined}
                         />
                         <AvatarFallback>{t(`ourStory.team.${member.key}.name`).charAt(0)}</AvatarFallback>
                       </Avatar>
