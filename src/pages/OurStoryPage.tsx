@@ -106,7 +106,7 @@ export function OurStoryPage() {
                               ? "scale-[1.7] object-cover"
                               : ""
                           }
-                          style={member.key === "hajarErahmani" ? { objectPosition: "70% 20%" } : undefined}
+                          style={member.key === "hajarErahmani" ? { objectPosition: "50% 20%" } : undefined}
                         />
                         <AvatarFallback>{t(`ourStory.team.${member.key}.name`).charAt(0)}</AvatarFallback>
                       </Avatar>
