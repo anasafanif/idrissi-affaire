@@ -96,7 +96,11 @@ export function OurStoryPage() {
                   <Card className="h-full text-center card-premium shadow-premium">
                     <CardHeader className="items-center">
                       <Avatar className="h-24 w-24">
-                        <AvatarImage src={member.image} alt={t(`ourStory.team.${member.key}.name`)} />
+                        <AvatarImage 
+                          src={member.image} 
+                          alt={t(`ourStory.team.${member.key}.name`)}
+                          className={member.key === "anas" ? "scale-125 object-cover object-center" : ""}
+                        />
                         <AvatarFallback>{t(`ourStory.team.${member.key}.name`).charAt(0)}</AvatarFallback>
                       </Avatar>
                       <CardTitle className="text-idrissi-blue pt-4">{t(`ourStory.team.${member.key}.name`)}</CardTitle>
