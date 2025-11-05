@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import mounirImage from '@/assets/mounir.png';
 import anasImage from '@/assets/anas.jpg';
+import hajarErahmaniImage from '@/assets/hajar_err.png';
 
 const teamMembers = [
   {
@@ -27,7 +28,7 @@ const teamMembers = [
   },
   {
     key: "hajarErahmani",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    image: hajarErahmaniImage,
     linkedin: "#",
     twitter: "#",
   },
