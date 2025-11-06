@@ -62,7 +62,7 @@
       },
       "provenTrack": {
         "title": "سجل حافل مثبت",
-        "description": "أطلقنا بنجاح أكثر من 50 شركة في مختلف الصناعات."
+        "description": "أطلقنا بنجاح أكثر من 380 مشروع في مختلف الصناعات."
       }
     },
     "approach": {
@@ -168,6 +168,7 @@
   },
   "stats": {
     "successfulProjects": "المشاريع الناجحة",
+    "projects": "المشاريع",
     "coreServices": "الخدمات الأساسية",
     "clientSatisfaction": "رضا العملاء"
   },

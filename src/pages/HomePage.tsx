@@ -166,9 +166,9 @@ export function HomePage() {
                   animate={{ scale: 1 }}
                   transition={{ delay: 1, type: "spring", stiffness: 200 }}
                 >
-                  50+
+                  +380
                 </motion.div>
-                <p className="text-muted-foreground font-medium">{t('stats.successfulProjects')}</p>
+                <p className="text-muted-foreground font-medium">{t('stats.projects')}</p>
               </motion.div>
               <motion.div 
                 className="text-center card-premium p-8 rounded-2xl"
@@ -564,8 +564,8 @@ export function HomePage() {
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-idrissi-gold mb-2">50+</div>
-                  <p className="text-blue-100 text-sm">{t('stats.successfulProjects')}</p>
+                  <div className="text-2xl md:text-3xl font-bold text-idrissi-gold mb-2">+380</div>
+                  <p className="text-blue-100 text-sm">{t('stats.projects')}</p>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-white mb-2">3</div>

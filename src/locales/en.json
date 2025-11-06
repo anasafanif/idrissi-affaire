@@ -154,7 +154,7 @@
       },
       "provenTrack": {
         "title": "Proven Track Record",
-        "description": "Successfully launched 50+ businesses across various industries."
+        "description": "Successfully launched 380+ projects across various industries."
       }
     },
     "approach": {
@@ -260,6 +260,7 @@
   },
   "stats": {
     "successfulProjects": "Successful Projects",
+    "projects": "Projects",
     "coreServices": "Core Services",
     "clientSatisfaction": "Client Satisfaction"
   },

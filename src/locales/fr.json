@@ -62,7 +62,7 @@
       },
       "provenTrack": {
         "title": "Bilan Éprouvé",
-        "description": "Plus de 50 entreprises lancées avec succès dans diverses industries."
+        "description": "Plus de 380 projets lancés avec succès dans diverses industries."
       }
     },
     "approach": {
@@ -168,6 +168,7 @@
   },
   "stats": {
     "successfulProjects": "Projets Réussis",
+    "projects": "Projets",
     "coreServices": "Services Principaux",
     "clientSatisfaction": "Satisfaction Client"
   },

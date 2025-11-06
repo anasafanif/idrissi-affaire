@@ -154,7 +154,7 @@
       },
       "provenTrack": {
         "title": "Tracciato Comprovato",
-        "description": "Attività lanciate con successo in oltre 50 settori diversi."
+        "description": "Oltre 380 progetti lanciati con successo in vari settori."
       }
     },
     "approach": {
@@ -260,6 +260,7 @@
   },
   "stats": {
     "successfulProjects": "Progetti di Successo",
+    "projects": "Progetti",
     "coreServices": "Servizi Principali",
     "clientSatisfaction": "Soddisfazione del Cliente"
   },
