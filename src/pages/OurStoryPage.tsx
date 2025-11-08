@@ -3,9 +3,9 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import mounirImage from '@/assets/mounir.png';
+import mounirImage from '@/assets/mounir.jpg';
 import anasImage from '@/assets/anas.jpg';
-import hajarErahmaniImage from '@/assets/hajar_err.png';
+import hajarErahmaniImage from '@/assets/hajar_err.jpg';
 
 const teamMembers = [
   {

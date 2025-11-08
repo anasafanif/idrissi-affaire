@@ -1,4 +1,4 @@
-import { defineConfig, loadEnv } from "vite";
+import { defineConfig, loadEnv, splitVendorChunkPlugin } from "vite";
 import path from "path";
 import react from "@vitejs/plugin-react";
 import { exec } from "node:child_process";
@@ -89,15 +89,32 @@ function watchDependenciesPlugin() {
 export default ({ mode }: { mode: string }) => {
   const env = loadEnv(mode, process.cwd());
   return defineConfig({
-    plugins: [react(), cloudflare(), watchDependenciesPlugin()],
+    plugins: [react(), cloudflare(), splitVendorChunkPlugin(), watchDependenciesPlugin()],
     build: {
       minify: true,
       sourcemap: "inline", // Use inline source maps for better error reporting
       rollupOptions: {
         output: {
           sourcemapExcludeSources: false, // Include original source in source maps
+          manualChunks(id) {
+            if (!id.includes('node_modules')) return undefined;
+            if (id.includes('react-router') || id.includes('react-dom') || id.includes('react/jsx-runtime')) {
+              return 'vendor-react';
+            }
+            if (id.includes('i18next')) {
+              return 'vendor-i18n';
+            }
+            if (id.includes('framer-motion')) {
+              return 'vendor-motion';
+            }
+            if (id.includes('@radix-ui') || id.includes('lucide-react')) {
+              return 'vendor-ui';
+            }
+            return 'vendor-chunks';
+          },
         },
       },
+      chunkSizeWarningLimit: 1500,
     },
     customLogger: env.VITE_LOGGER_TYPE === 'json' ? customLogger : undefined,
     // Enable source maps in development too

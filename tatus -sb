@@ -1,0 +1,97 @@
+[1mdiff --git a/src/main.tsx b/src/main.tsx[m
+[1mindex cbbba2b..518674d 100644[m
+[1m--- a/src/main.tsx[m
+[1m+++ b/src/main.tsx[m
+[36m@@ -2,7 +2,7 @@[m [mimport '@/lib/errorReporter';[m
+ import '@/lib/i18n';[m
+ import { enableMapSet } from "immer";[m
+ enableMapSet();[m
+[31m-import { StrictMode } from 'react'[m
+[32m+[m[32mimport { StrictMode, Suspense, lazy } from 'react'[m
+ import { createRoot } from 'react-dom/client'[m
+ import {[m
+   createBrowserRouter,[m
+[36m@@ -11,53 +11,67 @@[m [mimport {[m
+ import { ErrorBoundary } from '@/components/ErrorBoundary';[m
+ import { RouteErrorBoundary } from '@/components/RouteErrorBoundary';[m
+ import '@/index.css'[m
+[31m-import { HomePage } from '@/pages/HomePage'[m
+[31m-import { BusinessFinancialPage } from '@/pages/services/BusinessFinancialPage';[m
+[31m-import { DigitalGrowthPage } from '@/pages/services/DigitalGrowthPage';[m
+[31m-import { InternationalMobilityPage } from '@/pages/services/InternationalMobilityPage';[m
+[31m-import { OurStoryPage } from '@/pages/OurStoryPage';[m
+[31m-import { BlogPage } from '@/pages/BlogPage';[m
+[31m-import { BlogPostPage } from '@/pages/BlogPostPage';[m
+[31m-import { ContactPage } from '@/pages/ContactPage';[m
+[32m+[m[32mconst HomePage = lazy(() => import('@/pages/HomePage').then((mod) => ({ default: mod.HomePage })));[m
+[32m+[m[32mconst BusinessFinancialPage = lazy(() =>[m
+[32m+[m[32m  import('@/pages/services/BusinessFinancialPage').then((mod) => ({ default: mod.BusinessFinancialPage }))[m
+[32m+[m[32m);[m
+[32m+[m[32mconst DigitalGrowthPage = lazy(() =>[m
+[32m+[m[32m  import('@/pages/services/DigitalGrowthPage').then((mod) => ({ default: mod.DigitalGrowthPage }))[m
+[32m+[m[32m);[m
+[32m+[m[32mconst InternationalMobilityPage = lazy(() =>[m
+[32m+[m[32m  import('@/pages/services/InternationalMobilityPage').then((mod) => ({ default: mod.InternationalMobilityPage }))[m
+[32m+[m[32m);[m
+[32m+[m[32mconst OurStoryPage = lazy(() => import('@/pages/OurStoryPage').then((mod) => ({ default: mod.OurStoryPage })));[m
+[32m+[m[32mconst BlogPage = lazy(() => import('@/pages/BlogPage').then((mod) => ({ default: mod.BlogPage })));[m
+[32m+[m[32mconst BlogPostPage = lazy(() => import('@/pages/BlogPostPage').then((mod) => ({ default: mod.BlogPostPage })));[m
+[32m+[m[32mconst ContactPage = lazy(() => import('@/pages/ContactPage').then((mod) => ({ default: mod.ContactPage })));[m
+[32m+[m
+[32m+[m[32mconst PageLoader = () => ([m
+[32m+[m[32m  <div className="min-h-[60vh] w-full flex items-center justify-center bg-pattern">[m
+[32m+[m[32m    <div className="h-10 w-10 rounded-full border-4 border-idrissi-gold/80 border-t-transparent animate-spin" />[m
+[32m+[m[32m  </div>[m
+[32m+[m[32m);[m
+[32m+[m
+[32m+[m[32mconst withSuspense = (element: JSX.Element) => <Suspense fallback={<PageLoader />}>{element}</Suspense>;[m
+ const router = createBrowserRouter([[m
+   {[m
+     path: "/",[m
+[31m-    element: <HomePage />,[m
+[32m+[m[32m    element: withSuspense(<HomePage />),[m
+     errorElement: <RouteErrorBoundary />,[m
+   },[m
+   {[m
+     path: "/services/business-financial",[m
+[31m-    element: <BusinessFinancialPage />,[m
+[32m+[m[32m    element: withSuspense(<BusinessFinancialPage />),[m
+     errorElement: <RouteErrorBoundary />,[m
+   },[m
+   {[m
+     path: "/services/digital-growth",[m
+[31m-    element: <DigitalGrowthPage />,[m
+[32m+[m[32m    element: withSuspense(<DigitalGrowthPage />),[m
+     errorElement: <RouteErrorBoundary />,[m
+   },[m
+   {[m
+     path: "/services/international-mobility",[m
+[31m-    element: <InternationalMobilityPage />,[m
+[32m+[m[32m    element: withSuspense(<InternationalMobilityPage />),[m
+     errorElement: <RouteErrorBoundary />,[m
+   },[m
+   {[m
+     path: "/our-story",[m
+[31m-    element: <OurStoryPage />,[m
+[32m+[m[32m    element: withSuspense(<OurStoryPage />),[m
+     errorElement: <RouteErrorBoundary />,[m
+   },[m
+   {[m
+     path: "/blog",[m
+[31m-    element: <BlogPage />,[m
+[32m+[m[32m    element: withSuspense(<BlogPage />),[m
+     errorElement: <RouteErrorBoundary />,[m
+   },[m
+   {[m
+     path: "/blog/:slug",[m
+[31m-    element: <BlogPostPage />,[m
+[32m+[m[32m    element: withSuspense(<BlogPostPage />),[m
+     errorElement: <RouteErrorBoundary />,[m
+   },[m
+   {[m
+     path: "/contact",[m
+[31m-    element: <ContactPage />,[m
+[32m+[m[32m    element: withSuspense(<ContactPage />),[m
+     errorElement: <RouteErrorBoundary />,[m
+   },[m
+ ]);[m

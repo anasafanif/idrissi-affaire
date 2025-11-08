@@ -2,7 +2,7 @@ import '@/lib/errorReporter';
 import '@/lib/i18n';
 import { enableMapSet } from "immer";
 enableMapSet();
-import { StrictMode } from 'react'
+import { StrictMode, Suspense, lazy } from 'react'
 import { createRoot } from 'react-dom/client'
 import {
   createBrowserRouter,
@@ -11,53 +11,67 @@ import {
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { RouteErrorBoundary } from '@/components/RouteErrorBoundary';
 import '@/index.css'
-import { HomePage } from '@/pages/HomePage'
-import { BusinessFinancialPage } from '@/pages/services/BusinessFinancialPage';
-import { DigitalGrowthPage } from '@/pages/services/DigitalGrowthPage';
-import { InternationalMobilityPage } from '@/pages/services/InternationalMobilityPage';
-import { OurStoryPage } from '@/pages/OurStoryPage';
-import { BlogPage } from '@/pages/BlogPage';
-import { BlogPostPage } from '@/pages/BlogPostPage';
-import { ContactPage } from '@/pages/ContactPage';
+const HomePage = lazy(() => import('@/pages/HomePage').then((mod) => ({ default: mod.HomePage })));
+const BusinessFinancialPage = lazy(() =>
+  import('@/pages/services/BusinessFinancialPage').then((mod) => ({ default: mod.BusinessFinancialPage }))
+);
+const DigitalGrowthPage = lazy(() =>
+  import('@/pages/services/DigitalGrowthPage').then((mod) => ({ default: mod.DigitalGrowthPage }))
+);
+const InternationalMobilityPage = lazy(() =>
+  import('@/pages/services/InternationalMobilityPage').then((mod) => ({ default: mod.InternationalMobilityPage }))
+);
+const OurStoryPage = lazy(() => import('@/pages/OurStoryPage').then((mod) => ({ default: mod.OurStoryPage })));
+const BlogPage = lazy(() => import('@/pages/BlogPage').then((mod) => ({ default: mod.BlogPage })));
+const BlogPostPage = lazy(() => import('@/pages/BlogPostPage').then((mod) => ({ default: mod.BlogPostPage })));
+const ContactPage = lazy(() => import('@/pages/ContactPage').then((mod) => ({ default: mod.ContactPage })));
+
+const PageLoader = () => (
+  <div className="min-h-[60vh] w-full flex items-center justify-center bg-pattern">
+    <div className="h-10 w-10 rounded-full border-4 border-idrissi-gold/80 border-t-transparent animate-spin" />
+  </div>
+);
+
+const withSuspense = (element: JSX.Element) => <Suspense fallback={<PageLoader />}>{element}</Suspense>;
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: withSuspense(<HomePage />),
     errorElement: <RouteErrorBoundary />,
   },
   {
     path: "/services/business-financial",
-    element: <BusinessFinancialPage />,
+    element: withSuspense(<BusinessFinancialPage />),
     errorElement: <RouteErrorBoundary />,
   },
   {
     path: "/services/digital-growth",
-    element: <DigitalGrowthPage />,
+    element: withSuspense(<DigitalGrowthPage />),
     errorElement: <RouteErrorBoundary />,
   },
   {
     path: "/services/international-mobility",
-    element: <InternationalMobilityPage />,
+    element: withSuspense(<InternationalMobilityPage />),
     errorElement: <RouteErrorBoundary />,
   },
   {
     path: "/our-story",
-    element: <OurStoryPage />,
+    element: withSuspense(<OurStoryPage />),
     errorElement: <RouteErrorBoundary />,
   },
   {
     path: "/blog",
-    element: <BlogPage />,
+    element: withSuspense(<BlogPage />),
     errorElement: <RouteErrorBoundary />,
   },
   {
     path: "/blog/:slug",
-    element: <BlogPostPage />,
+    element: withSuspense(<BlogPostPage />),
     errorElement: <RouteErrorBoundary />,
   },
   {
     path: "/contact",
-    element: <ContactPage />,
+    element: withSuspense(<ContactPage />),
     errorElement: <RouteErrorBoundary />,
   },
 ]);
