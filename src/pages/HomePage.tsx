@@ -551,7 +551,12 @@ export function HomePage() {
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 text-lg px-10 py-6 transition-all duration-300 backdrop-blur-sm">
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="bg-white text-idrissi-blue font-semibold shadow-premium hover:bg-white/90 hover:text-idrissi-blue text-lg px-10 py-6 transition-all duration-300 border-none"
+                  >
                     <Link to="/our-story" className="flex items-center gap-2">
                       <Users className="h-5 w-5" />
                       Learn More About Us
