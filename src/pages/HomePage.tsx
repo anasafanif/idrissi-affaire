@@ -130,7 +130,7 @@ export function HomePage() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button asChild size="lg" className="btn-premium gradient-primary hover:shadow-gold text-white text-lg px-8 py-6 font-semibold group">
+                <Button asChild size="lg" className="btn-premium gradient-primary hover:shadow-gold text-white text-lg px-8 py-6 font-semibold shadow-premium group">
                   <Link to="/contact" className="flex items-center gap-2">
                     {t('home.hero.getStarted')}
                     <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -141,7 +141,12 @@ export function HomePage() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button asChild variant="outline" size="lg" className="border-idrissi-blue text-idrissi-blue hover:bg-idrissi-blue hover:text-white text-lg px-8 py-6 transition-all duration-300">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="border border-idrissi-blue/30 bg-white/80 text-idrissi-blue font-semibold shadow-sm hover:border-idrissi-blue hover:bg-idrissi-blue/10 hover:text-idrissi-blue text-lg px-8 py-6 transition-all duration-300 backdrop-blur"
+                >
                   <Link to="/our-story">{t('home.hero.learnMore')}</Link>
                 </Button>
               </motion.div>

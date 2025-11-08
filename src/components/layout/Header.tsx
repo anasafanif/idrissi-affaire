@@ -92,12 +92,19 @@ export function Header() {
           <div className="hidden md:flex items-center space-x-2 rtl:order-1">
             <LanguageSwitcher />
             <ThemeToggle />
-            <Button asChild variant="ghost">
-                <Link to="/contact">{t('nav.scheduleConsultation')}</Link>
+            <Button
+              asChild
+              variant="ghost"
+              className="text-idrissi-blue font-semibold hover:text-idrissi-gold transition-colors"
+            >
+              <Link to="/contact">{t('nav.scheduleConsultation')}</Link>
             </Button>
-                <Button asChild className="btn-premium gradient-primary hover:shadow-gold text-white font-semibold">
-                    <Link to="/contact">{t('nav.startJourney')}</Link>
-                </Button>
+            <Button
+              asChild
+              className="btn-premium gradient-primary hover:shadow-gold text-white font-semibold shadow-premium"
+            >
+              <Link to="/contact">{t('nav.startJourney')}</Link>
+            </Button>
           </div>
           {/* Mobile Navigation */}
           <div className="md:hidden">
@@ -133,7 +140,7 @@ export function Header() {
                       ))}
                     </div>
                   </div>
-                  <Button asChild className="bg-idrissi-blue hover:bg-idrissi-blue/90 text-white mt-6">
+                  <Button asChild className="bg-idrissi-blue hover:bg-idrissi-blue/90 text-white mt-6 shadow-premium">
                     <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>{t('nav.startJourney')}</Link>
                   </Button>
                 </nav>
