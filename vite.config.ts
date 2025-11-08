@@ -110,7 +110,33 @@ export default ({ mode }: { mode: string }) => {
             if (id.includes('@radix-ui') || id.includes('lucide-react')) {
               return 'vendor-ui';
             }
-            return 'vendor-chunks';
+            if (id.includes('recharts')) {
+              return 'vendor-charts';
+            }
+            if (id.includes('@dnd-kit')) {
+              return 'vendor-dnd';
+            }
+            if (id.includes('react-hook-form') || id.includes('@hookform') || id.includes('zod')) {
+              return 'vendor-forms';
+            }
+            if (id.includes('cmdk')) {
+              return 'vendor-cmdk';
+            }
+            if (id.includes('embla-carousel')) {
+              return 'vendor-carousel';
+            }
+            if (id.includes('react-day-picker')) {
+              return 'vendor-date';
+            }
+            if (id.includes('vaul') || id.includes('@headlessui')) {
+              return 'vendor-dialog';
+            }
+            const normalized = id
+              .split('node_modules/')[1]
+              .split('/')[0]
+              .replace('@', '')
+              .replace(/[^a-zA-Z0-9]/g, '-');
+            return `vendor-${normalized}`;
           },
         },
       },
