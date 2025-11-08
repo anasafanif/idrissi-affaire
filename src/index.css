@@ -89,10 +89,6 @@
   }
   
   /* Flex direction adjustments */
-  [dir="rtl"] .flex {
-    flex-direction: row-reverse;
-  }
-  
   [dir="rtl"] .flex-row {
     flex-direction: row-reverse;
   }
