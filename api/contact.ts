@@ -1,6 +1,16 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
 import nodemailer from 'nodemailer';
-import type { ContactFormPayload } from '../shared/types';
+import type { ContactFormPayload } from '../shared/types.js';
+
+type VercelRequest = {
+  method?: string;
+  body?: unknown;
+};
+
+type VercelResponse = {
+  status: (code: number) => VercelResponse;
+  setHeader: (name: string, value: string) => void;
+  send: (body: string) => void;
+};
 
 const {
   GMAIL_USER,
