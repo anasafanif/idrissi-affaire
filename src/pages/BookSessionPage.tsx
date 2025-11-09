@@ -14,7 +14,7 @@ const fadeIn = {
   }),
 };
 
-const CAL_EMBED_URL = 'https://app.cal.com/embed/idrissi-affairs-eycuvs?layout=month_view&hide_landing_page_details=1&hide_event_type_details=1';
+const CAL_EMBED_URL = 'https://app.cal.com/idrissi-affairs-eycuvs?embed=true&layout=month_view&hide_landing_page_details=1&hide_event_type_details=1';
 
 export function BookSessionPage() {
   const { t } = useTranslation();
