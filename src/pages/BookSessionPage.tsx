@@ -19,7 +19,7 @@ const CAL_LINK = 'idrissi-affairs-eycuvs';
 
 declare global {
   interface Window {
-    Cal?: (...args: unknown[]) => void;
+    Cal?: ((...args: unknown[]) => void) & { q?: unknown[] };
   }
 }
 
@@ -29,6 +29,10 @@ export function BookSessionPage() {
   useEffect(() => {
     const initCal = () => {
       if (window.Cal) {
+        window.Cal('destroy');
+        window.Cal('init', {
+          origin: 'https://cal.com',
+        });
         window.Cal('inline', {
           elementOrSelector: '#cal-booking-widget',
           calLink: CAL_LINK,
@@ -52,9 +56,6 @@ export function BookSessionPage() {
     const existingScript = document.getElementById(scriptId) as HTMLScriptElement | null;
 
     if (existingScript) {
-      if (window.Cal) {
-        window.Cal('destroy');
-      }
       initCal();
     } else {
       const script = document.createElement('script');
@@ -66,7 +67,9 @@ export function BookSessionPage() {
     }
 
     return () => {
-      window.Cal?.('destroy');
+      if (window.Cal) {
+        window.Cal('destroy');
+      }
     };
   }, []);
 
