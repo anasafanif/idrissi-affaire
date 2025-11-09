@@ -17,10 +17,28 @@ const fadeIn = {
 
 const CAL_LINK = 'idrissi-affairs-eycuvs';
 
+declare global {
+  interface Window {
+    Cal?: (...args: unknown[]) => void;
+  }
+}
+
 export function BookSessionPage() {
   const { t } = useTranslation();
 
   useEffect(() => {
+    const initCal = () => {
+      if (window.Cal) {
+        window.Cal('inline', {
+          elementOrSelector: '#cal-booking-widget',
+          calLink: CAL_LINK,
+          layout: 'month_view',
+          hideEventTypeDetails: true,
+          hideLandingPageDetails: true,
+        });
+      }
+    };
+
     const styleId = 'cal-embed-styles';
     if (!document.getElementById(styleId)) {
       const link = document.createElement('link');
@@ -31,13 +49,25 @@ export function BookSessionPage() {
     }
 
     const scriptId = 'cal-embed-script';
-    if (!document.getElementById(scriptId)) {
+    const existingScript = document.getElementById(scriptId) as HTMLScriptElement | null;
+
+    if (existingScript) {
+      if (window.Cal) {
+        window.Cal('destroy');
+      }
+      initCal();
+    } else {
       const script = document.createElement('script');
       script.src = 'https://cal.com/embed.js';
       script.async = true;
       script.id = scriptId;
+      script.onload = initCal;
       document.body.appendChild(script);
     }
+
+    return () => {
+      window.Cal?.('destroy');
+    };
   }, []);
 
   return (
@@ -69,14 +99,10 @@ export function BookSessionPage() {
                 {t('bookSession.instructions')}
               </p>
               <div className="relative w-full rounded-2xl overflow-hidden shadow-lg bg-white dark:bg-black">
-                <div
-                  className="cal-inline-widget w-full min-h-[720px] border-0"
-                  data-cal-link={CAL_LINK}
-                  data-hide-event-type-details="true"
-                  data-hide-branding="false"
-                  data-background-color="transparent"
-                  data-text-color="#001122"
-                />
+              <div
+                id="cal-booking-widget"
+                className="w-full min-h-[720px] border-0"
+              />
               </div>
             </motion.div>
           </div>
