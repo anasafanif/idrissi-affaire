@@ -1,7 +1,6 @@
 import { MainLayout } from '@/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -15,72 +14,10 @@ const fadeIn = {
   }),
 };
 
-const CAL_LINK = 'idrissi-affairs-eycuvs';
-const CAL_ORIGIN = 'https://app.cal.com';
-const CAL_SCRIPT_SRC = `${CAL_ORIGIN}/embed/embed.js`;
-const CAL_STYLE_HREF = `${CAL_ORIGIN}/embed/embed.css`;
-
-declare global {
-  interface Window {
-    Cal: ((...args: unknown[]) => void) & { q?: unknown[] };
-  }
-}
+const CAL_EMBED_URL = 'https://app.cal.com/embed/idrissi-affairs-eycuvs?layout=month_view&hide_landing_page_details=1&hide_event_type_details=1';
 
 export function BookSessionPage() {
   const { t } = useTranslation();
-
-  useEffect(() => {
-    const styleId = 'cal-embed-styles';
-    if (!document.getElementById(styleId)) {
-      const link = document.createElement('link');
-      link.id = styleId;
-      link.rel = 'stylesheet';
-      link.href = CAL_STYLE_HREF;
-      document.head.appendChild(link);
-    }
-
-    if (!window.Cal) {
-      const queue: unknown[] = [];
-      const calQueue = (...args: unknown[]) => {
-        queue.push(args);
-      };
-      (calQueue as typeof window.Cal).q = queue;
-      window.Cal = calQueue as typeof window.Cal;
-    }
-
-    const initializeInlineWidget = () => {
-      window.Cal('init', { origin: CAL_ORIGIN });
-      window.Cal('inline', {
-        elementOrSelector: '#cal-booking-widget',
-        calLink: CAL_LINK,
-        layout: 'month_view',
-        hideEventTypeDetails: true,
-        hideLandingPageDetails: true,
-      });
-    };
-
-    const scriptId = 'cal-embed-script';
-    const existingScript = document.getElementById(scriptId) as HTMLScriptElement | null;
-
-    if (existingScript) {
-      initializeInlineWidget();
-    } else {
-      const script = document.createElement('script');
-      script.src = CAL_SCRIPT_SRC;
-      script.async = true;
-      script.id = scriptId;
-      script.onload = initializeInlineWidget;
-      document.body.appendChild(script);
-    }
-
-    return () => {
-      try {
-        window.Cal('destroy');
-      } catch {
-        // ignore if embed script not ready yet
-      }
-    };
-  }, []);
 
   return (
     <MainLayout>
@@ -111,10 +48,13 @@ export function BookSessionPage() {
                 {t('bookSession.instructions')}
               </p>
               <div className="relative w-full rounded-2xl overflow-hidden shadow-lg bg-white dark:bg-black">
-              <div
-                id="cal-booking-widget"
-                className="w-full min-h-[720px] border-0"
-              />
+                <iframe
+                  src={CAL_EMBED_URL}
+                  title="Idrissi Affairs Booking"
+                  className="w-full min-h-[720px]"
+                  style={{ border: '0' }}
+                  allow="camera; microphone; fullscreen; autoplay"
+                />
               </div>
             </motion.div>
           </div>
