@@ -265,10 +265,10 @@ export function HomePage() {
                     >
                       <Button asChild variant="link" className="text-idrissi-gold hover:text-idrissi-blue font-semibold group">
                         <Link to="/services/business-financial" className="flex items-center gap-2">
-                          {t('home.hero.learnMore')} 
+                          {t('home.services.pillars.foundation.ctaLabel')} 
                           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                    </Button>
+                      </Button>
                     </motion.div>
                   </CardContent>
                 </Card>
@@ -307,10 +307,10 @@ export function HomePage() {
                     >
                       <Button asChild variant="link" className="text-idrissi-gold hover:text-idrissi-blue font-semibold group">
                         <Link to="/services/digital-growth" className="flex items-center gap-2">
-                          {t('home.hero.learnMore')} 
+                          {t('home.services.pillars.presence.ctaLabel')} 
                           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                    </Button>
+                      </Button>
                     </motion.div>
                   </CardContent>
                 </Card>
@@ -349,10 +349,10 @@ export function HomePage() {
                     >
                       <Button asChild variant="link" className="text-idrissi-gold hover:text-idrissi-blue font-semibold group">
                         <Link to="/services/international-mobility" className="flex items-center gap-2">
-                          {t('home.hero.learnMore')} 
+                          {t('home.services.pillars.horizons.ctaLabel')} 
                           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                    </Button>
+                      </Button>
                     </motion.div>
                   </CardContent>
                 </Card>

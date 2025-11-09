@@ -134,14 +134,17 @@
         "title": "The Three Pillars of Your Success",
         "foundation": {
           "title": "Launch Your Foundation",
+          "ctaLabel": "Explore Business & Financial Services",
           "description": "We handle all the legal and financial complexities of starting your business, from company creation to meticulous accounting, so you can focus on your vision."
         },
         "presence": {
           "title": "Amplify Your Presence",
+          "ctaLabel": "Discover Digital Growth Solutions",
           "description": "Your vision deserves to be seen. Our digital experts build your brand, develop your website, and run targeted ad campaigns to connect you with your audience."
         },
         "horizons": {
           "title": "Expand Your Horizons",
+          "ctaLabel": "See International Mobility Programs",
           "description": "The world is your market. We guide you through international expansion, from visa applications to global business strategies."
         }
       }

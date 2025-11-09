@@ -42,14 +42,17 @@
         "title": "Les Trois Piliers de Votre Succès",
         "foundation": {
           "title": "Lancez Votre Fondation",
+          "ctaLabel": "Découvrir nos services Business & Financier",
           "description": "Nous gérons toutes les complexités légales et financières du démarrage de votre entreprise, de la création d'entreprise à la comptabilité méticuleuse, pour que vous puissiez vous concentrer sur votre vision."
         },
         "presence": {
           "title": "Amplifiez Votre Présence",
+          "ctaLabel": "Explorer nos solutions de Croissance Numérique",
           "description": "Votre vision mérite d'être vue. Nos experts numériques construisent votre marque, développent votre site web et lancent des campagnes publicitaires ciblées pour vous connecter avec votre audience."
         },
         "horizons": {
           "title": "Élargissez Vos Horizons",
+          "ctaLabel": "Consulter nos programmes de Mobilité Internationale",
           "description": "Le monde est votre marché. Nous vous guidons à travers l'expansion internationale, des demandes de visa aux stratégies commerciales mondiales."
         }
       }

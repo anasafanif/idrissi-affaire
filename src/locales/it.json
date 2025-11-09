@@ -134,14 +134,17 @@
         "title": "I Tre Pilastri del Tuo Successo",
         "foundation": {
           "title": "Lancia le Tue Fondamenta",
+          "ctaLabel": "Esplora i servizi Business & Financial",
           "description": "Gestiamo tutte le complessità legali e finanziarie dell'avvio della tua attività, dalla creazione dell'azienda alla contabilità meticolosa, così puoi concentrarti sulla tua visione."
         },
         "presence": {
           "title": "Amplifica la Tua Presenza",
+          "ctaLabel": "Scopri le soluzioni di Crescita Digitale",
           "description": "La tua visione merita di essere vista. I nostri esperti digitali costruiscono il tuo brand, sviluppano il tuo sito web e gestiscono campagne pubblicitarie mirate per collegarti con il tuo pubblico."
         },
         "horizons": {
           "title": "Espandi i Tuoi Orizzonti",
+          "ctaLabel": "Esplora i programmi di Mobilità Internazionale",
           "description": "Il mondo è il tuo mercato. Ti guidiamo attraverso l'espansione internazionale, dalle domande di visto alle strategie commerciali globali."
         }
       }
