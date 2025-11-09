@@ -2,7 +2,6 @@ import { MainLayout } from '@/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
-import type { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -16,27 +15,21 @@ const fadeIn = {
   }),
 };
 
-const CAL_LINK = 'https://cal.com/idrissi-affairs-eycuvs';
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'cal-inline-widget': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & {
-        href: string;
-        'data-cal-link'?: string;
-        'data-hide-event-type-details'?: string;
-        'data-hide-branding'?: string;
-        'data-background-color'?: string;
-        'data-text-color'?: string;
-      };
-    }
-  }
-}
+const CAL_LINK = 'idrissi-affairs-eycuvs';
 
 export function BookSessionPage() {
   const { t } = useTranslation();
 
   useEffect(() => {
+    const styleId = 'cal-embed-styles';
+    if (!document.getElementById(styleId)) {
+      const link = document.createElement('link');
+      link.id = styleId;
+      link.rel = 'stylesheet';
+      link.href = 'https://cal.com/embed.css';
+      document.head.appendChild(link);
+    }
+
     const scriptId = 'cal-embed-script';
     if (!document.getElementById(scriptId)) {
       const script = document.createElement('script');
@@ -76,13 +69,13 @@ export function BookSessionPage() {
                 {t('bookSession.instructions')}
               </p>
               <div className="relative w-full rounded-2xl overflow-hidden shadow-lg bg-white dark:bg-black">
-                <cal-inline-widget
-                  href={CAL_LINK}
+                <div
+                  className="cal-inline-widget w-full min-h-[720px] border-0"
+                  data-cal-link={CAL_LINK}
                   data-hide-event-type-details="true"
                   data-hide-branding="false"
                   data-background-color="transparent"
                   data-text-color="#001122"
-                  className="block w-full min-h-[720px] border-0"
                 />
               </div>
             </motion.div>
