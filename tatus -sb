@@ -1,0 +1,60 @@
+[33mcommit 94019f7c58080047f9fddbaf6c0794ca40fd7ce7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: anasafanif <anasmsdidrissi@gmail.com>
+Date:   Sun Nov 9 11:40:53 2025 +0100
+
+    seo: add meta description and descriptive link text
+
+ index.html             |  4 [32m++++[m
+ src/locales/ar.json    |  3 [32m+++[m
+ src/locales/en.json    |  3 [32m+++[m
+ src/locales/fr.json    |  3 [32m+++[m
+ src/locales/it.json    |  3 [32m+++[m
+ src/pages/HomePage.tsx | 12 [32m++++++[m[31m------[m
+ 6 files changed, 22 insertions(+), 6 deletions(-)
+
+[33mcommit c7ed3b57a9bf6c88c7b86323967809fb6bcb1de8[m
+Author: anasafanif <anasmsdidrissi@gmail.com>
+Date:   Sun Nov 9 03:15:34 2025 +0100
+
+    chore: add terser build dependency
+
+ package.json | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+
+[33mcommit e2278b1715975a3bb54e5d289183bd64e79cff2d[m
+Author: anasafanif <anasmsdidrissi@gmail.com>
+Date:   Sun Nov 9 02:57:34 2025 +0100
+
+    Refactor Vite configuration and improve header image loading
+    
+    - Updated Vite configuration to use 'terser' for minification and disabled inline source maps for better performance.
+    - Added Terser options to drop console and debugger statements, and to remove comments from the output.
+    - Enhanced the Header component by specifying width and height for the logo image and setting loading to 'eager' for improved loading performance.
+    - Removed unnecessary files related to previous command summaries.
+
+ ...ange(start, min(end, len(lines)))]\357\200\242" | 105 [31m---------------------[m
+ index.html                                         |   1 [32m+[m
+ src/components/layout/Header.tsx                   |  18 [32m+++[m[31m-[m
+ tatus -sb                                          |  97 [31m-------------------[m
+ vite.config.ts                                     |  13 [32m++[m[31m-[m
+ 5 files changed, 28 insertions(+), 206 deletions(-)
+
+[33mcommit 3cc9ba22aa1e3005b2322c72ad4c48b8c9acc4cf[m
+Author: anasafanif <anasmsdidrissi@gmail.com>
+Date:   Sun Nov 9 02:06:02 2025 +0100
+
+    Update CAL_EMBED_URL in BookSessionPage for improved embed functionality
+
+ src/pages/BookSessionPage.tsx | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit 698fc6384ee429b2bb7d99b197af26f67f62217e[m
+Author: anasafanif <anasmsdidrissi@gmail.com>
+Date:   Sun Nov 9 02:01:04 2025 +0100
+
+    - Replaced the dynamic script and style loading with a direct iframe embed for the Cal.com booking widget.
+    - Updated the CAL_EMBED_URL for improved clarity and maintainability.
+    - Removed unnecessary useEffect and global declarations related to Cal.com integration.
+
+ src/pages/BookSessionPage.tsx | 76 [32m+++++[m[31m--------------------------------------[m
+ 1 file changed, 8 insertions(+), 68 deletions(-)
