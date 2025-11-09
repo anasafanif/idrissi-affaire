@@ -16,10 +16,13 @@ const fadeIn = {
 };
 
 const CAL_LINK = 'idrissi-affairs-eycuvs';
+const CAL_ORIGIN = 'https://app.cal.com';
+const CAL_SCRIPT_SRC = `${CAL_ORIGIN}/embed/embed.js`;
+const CAL_STYLE_HREF = `${CAL_ORIGIN}/embed/embed.css`;
 
 declare global {
   interface Window {
-    Cal?: ((...args: unknown[]) => void) & { q?: unknown[] };
+    Cal: ((...args: unknown[]) => void) & { q?: unknown[] };
   }
 }
 
@@ -27,48 +30,54 @@ export function BookSessionPage() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    const initCal = () => {
-      if (window.Cal) {
-        window.Cal('destroy');
-        window.Cal('init', {
-          origin: 'https://cal.com',
-        });
-        window.Cal('inline', {
-          elementOrSelector: '#cal-booking-widget',
-          calLink: CAL_LINK,
-          layout: 'month_view',
-          hideEventTypeDetails: true,
-          hideLandingPageDetails: true,
-        });
-      }
-    };
-
     const styleId = 'cal-embed-styles';
     if (!document.getElementById(styleId)) {
       const link = document.createElement('link');
       link.id = styleId;
       link.rel = 'stylesheet';
-      link.href = 'https://cal.com/embed.css';
+      link.href = CAL_STYLE_HREF;
       document.head.appendChild(link);
     }
+
+    if (!window.Cal) {
+      const queue: unknown[] = [];
+      const calQueue = (...args: unknown[]) => {
+        queue.push(args);
+      };
+      (calQueue as typeof window.Cal).q = queue;
+      window.Cal = calQueue as typeof window.Cal;
+    }
+
+    const initializeInlineWidget = () => {
+      window.Cal('init', { origin: CAL_ORIGIN });
+      window.Cal('inline', {
+        elementOrSelector: '#cal-booking-widget',
+        calLink: CAL_LINK,
+        layout: 'month_view',
+        hideEventTypeDetails: true,
+        hideLandingPageDetails: true,
+      });
+    };
 
     const scriptId = 'cal-embed-script';
     const existingScript = document.getElementById(scriptId) as HTMLScriptElement | null;
 
     if (existingScript) {
-      initCal();
+      initializeInlineWidget();
     } else {
       const script = document.createElement('script');
-      script.src = 'https://cal.com/embed.js';
+      script.src = CAL_SCRIPT_SRC;
       script.async = true;
       script.id = scriptId;
-      script.onload = initCal;
+      script.onload = initializeInlineWidget;
       document.body.appendChild(script);
     }
 
     return () => {
-      if (window.Cal) {
+      try {
         window.Cal('destroy');
+      } catch {
+        // ignore if embed script not ready yet
       }
     };
   }, []);
