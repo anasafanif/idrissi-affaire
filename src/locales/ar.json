@@ -8,6 +8,11 @@
     "scheduleConsultation": "جدولة استشارة",
     "startJourney": "ابدأ رحلتك"
   },
+  "bookSession": {
+    "title": "احجز جلسة استشارية",
+    "subtitle": "اختر الموعد الذي يناسب جدولك.",
+    "instructions": "استخدم التقويم أدناه لحجز جلسة مع فريق إدريسي أفيرز. ستتلقى تأكيدًا فوريًا."
+  },
   "services": {
     "businessFinancial": {
       "title": "الأعمال والمالية",

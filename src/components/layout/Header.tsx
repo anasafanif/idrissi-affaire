@@ -97,13 +97,13 @@ export function Header() {
               variant="ghost"
               className="text-idrissi-blue font-semibold hover:text-idrissi-gold transition-colors"
             >
-              <Link to="/contact">{t('nav.scheduleConsultation')}</Link>
+              <Link to="/book-session">{t('nav.scheduleConsultation')}</Link>
             </Button>
             <Button
               asChild
               className="btn-premium gradient-primary hover:shadow-gold text-white font-semibold shadow-premium"
             >
-              <Link to="/contact">{t('nav.startJourney')}</Link>
+              <Link to="/book-session">{t('nav.startJourney')}</Link>
             </Button>
           </div>
           {/* Mobile Navigation */}
@@ -141,7 +141,7 @@ export function Header() {
                     </div>
                   </div>
                   <Button asChild className="bg-idrissi-blue hover:bg-idrissi-blue/90 text-white mt-6 shadow-premium">
-                    <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>{t('nav.startJourney')}</Link>
+                    <Link to="/book-session" onClick={() => setMobileMenuOpen(false)}>{t('nav.startJourney')}</Link>
                   </Button>
                 </nav>
               </SheetContent>

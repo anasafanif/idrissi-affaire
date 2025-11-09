@@ -8,6 +8,11 @@
     "scheduleConsultation": "Prenota una Consulenza",
     "startJourney": "Inizia il Tuo Percorso"
   },
+  "bookSession": {
+    "title": "Prenota una Consulenza",
+    "subtitle": "Scegli l'orario che si adatta meglio ai tuoi impegni.",
+    "instructions": "Utilizza il calendario qui sotto per programmare una sessione con il team di Idrissi Affairs. Riceverai immediatamente una conferma."
+  },
   "services": {
     "businessFinancial": {
       "title": "Business & Finanziario",

@@ -88,7 +88,7 @@ export function HomePage() {
               <Target className="h-7 w-7" />
             </motion.div>
 
-            <motion.h1
+            <motion.h1 
               className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-idrissi-blue text-balance leading-tight"
               variants={fadeIn}
               initial="hidden"
@@ -110,7 +110,7 @@ export function HomePage() {
                 {t('home.hero.subtitle')}
               </motion.span>
             </motion.h1>
-            <motion.p
+            <motion.p 
               className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground text-balance leading-relaxed"
               variants={fadeIn}
               initial="hidden"
@@ -119,7 +119,7 @@ export function HomePage() {
             >
               {t('home.hero.description')}
             </motion.p>
-            <motion.div
+            <motion.div 
               className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={fadeIn}
               initial="hidden"
@@ -148,7 +148,7 @@ export function HomePage() {
                   className="border border-idrissi-blue/30 bg-white/80 text-idrissi-blue font-semibold shadow-sm hover:border-idrissi-blue hover:bg-idrissi-blue/10 hover:text-idrissi-blue text-lg px-8 py-6 transition-all duration-300 backdrop-blur"
                 >
                   <Link to="/our-story">{t('home.hero.learnMore')}</Link>
-                </Button>
+              </Button>
               </motion.div>
             </motion.div>
 
@@ -268,7 +268,7 @@ export function HomePage() {
                           {t('home.hero.learnMore')} 
                           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                      </Button>
+                    </Button>
                     </motion.div>
                   </CardContent>
                 </Card>
@@ -310,7 +310,7 @@ export function HomePage() {
                           {t('home.hero.learnMore')} 
                           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                      </Button>
+                    </Button>
                     </motion.div>
                   </CardContent>
                 </Card>
@@ -352,7 +352,7 @@ export function HomePage() {
                           {t('home.hero.learnMore')} 
                           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                      </Button>
+                    </Button>
                     </motion.div>
                   </CardContent>
                 </Card>
@@ -540,7 +540,7 @@ export function HomePage() {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Button asChild size="lg" className="btn-premium gradient-gold hover:shadow-gold text-idrissi-blue text-lg px-10 py-6 font-semibold group">
-                    <Link to="/contact" className="flex items-center gap-2">
+                    <Link to="/book-session" className="flex items-center gap-2">
                       {t('home.cta.button')}
                       <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
@@ -561,7 +561,7 @@ export function HomePage() {
                       <Users className="h-5 w-5" />
                       Learn More About Us
                     </Link>
-                  </Button>
+              </Button>
                 </motion.div>
               </motion.div>
 
@@ -584,7 +584,7 @@ export function HomePage() {
                 <div className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-idrissi-gold mb-2">100%</div>
                   <p className="text-blue-100 text-sm">{t('stats.clientSatisfaction')}</p>
-                </div>
+            </div>
               </motion.div>
             </motion.div>
           </div>

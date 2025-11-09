@@ -25,6 +25,7 @@ const OurStoryPage = lazy(() => import('@/pages/OurStoryPage').then((mod) => ({ 
 const BlogPage = lazy(() => import('@/pages/BlogPage').then((mod) => ({ default: mod.BlogPage })));
 const BlogPostPage = lazy(() => import('@/pages/BlogPostPage').then((mod) => ({ default: mod.BlogPostPage })));
 const ContactPage = lazy(() => import('@/pages/ContactPage').then((mod) => ({ default: mod.ContactPage })));
+const BookSessionPage = lazy(() => import('@/pages/BookSessionPage').then((mod) => ({ default: mod.BookSessionPage })));
 
 const PageLoader = () => (
   <div className="min-h-[60vh] w-full flex items-center justify-center bg-pattern">
@@ -72,6 +73,11 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: withSuspense(<ContactPage />),
+    errorElement: <RouteErrorBoundary />,
+  },
+  {
+    path: "/book-session",
+    element: withSuspense(<BookSessionPage />),
     errorElement: <RouteErrorBoundary />,
   },
 ]);

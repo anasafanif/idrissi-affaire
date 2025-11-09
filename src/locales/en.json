@@ -8,6 +8,11 @@
     "scheduleConsultation": "Schedule Consultation",
     "startJourney": "Start Your Journey"
   },
+  "bookSession": {
+    "title": "Book a Consultation",
+    "subtitle": "Choose the meeting slot that best fits your schedule.",
+    "instructions": "Use the scheduler below to reserve a session with the Idrissi Affairs team. You’ll receive an instant confirmation."
+  },
   "services": {
     "businessFinancial": {
       "title": "Business & Financial",

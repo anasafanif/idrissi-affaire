@@ -8,6 +8,11 @@
     "scheduleConsultation": "Planifier une Consultation",
     "startJourney": "Commencer Votre Voyage"
   },
+  "bookSession": {
+    "title": "Réservez une Consultation",
+    "subtitle": "Choisissez le créneau qui correspond le mieux à votre agenda.",
+    "instructions": "Utilisez le calendrier ci-dessous pour planifier une session avec l’équipe Idrissi Affairs. Vous recevrez une confirmation immédiate."
+  },
   "services": {
     "businessFinancial": {
       "title": "Business & Financier",
