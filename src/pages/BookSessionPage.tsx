@@ -1,6 +1,8 @@
 import { MainLayout } from '@/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
+import type { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -14,10 +16,36 @@ const fadeIn = {
   }),
 };
 
-const CAL_EMBED_URL = 'https://cal.com/embed/idrissi-affairs-eycuvs?theme=auto&primaryColor=001122&hide_landing_page_details=1';
+const CAL_LINK = 'https://cal.com/idrissi-affairs-eycuvs';
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'cal-inline-widget': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & {
+        href: string;
+        'data-cal-link'?: string;
+        'data-hide-event-type-details'?: string;
+        'data-hide-branding'?: string;
+        'data-background-color'?: string;
+        'data-text-color'?: string;
+      };
+    }
+  }
+}
 
 export function BookSessionPage() {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const scriptId = 'cal-embed-script';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.src = 'https://cal.com/embed.js';
+      script.async = true;
+      script.id = scriptId;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   return (
     <MainLayout>
@@ -48,12 +76,13 @@ export function BookSessionPage() {
                 {t('bookSession.instructions')}
               </p>
               <div className="relative w-full rounded-2xl overflow-hidden shadow-lg bg-white dark:bg-black">
-                <iframe
-                  src={CAL_EMBED_URL}
-                  title="Idrissi Affairs Booking"
-                  className="w-full min-h-[720px]"
-                  style={{ border: '0px', background: 'transparent' }}
-                  allow="camera; microphone; fullscreen; autoplay"
+                <cal-inline-widget
+                  href={CAL_LINK}
+                  data-hide-event-type-details="true"
+                  data-hide-branding="false"
+                  data-background-color="transparent"
+                  data-text-color="#001122"
+                  className="block w-full min-h-[720px] border-0"
                 />
               </div>
             </motion.div>
