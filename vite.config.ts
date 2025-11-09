@@ -91,8 +91,8 @@ export default ({ mode }: { mode: string }) => {
   return defineConfig({
     plugins: [react(), cloudflare(), splitVendorChunkPlugin(), watchDependenciesPlugin()],
     build: {
-      minify: true,
-      sourcemap: "inline", // Use inline source maps for better error reporting
+      minify: 'terser',
+      sourcemap: false,
       rollupOptions: {
         output: {
           sourcemapExcludeSources: false, // Include original source in source maps
@@ -141,6 +141,15 @@ export default ({ mode }: { mode: string }) => {
         },
       },
       chunkSizeWarningLimit: 1500,
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+        },
+        format: {
+          comments: false,
+        },
+      },
     },
     customLogger: env.VITE_LOGGER_TYPE === 'json' ? customLogger : undefined,
     // Enable source maps in development too

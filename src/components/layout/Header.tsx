@@ -55,7 +55,14 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center gap-2 rtl:order-2">
-            <img src={logo} alt="Idrissi Affairs" className="h-8 w-auto" />
+            <img
+              src={logo}
+              alt="Idrissi Affairs"
+              className="h-8 w-auto"
+              width={128}
+              height={32}
+              loading="eager"
+            />
             <span className="font-display text-xl font-bold text-idrissi-blue">Idrissi Affairs</span>
           </Link>
           {/* Desktop Navigation */}
@@ -118,7 +125,14 @@ export function Header() {
               <SheetContent side="right" className="w-full sm:w-3/4">
                 <div className="flex justify-between items-center mb-6">
                     <Link to="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                        <img src={logo} alt="Idrissi Affairs" className="h-8 w-auto" />
+                        <img
+                          src={logo}
+                          alt="Idrissi Affairs"
+                          className="h-8 w-auto"
+                          width={128}
+                          height={32}
+                          loading="eager"
+                        />
                         <span className="font-display text-xl font-bold text-idrissi-blue">Idrissi Affairs</span>
                     </Link>
                     <div className="flex items-center gap-2">
