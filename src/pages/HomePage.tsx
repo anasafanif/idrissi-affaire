@@ -88,11 +88,11 @@ export function HomePage() {
               <Target className="h-7 w-7" />
             </motion.div>
 
-            <motion.h1 
+            <motion.h1
               className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-idrissi-blue text-balance leading-tight"
-              variants={fadeIn}
-              initial="hidden"
-              animate="visible"
+              initial={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 }}
             >
               <motion.span
                 className="inline-block"
@@ -110,12 +110,11 @@ export function HomePage() {
                 {t('home.hero.subtitle')}
               </motion.span>
             </motion.h1>
-            <motion.p 
+            <motion.p
               className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground text-balance leading-relaxed"
-              variants={fadeIn}
-              initial="hidden"
-              animate="visible"
-              custom={1}
+              initial={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 }}
             >
               {t('home.hero.description')}
             </motion.p>
