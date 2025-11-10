@@ -121,11 +121,25 @@
   },
   "home": {
     "hero": {
-      "title": "Domiciliazione • Creazione aziendale • Contabilità & Fisco • Payroll • Consulenza strategica • Branding • Sviluppo web • Pubblicità & Social • Produzione video • Automazione AI • Visti & Mobilità • Espansione globale",
+      "title": "Esperti completi in servizi aziendali e mobilità",
       "subtitle": "Costruiamo il Tuo Progetto dei Sogni.",
       "description": "Il tuo partner end-to-end a Kenitra per la creazione di imprese, crescita digitale e mobilità internazionale.",
       "getStarted": "Inizia",
-      "learnMore": "Scopri la Nostra Storia"
+      "learnMore": "Scopri la Nostra Storia",
+      "highlights": [
+        "Domiciliazione",
+        "Creazione aziendale",
+        "Contabilità e Fisco",
+        "Payroll",
+        "Consulenza strategica",
+        "Branding & Design",
+        "Sviluppo web",
+        "Ads & Social Media",
+        "Produzione video",
+        "Automazione AI",
+        "Programmi di visti e mobilità",
+        "Espansione globale"
+      ]
     },
     "services": {
       "title": "I Nostri Servizi",

@@ -18,6 +18,8 @@ const fadeIn = {
 };
 export function HomePage() {
   const { t } = useTranslation();
+  const heroHighlightsRaw = t('home.hero.highlights', { returnObjects: true }) as string[] | undefined;
+  const heroHighlights = Array.isArray(heroHighlightsRaw) ? heroHighlightsRaw : [];
   
   return (
     <MainLayout>
@@ -89,7 +91,7 @@ export function HomePage() {
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-idrissi-blue text-balance leading-tight"
+              className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-idrissi-blue text-balance leading-tight"
               initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 }}
@@ -110,6 +112,20 @@ export function HomePage() {
                 {t('home.hero.subtitle')}
               </motion.span>
             </motion.h1>
+            {heroHighlights.length > 0 && (
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-4xl mx-auto">
+                {heroHighlights.map((item) => (
+                  <motion.span
+                    key={item}
+                    className="inline-flex items-center justify-center rounded-full bg-white/80 text-idrissi-blue font-semibold px-4 py-2 text-sm shadow-sm border border-idrissi-blue/10 backdrop-blur-sm"
+                    whileHover={{ scale: 1.04 }}
+                    transition={{ type: "spring", stiffness: 250 }}
+                  >
+                    {item}
+                  </motion.span>
+                ))}
+              </div>
+            )}
             <motion.p
               className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground text-balance leading-relaxed"
               initial={{ opacity: 1, y: 0 }}

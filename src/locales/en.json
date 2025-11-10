@@ -121,11 +121,25 @@
   },
   "home": {
     "hero": {
-      "title": "Domiciliation • Company Creation • Accounting & Tax • Payroll • Strategic Consulting • Branding • Web Development • Ads & Social Media • Video Production • AI Automation • Visa & Mobility Programs • Global Expansion",
+      "title": "Full-Service Business & Mobility Experts",
       "subtitle": "We Build Your Dream Project.",
       "description": "Your end-to-end partner in Kenitra for business creation, digital growth, and international mobility.",
       "getStarted": "Get Started",
-      "learnMore": "Discover Our Story"
+      "learnMore": "Discover Our Story",
+      "highlights": [
+        "Domiciliation",
+        "Company Creation",
+        "Accounting & Tax",
+        "Payroll",
+        "Strategic Consulting",
+        "Branding & Design",
+        "Web Development",
+        "Ads & Social Media",
+        "Video Production",
+        "AI Automation",
+        "Visa & Mobility Programs",
+        "Global Expansion"
+      ]
     },
     "services": {
       "title": "Our Services",
