@@ -113,12 +113,12 @@ export function HomePage() {
               </motion.span>
             </motion.h1>
             {heroHighlights.length > 0 && (
-              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-4xl mx-auto">
+              <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-4xl mx-auto">
                 {heroHighlights.map((item) => (
                   <motion.span
                     key={item}
-                    className="inline-flex items-center justify-center rounded-full bg-white/80 text-idrissi-blue font-semibold px-4 py-2 text-sm shadow-sm border border-idrissi-blue/10 backdrop-blur-sm"
-                    whileHover={{ scale: 1.04 }}
+                    className="inline-flex items-center justify-center rounded-full bg-white/80 text-idrissi-blue font-semibold px-5 py-3 text-sm shadow-premium border border-idrissi-blue/10 backdrop-blur-sm transition-all duration-300 hover:border-idrissi-gold/60 hover:bg-gradient-to-r hover:from-white hover:to-idrissi-gold/10 dark:bg-white/10 dark:text-white dark:border-white/10 dark:hover:border-idrissi-gold/50 dark:hover:from-idrissi-blue/20 dark:hover:to-idrissi-gold/20"
+                    whileHover={{ scale: 1.05, y: -2 }}
                     transition={{ type: "spring", stiffness: 250 }}
                   >
                     {item}
