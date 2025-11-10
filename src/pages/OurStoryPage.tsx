@@ -21,12 +21,6 @@ const teamMembers = [
     twitter: "#",
   },
   {
-    key: "hajarBouamira",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
     key: "hajarErahmani",
     image: hajarErahmaniImage,
     linkedin: "#",
