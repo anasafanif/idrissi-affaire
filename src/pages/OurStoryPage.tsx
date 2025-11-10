@@ -78,7 +78,7 @@ export function OurStoryPage() {
             <h2 className="text-3xl font-display font-bold text-center mb-12">
               <span className="text-gradient">{t('ourStory.team.title')}</span>
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
               {teamMembers.map((member, index) => (
                 <motion.div
                   key={member.key}
