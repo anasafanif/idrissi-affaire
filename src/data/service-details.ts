@@ -105,7 +105,7 @@ export const serviceDetails: ServiceDetail[] = [
             title: "Our Process Includes",
             items: [
               "Legal Structure Advisory: We help you choose the most suitable company form for your business goals, whether it's a Limited Liability Company (SARL), a Public Limited Company (SA), or a Simplified Joint Stock Company (SAS). The SARL is the most common structure in Morocco, ideal for small and medium-sized enterprises due to its flexibility and limited liability for partners.",
-              "Name Reservation: We secure your unique company name by obtaining the "Certificat Négatif" from the Moroccan Office of Industrial and Commercial Property (OMPIC).",
+              "Name Reservation: We secure your unique company name by obtaining the \"Certificat Négatif\" from the Moroccan Office of Industrial and Commercial Property (OMPIC).",
               "Documentation & Registration: Our team will draft your articles of association, manage the deposit of share capital, and file all necessary documents with the Commercial Registry (Registre du Commerce).",
               "Final Formalities: We make sure your company is registered for the tax ID (IF), professional tax (TP), Common Company Identifier (ICE), commercial registry (RC), and social security (CNSS via Damancom), then handle the mandatory publication in the Official Bulletin and a legal journal."
             ],
