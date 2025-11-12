@@ -107,7 +107,7 @@ export const serviceDetails: ServiceDetail[] = [
               "Legal Structure Advisory: We help you choose the most suitable company form for your business goals, whether it's a Limited Liability Company (SARL), a Public Limited Company (SA), or a Simplified Joint Stock Company (SAS). The SARL is the most common structure in Morocco, ideal for small and medium-sized enterprises due to its flexibility and limited liability for partners.",
               "Name Reservation: We secure your unique company name by obtaining the “Certificat Négatif” from the Moroccan Office of Industrial and Commercial Property (OMPIC).",
               "Documentation & Registration: Our team will draft your articles of association, manage the deposit of share capital, and file all necessary documents with the Commercial Registry (Registre du Commerce).",
-              "Final Formalities: We ensure you are correctly registered for tax identification (IF), professional tax (TP), and social security (CNSS), and handle the final publication of your company's establishment."
+              "Final Formalities: We make sure your company is registered for the tax ID (IF), professional tax (TP), Common Company Identifier (ICE), commercial registry (RC), and social security (CNSS via Damancom), then handle the mandatory publication in the Official Bulletin and a legal journal."
             ],
             description: "With our expert handling of every detail, you can focus on what you do best: building your business."
           }
@@ -125,7 +125,7 @@ export const serviceDetails: ServiceDetail[] = [
               "Conseil sur la forme juridique : Nous vous aidons à choisir la structure la plus adaptée à vos objectifs (SARL, SA, SAS). La SARL est la forme la plus répandue au Maroc grâce à sa flexibilité et à la responsabilité limitée des associés.",
               "Réservation du nom : Nous obtenons votre « Certificat négatif » auprès de l’OMPIC pour garantir l’exclusivité de votre dénomination sociale.",
               "Dossiers & immatriculation : Rédaction des statuts, dépôt du capital social, constitution du dossier et immatriculation au Registre du commerce.",
-              "Formalités finales : Inscription à l’identifiant fiscal (IF), à la taxe professionnelle (TP) et à la CNSS, puis publication légale de la création."
+              "Formalités finales : Inscription à l’identifiant fiscal (IF), à la taxe professionnelle (TP), à l’Identifiant Commun de l’Entreprise (ICE), au Registre du Commerce (RC) et à la CNSS (via Damancom), puis publication légale dans le Bulletin officiel et un journal d’annonces légales."
             ],
             description: "En nous confiant chaque étape, vous pouvez vous concentrer pleinement sur le développement de votre activité."
           }
@@ -143,7 +143,7 @@ export const serviceDetails: ServiceDetail[] = [
               "Consulenza sulla forma giuridica: Ti aiutiamo a scegliere la struttura societaria più adatta (SARL, SA, SAS). La SARL è la forma più diffusa in Marocco perché combina flessibilità e responsabilità limitata per i soci.",
               "Prenotazione del nome: Otteniamo per te il “Certificat Négatif” presso l’OMPIC per tutelare l’unicità della tua denominazione.",
               "Documentazione e registrazione: Redigiamo lo statuto, gestiamo il deposito del capitale sociale e presentiamo tutte le pratiche al Registro delle imprese.",
-              "Adempimenti finali: Curamo l’iscrizione all’identificativo fiscale (IF), alla tassa professionale (TP) e alla CNSS, oltre alla pubblicazione legale della costituzione."
+              "Adempimenti finali: Ci occupiamo dell’iscrizione all’identificativo fiscale (IF), alla tassa professionale (TP), all’Identificativo Comune dell’Impresa (ICE), al Registro di Commercio (RC) e alla CNSS (Damancom), oltre alla pubblicazione legale su Gazzetta Ufficiale e giornale autorizzato."
             ],
             description: "Gestiamo ogni dettaglio con precisione, così puoi dedicarti a far crescere il tuo business."
           }
@@ -161,7 +161,7 @@ export const serviceDetails: ServiceDetail[] = [
               "الاستشارة في الشكل القانوني: نساعدك على اختيار الصيغة الأنسب لأهدافك (ش.م.م، ش.م، ش.س.ب). تُعد الشركة ذات المسؤولية المحدودة الأكثر انتشاراً في المغرب بفضل مرونتها ومسؤولية الشركاء المحدودة.",
               "حجز الاسم التجاري: نحصل لك على الشهادة السلبية من المكتب المغربي للملكية الصناعية والتجارية لضمان تميز اسم شركتك.",
               "إعداد الوثائق والتسجيل: نتولى صياغة النظام الأساسي، وإيداع رأس المال، وتكوين الملف وإيداعه في السجل التجاري.",
-              "الإجراءات النهائية: نسجل شركتك للحصول على المعرف الضريبي، والضريبة المهنية، والضمان الاجتماعي (CNSS)، ونتكفل بالإشهار القانوني للتأسيس."
+              "الإجراءات النهائية: نضمن تسجيل شركتك للحصول على المعرف الضريبي (IF)، والضريبة المهنية (TP)، والرقم الموحد للمقاولة (ICE)، والسجل التجاري (RC)، والضمان الاجتماعي عبر Damancom، ونتكفل بالنشر القانوني في الجريدة الرسمية وصحيفة الإعلانات القانونية."
             ],
             description: "مع إدارتنا الدقيقة لكل التفاصيل، يمكنك التركيز على ما تتقن فعله: بناء عملك."
           }
