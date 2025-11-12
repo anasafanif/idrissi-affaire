@@ -35,18 +35,18 @@
       "getStarted": "ابدأ الآن",
       "learnMore": "اكتشف قصتنا",
       "highlights": [
-        "التوطين",
-        "إنشاء الشركات",
-        "المحاسبة والضرائب",
-        "إدارة الرواتب",
-        "الاستشارات الاستراتيجية",
-        "الهوية البصرية والبراندينغ",
-        "تطوير الويب",
-        "الإعلانات ووسائل التواصل",
-        "إنتاج الفيديو",
-        "أتمتة الذكاء الاصطناعي",
-        "برامج التأشيرات والتنقل",
-        "التوسع العالمي"
+        { "label": "التوطين", "slug": "domiciliation" },
+        { "label": "إنشاء الشركات", "slug": "company-creation" },
+        { "label": "المحاسبة والضرائب", "slug": "accounting-tax" },
+        { "label": "إدارة الرواتب", "slug": "payroll" },
+        { "label": "الاستشارات الاستراتيجية", "slug": "strategic-consulting" },
+        { "label": "الهوية البصرية والتصميم", "slug": "branding-design" },
+        { "label": "تطوير الويب", "slug": "web-development" },
+        { "label": "الإعلانات ووسائل التواصل", "slug": "ads-social-media" },
+        { "label": "إنتاج الفيديو", "slug": "video-production" },
+        { "label": "أتمتة الذكاء الاصطناعي", "slug": "ai-automation" },
+        { "label": "برامج التأشيرات والتنقل", "slug": "visa-mobility-programs" },
+        { "label": "التوسع العالمي", "slug": "global-expansion" }
       ]
     },
     "services": {

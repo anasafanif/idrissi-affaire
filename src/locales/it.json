@@ -127,18 +127,18 @@
       "getStarted": "Inizia",
       "learnMore": "Scopri la Nostra Storia",
       "highlights": [
-        "Domiciliazione",
-        "Creazione aziendale",
-        "Contabilità e Fisco",
-        "Payroll",
-        "Consulenza strategica",
-        "Branding & Design",
-        "Sviluppo web",
-        "Ads & Social Media",
-        "Produzione video",
-        "Automazione AI",
-        "Programmi di visti e mobilità",
-        "Espansione globale"
+        { "label": "Domiciliazione", "slug": "domiciliation" },
+        { "label": "Creazione aziendale", "slug": "company-creation" },
+        { "label": "Contabilità & Fisco", "slug": "accounting-tax" },
+        { "label": "Payroll", "slug": "payroll" },
+        { "label": "Consulenza strategica", "slug": "strategic-consulting" },
+        { "label": "Branding & Design", "slug": "branding-design" },
+        { "label": "Sviluppo web", "slug": "web-development" },
+        { "label": "Ads & Social Media", "slug": "ads-social-media" },
+        { "label": "Produzione video", "slug": "video-production" },
+        { "label": "Automazione IA", "slug": "ai-automation" },
+        { "label": "Programmi di visti & mobilità", "slug": "visa-mobility-programs" },
+        { "label": "Espansione globale", "slug": "global-expansion" }
       ]
     },
     "services": {

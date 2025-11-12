@@ -16,10 +16,14 @@ const fadeIn = {
     },
   }),
 };
+type HeroHighlight = { label: string; slug: string };
+
 export function HomePage() {
   const { t } = useTranslation();
-  const heroHighlightsRaw = t('home.hero.highlights', { returnObjects: true }) as string[] | undefined;
-  const heroHighlights = Array.isArray(heroHighlightsRaw) ? heroHighlightsRaw : [];
+  const heroHighlightsRaw = t('home.hero.highlights', { returnObjects: true }) as HeroHighlight[] | HeroHighlight | undefined;
+  const heroHighlights = Array.isArray(heroHighlightsRaw)
+    ? heroHighlightsRaw.filter((item): item is HeroHighlight => !!item && typeof item === 'object' && 'label' in item && 'slug' in item)
+    : [];
   
   return (
     <MainLayout>
@@ -90,7 +94,7 @@ export function HomePage() {
               <Target className="h-7 w-7" />
             </motion.div>
 
-            <motion.h1
+            <motion.h1 
               className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-idrissi-blue text-balance leading-tight"
               initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
@@ -114,19 +118,24 @@ export function HomePage() {
             </motion.h1>
             {heroHighlights.length > 0 && (
               <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-4xl mx-auto">
-                {heroHighlights.map((item) => (
-                  <motion.span
-                    key={item}
-                    className="inline-flex items-center justify-center rounded-full bg-white/80 text-idrissi-blue font-semibold px-5 py-3 text-sm shadow-premium border border-idrissi-blue/10 backdrop-blur-sm transition-all duration-300 hover:border-idrissi-gold/60 hover:bg-gradient-to-r hover:from-white hover:to-idrissi-gold/10 dark:bg-white/10 dark:text-white dark:border-white/10 dark:hover:border-idrissi-gold/50 dark:hover:from-idrissi-blue/20 dark:hover:to-idrissi-gold/20"
+                {heroHighlights.map(({ label, slug }) => (
+                  <motion.div
+                    key={slug}
                     whileHover={{ scale: 1.05, y: -2 }}
                     transition={{ type: "spring", stiffness: 250 }}
+                    className="w-full"
                   >
-                    {item}
-                  </motion.span>
+                    <Link
+                      to={`/services/${slug}`}
+                      className="inline-flex w-full items-center justify-center rounded-full bg-white/80 text-idrissi-blue font-semibold px-5 py-3 text-sm shadow-premium border border-idrissi-blue/10 backdrop-blur-sm transition-all duration-300 hover:border-idrissi-gold/60 hover:bg-gradient-to-r hover:from-white hover:to-idrissi-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-idrissi-gold dark:bg-white/10 dark:text-white dark:border-white/10 dark:hover:border-idrissi-gold/50 dark:hover:from-idrissi-blue/20 dark:hover:to-idrissi-gold/20"
+                    >
+                      {label}
+                    </Link>
+                  </motion.div>
                 ))}
               </div>
             )}
-            <motion.p
+            <motion.p 
               className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground text-balance leading-relaxed"
               initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
@@ -283,7 +292,7 @@ export function HomePage() {
                           {t('home.services.pillars.foundation.ctaLabel')} 
                           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                      </Button>
+                    </Button>
                     </motion.div>
                   </CardContent>
                 </Card>
@@ -325,7 +334,7 @@ export function HomePage() {
                           {t('home.services.pillars.presence.ctaLabel')} 
                           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                      </Button>
+                    </Button>
                     </motion.div>
                   </CardContent>
                 </Card>
@@ -367,7 +376,7 @@ export function HomePage() {
                           {t('home.services.pillars.horizons.ctaLabel')} 
                           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                      </Button>
+                    </Button>
                     </motion.div>
                   </CardContent>
                 </Card>

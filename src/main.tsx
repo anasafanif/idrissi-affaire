@@ -26,6 +26,9 @@ const BlogPage = lazy(() => import('@/pages/BlogPage').then((mod) => ({ default:
 const BlogPostPage = lazy(() => import('@/pages/BlogPostPage').then((mod) => ({ default: mod.BlogPostPage })));
 const ContactPage = lazy(() => import('@/pages/ContactPage').then((mod) => ({ default: mod.ContactPage })));
 const BookSessionPage = lazy(() => import('@/pages/BookSessionPage').then((mod) => ({ default: mod.BookSessionPage })));
+const ServiceDetailPage = lazy(() =>
+  import('@/pages/services/ServiceDetailPage').then((mod) => ({ default: mod.ServiceDetailPage }))
+);
 
 const PageLoader = () => (
   <div className="min-h-[60vh] w-full flex items-center justify-center bg-pattern">
@@ -53,6 +56,11 @@ const router = createBrowserRouter([
   {
     path: "/services/international-mobility",
     element: withSuspense(<InternationalMobilityPage />),
+    errorElement: <RouteErrorBoundary />,
+  },
+  {
+    path: "/services/:slug",
+    element: withSuspense(<ServiceDetailPage />),
     errorElement: <RouteErrorBoundary />,
   },
   {

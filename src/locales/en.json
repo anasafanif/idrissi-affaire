@@ -127,18 +127,18 @@
       "getStarted": "Get Started",
       "learnMore": "Discover Our Story",
       "highlights": [
-        "Domiciliation",
-        "Company Creation",
-        "Accounting & Tax",
-        "Payroll",
-        "Strategic Consulting",
-        "Branding & Design",
-        "Web Development",
-        "Ads & Social Media",
-        "Video Production",
-        "AI Automation",
-        "Visa & Mobility Programs",
-        "Global Expansion"
+        { "label": "Domiciliation", "slug": "domiciliation" },
+        { "label": "Company Creation", "slug": "company-creation" },
+        { "label": "Accounting & Tax", "slug": "accounting-tax" },
+        { "label": "Payroll", "slug": "payroll" },
+        { "label": "Strategic Consulting", "slug": "strategic-consulting" },
+        { "label": "Branding & Design", "slug": "branding-design" },
+        { "label": "Web Development", "slug": "web-development" },
+        { "label": "Ads & Social Media", "slug": "ads-social-media" },
+        { "label": "Video Production", "slug": "video-production" },
+        { "label": "AI Automation", "slug": "ai-automation" },
+        { "label": "Visa & Mobility Programs", "slug": "visa-mobility-programs" },
+        { "label": "Global Expansion", "slug": "global-expansion" }
       ]
     },
     "services": {
