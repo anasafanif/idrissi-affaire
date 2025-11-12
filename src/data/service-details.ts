@@ -43,15 +43,15 @@ export const serviceDetails: ServiceDetail[] = [
         title: "Domiciliation",
         headline: "Une adresse prestigieuse pour votre entreprise au Maroc",
         intro:
-          "Établissez une présence crédible et professionnelle au Maroc sans supporter les coûts d’un bureau physique. Notre service de domiciliation vous fournit une adresse légale, exigence incontournable pour toute création d’entreprise. Idéal pour les start-up, les filiales internationales et les entrepreneurs qui recherchent flexibilité et image valorisante.",
+          "Établissez une présence crédible et professionnelle au Maroc sans supporter les coûts d'un bureau physique. Notre service de domiciliation vous fournit une adresse légale, exigence incontournable pour toute création d'entreprise. Idéal pour les start-up, les filiales internationales et les entrepreneurs qui recherchent flexibilité et image valorisante.",
         sections: [
           {
             title: "Notre offre de domiciliation comprend",
             items: [
-              "Adresse légale enregistrée : Bénéficiez d’une adresse prestigieuse dans un quartier d’affaires, conforme à toutes les obligations du Registre du commerce.",
+              "Adresse légale enregistrée : Bénéficiez d'une adresse prestigieuse dans un quartier d'affaires, conforme à toutes les obligations du Registre du commerce.",
               "Gestion du courrier : Nous recevons, traitons et réexpédions votre correspondance officielle en toute sécurité et efficacité.",
               "Image de marque renforcée : Une adresse professionnelle dans un pôle reconnu renforce la crédibilité de votre entreprise auprès des clients, partenaires et institutions financières.",
-              "Flexibilité et maîtrise des coûts : Évitez les frais et engagements d’un bail commercial tout en conservant une présence légale parfaitement conforme."
+              "Flexibilité et maîtrise des coûts : Évitez les frais et engagements d'un bail commercial tout en conservant une présence légale parfaitement conforme."
             ]
           }
         ]
@@ -60,7 +60,7 @@ export const serviceDetails: ServiceDetail[] = [
         title: "Domiciliazione",
         headline: "Un indirizzo prestigioso per la tua azienda in Marocco",
         intro:
-          "Costruisci una presenza credibile e professionale in Marocco senza i costi di un ufficio fisico. Il nostro servizio di domiciliazione ti fornisce un indirizzo legale registrato, requisito essenziale per costituire una società. È la soluzione ideale per startup, filiali internazionali e imprenditori che desiderano flessibilità e un’immagine distinta.",
+          "Costruisci una presenza credibile e professionale in Marocco senza i costi di un ufficio fisico. Il nostro servizio di domiciliazione ti fornisce un indirizzo legale registrato, requisito essenziale per costituire una società. È la soluzione ideale per startup, filiali internazionali e imprenditori che desiderano flessibilità e un'immagine distinta.",
         sections: [
           {
             title: "Il nostro pacchetto di domiciliazione include",
@@ -105,7 +105,7 @@ export const serviceDetails: ServiceDetail[] = [
             title: "Our Process Includes",
             items: [
               "Legal Structure Advisory: We help you choose the most suitable company form for your business goals, whether it's a Limited Liability Company (SARL), a Public Limited Company (SA), or a Simplified Joint Stock Company (SAS). The SARL is the most common structure in Morocco, ideal for small and medium-sized enterprises due to its flexibility and limited liability for partners.",
-              "Name Reservation: We secure your unique company name by obtaining the “Certificat Négatif” from the Moroccan Office of Industrial and Commercial Property (OMPIC).",
+              "Name Reservation: We secure your unique company name by obtaining the "Certificat Négatif" from the Moroccan Office of Industrial and Commercial Property (OMPIC).",
               "Documentation & Registration: Our team will draft your articles of association, manage the deposit of share capital, and file all necessary documents with the Commercial Registry (Registre du Commerce).",
               "Final Formalities: We make sure your company is registered for the tax ID (IF), professional tax (TP), Common Company Identifier (ICE), commercial registry (RC), and social security (CNSS via Damancom), then handle the mandatory publication in the Official Bulletin and a legal journal."
             ],
@@ -114,36 +114,36 @@ export const serviceDetails: ServiceDetail[] = [
         ]
       },
       fr: {
-        title: "Création d’entreprise",
+        title: "Création d'entreprise",
         headline: "Lancez votre projet marocain en toute confiance",
         intro:
-          "Se lancer dans l’entrepreneuriat au Maroc est une aventure enthousiasmante. Poser le bon socle juridique est la première étape décisive vers la réussite. Nous maîtrisons les spécificités du droit des sociétés marocain pour rendre votre création d’entreprise fluide et sécurisée, du choix de la structure à l’immatriculation finale.",
+          "Se lancer dans l'entrepreneuriat au Maroc est une aventure enthousiasmante. Poser le bon socle juridique est la première étape décisive vers la réussite. Nous maîtrisons les spécificités du droit des sociétés marocain pour rendre votre création d'entreprise fluide et sécurisée, du choix de la structure à l'immatriculation finale.",
         sections: [
           {
             title: "Notre accompagnement comprend",
             items: [
               "Conseil sur la forme juridique : Nous vous aidons à choisir la structure la plus adaptée à vos objectifs (SARL, SA, SAS). La SARL est la forme la plus répandue au Maroc grâce à sa flexibilité et à la responsabilité limitée des associés.",
-              "Réservation du nom : Nous obtenons votre « Certificat négatif » auprès de l’OMPIC pour garantir l’exclusivité de votre dénomination sociale.",
+              "Réservation du nom : Nous obtenons votre « Certificat négatif » auprès de l'OMPIC pour garantir l'exclusivité de votre dénomination sociale.",
               "Dossiers & immatriculation : Rédaction des statuts, dépôt du capital social, constitution du dossier et immatriculation au Registre du commerce.",
-              "Formalités finales : Inscription à l’identifiant fiscal (IF), à la taxe professionnelle (TP), à l’Identifiant Commun de l’Entreprise (ICE), au Registre du Commerce (RC) et à la CNSS (via Damancom), puis publication légale dans le Bulletin officiel et un journal d’annonces légales."
+              "Formalités finales : Inscription à l'identifiant fiscal (IF), à la taxe professionnelle (TP), à l'Identifiant Commun de l'Entreprise (ICE), au Registre du Commerce (RC) et à la CNSS (via Damancom), puis publication légale dans le Bulletin officiel et un journal d'annonces légales."
             ],
             description: "En nous confiant chaque étape, vous pouvez vous concentrer pleinement sur le développement de votre activité."
           }
         ]
       },
       it: {
-        title: "Creazione d’impresa",
+        title: "Creazione d'impresa",
         headline: "Avvia la tua attività in Marocco con tranquillità",
         intro:
-          "Iniziare un nuovo progetto imprenditoriale in Marocco è un’opportunità entusiasmante e porre basi legali solide è il primo passo fondamentale. Siamo specializzati nelle normative societarie marocchine per rendere semplice ed efficiente l’intero processo, dalla scelta della struttura alla registrazione definitiva.",
+          "Iniziare un nuovo progetto imprenditoriale in Marocco è un'opportunità entusiasmante e porre basi legali solide è il primo passo fondamentale. Siamo specializzati nelle normative societarie marocchine per rendere semplice ed efficiente l'intero processo, dalla scelta della struttura alla registrazione definitiva.",
         sections: [
           {
             title: "Il nostro processo comprende",
             items: [
               "Consulenza sulla forma giuridica: Ti aiutiamo a scegliere la struttura societaria più adatta (SARL, SA, SAS). La SARL è la forma più diffusa in Marocco perché combina flessibilità e responsabilità limitata per i soci.",
-              "Prenotazione del nome: Otteniamo per te il “Certificat Négatif” presso l’OMPIC per tutelare l’unicità della tua denominazione.",
+              "Prenotazione del nome: Otteniamo per te il "Certificat Négatif" presso l'OMPIC per tutelare l'unicità della tua denominazione.",
               "Documentazione e registrazione: Redigiamo lo statuto, gestiamo il deposito del capitale sociale e presentiamo tutte le pratiche al Registro delle imprese.",
-              "Adempimenti finali: Ci occupiamo dell’iscrizione all’identificativo fiscale (IF), alla tassa professionale (TP), all’Identificativo Comune dell’Impresa (ICE), al Registro di Commercio (RC) e alla CNSS (Damancom), oltre alla pubblicazione legale su Gazzetta Ufficiale e giornale autorizzato."
+              "Adempimenti finali: Ci occupiamo dell'iscrizione all'identificativo fiscale (IF), alla tassa professionale (TP), all'Identificativo Comune dell'Impresa (ICE), al Registro di Commercio (RC) e alla CNSS (Damancom), oltre alla pubblicazione legale su Gazzetta Ufficiale e giornale autorizzato."
             ],
             description: "Gestiamo ogni dettaglio con precisione, così puoi dedicarti a far crescere il tuo business."
           }
@@ -162,8 +162,7 @@ export const serviceDetails: ServiceDetail[] = [
               "حجز الاسم التجاري: نحصل لك على الشهادة السلبية من المكتب المغربي للملكية الصناعية والتجارية لضمان تميز اسم شركتك.",
               "إعداد الوثائق والتسجيل: نتولى صياغة النظام الأساسي، وإيداع رأس المال، وتكوين الملف وإيداعه في السجل التجاري.",
               "الإجراءات النهائية: نضمن تسجيل شركتك للحصول على المعرف الضريبي (IF)، والضريبة المهنية (TP)، والرقم الموحد للمقاولة (ICE)، والسجل التجاري (RC)، والضمان الاجتماعي عبر Damancom، ونتكفل بالنشر القانوني في الجريدة الرسمية وصحيفة الإعلانات القانونية."
-            ],
-            description: "مع إدارتنا الدقيقة لكل التفاصيل، يمكنك التركيز على ما تتقن فعله: بناء عملك."
+            ]
           }
         ]
       }
@@ -194,7 +193,7 @@ export const serviceDetails: ServiceDetail[] = [
         title: "Comptabilité & Fiscalité",
         headline: "Une conformité comptable et fiscale maîtrisée au Maroc",
         intro:
-          "Naviguer dans l’environnement financier marocain exige rigueur, vigilance et connaissance approfondie des règles locales. Nous veillons à ce que votre entreprise reste parfaitement conforme aux obligations comptables et fiscales, pour une gestion financière claire et sereine.",
+          "Naviguer dans l'environnement financier marocain exige rigueur, vigilance et connaissance approfondie des règles locales. Nous veillons à ce que votre entreprise reste parfaitement conforme aux obligations comptables et fiscales, pour une gestion financière claire et sereine.",
         sections: [
           {
             title: "Nos services principaux",
@@ -202,7 +201,7 @@ export const serviceDetails: ServiceDetail[] = [
               "Comptabilité complète : Tenue comptable selon le Plan Comptable Général marocain, élaboration des états financiers et dépôt des liasses annuelles.",
               "Impôt sur les sociétés (IS) : Application des taux progressifs en fonction du bénéfice imposable, calcul des acomptes et préparation des déclarations fiscales.",
               "Taxe sur la valeur ajoutée (TVA) : Gestion des déclarations périodiques, respect des taux applicables (taux normal à 20 % et taux réduits) et sécurisation des versements.",
-              "Optimisation fiscale : Analyse de votre situation pour identifier les leviers d’optimisation dans le strict respect du cadre légal marocain."
+              "Optimisation fiscale : Analyse de votre situation pour identifier les leviers d'optimisation dans le strict respect du cadre légal marocain."
             ],
             description: "Confiez-nous la gestion détaillée de vos finances pour soutenir durablement la croissance de votre entreprise."
           }
@@ -270,7 +269,7 @@ export const serviceDetails: ServiceDetail[] = [
         title: "Paie",
         headline: "Une gestion de la paie fiable et conforme",
         intro:
-          "La paie est une fonction stratégique qui exige précision, ponctualité et maîtrise des obligations sociales. Nous sécurisons l’ensemble du processus pour garantir un versement juste et ponctuel tout en assurant votre conformité au droit du travail et à la CNSS.",
+          "La paie est une fonction stratégique qui exige précision, ponctualité et maîtrise des obligations sociales. Nous sécurisons l'ensemble du processus pour garantir un versement juste et ponctuel tout en assurant votre conformité au droit du travail et à la CNSS.",
         sections: [
           {
             title: "Nos solutions de paie couvrent",
@@ -287,7 +286,7 @@ export const serviceDetails: ServiceDetail[] = [
         title: "Payroll",
         headline: "Gestione paghe precisa e conforme",
         intro:
-          "La gestione delle paghe richiede puntualità, accuratezza e conoscenza delle normative sul lavoro. Ottimizziamo l’intero processo per garantire pagamenti corretti e tempestivi, assicurando la piena conformità alle regole marocchine e alla CNSS.",
+          "La gestione delle paghe richiede puntualità, accuratezza e conoscenza delle normative sul lavoro. Ottimizziamo l'intero processo per garantire pagamenti corretti e tempestivi, assicurando la piena conformità alle regole marocchine e alla CNSS.",
         sections: [
           {
             title: "Le nostre soluzioni payroll includono",
@@ -343,13 +342,13 @@ export const serviceDetails: ServiceDetail[] = [
         title: "Conseil stratégique",
         headline: "Tracer votre trajectoire de croissance durable",
         intro:
-          "Dans un environnement concurrentiel, disposer d’une stratégie claire et opérationnelle est indispensable. Nos consultants apportent l’analyse, le recul et les recommandations dont vous avez besoin pour prendre des décisions à fort impact.",
+          "Dans un environnement concurrentiel, disposer d'une stratégie claire et opérationnelle est indispensable. Nos consultants apportent l'analyse, le recul et les recommandations dont vous avez besoin pour prendre des décisions à fort impact.",
         sections: [
           {
-            title: "Nos domaines d’expertise",
+            title: "Nos domaines d'expertise",
             items: [
-              "Stratégie corporate et business : Définition des objectifs à long terme et déploiement de plans d’action cohérents.",
-              "Accès au marché & croissance : Identifier les marchés porteurs et construire des plans d’entrée et d’expansion basés sur les données.",
+              "Stratégie corporate et business : Définition des objectifs à long terme et déploiement de plans d'action cohérents.",
+              "Accès au marché & croissance : Identifier les marchés porteurs et construire des plans d'entrée et d'expansion basés sur les données.",
               "Innovation du business model : Repenser votre proposition de valeur, optimiser vos revenus et bâtir un modèle plus résilient.",
               "Efficience opérationnelle : Diagnostic des process, réduction des coûts et amélioration de la productivité."
             ]
@@ -422,7 +421,7 @@ export const serviceDetails: ServiceDetail[] = [
             items: [
               "Stratégie de marque & identité : Définition de votre mission, vision et positionnement, création du logo, de la palette de couleurs et des typographies.",
               "Design graphique : Supports marketing, cartes professionnelles, signalétique, packaging et présentations professionnelles.",
-              "Design UI/UX : Interfaces intuitives et engageantes pour sites web et applications, au service de l’expérience utilisateur et de la conversion."
+              "Design UI/UX : Interfaces intuitives et engageantes pour sites web et applications, au service de l'expérience utilisateur et de la conversion."
             ]
           }
         ]
@@ -431,14 +430,14 @@ export const serviceDetails: ServiceDetail[] = [
         title: "Branding & Design",
         headline: "Creare brand che colpiscono e coinvolgono",
         intro:
-          "Il tuo brand è l’esperienza complessiva che offri ai clienti. Collaboriamo con te per creare un’identità forte e coerente che esprima l’essenza della tua azienda, differenziandoti dalla concorrenza e generando relazioni durature.",
+          "Il tuo brand è l'esperienza complessiva che offri ai clienti. Collaboriamo con te per creare un'identità forte e coerente che esprima l'essenza della tua azienda, differenziandoti dalla concorrenza e generando relazioni durature.",
         sections: [
           {
             title: "I nostri servizi creativi",
             items: [
-              "Brand strategy & identity: Definiamo mission, vision e positioning, traducendoli in un’identità visiva completa (logo, palette colori, tipografia).",
+              "Brand strategy & identity: Definiamo mission, vision e positioning, traducendoli in un'identità visiva completa (logo, palette colori, tipografia).",
               "Graphic design: Materiale marketing, biglietti da visita, packaging, presentazioni e molto altro.",
-              "UI/UX design: Progettiamo interfacce intuitive e coinvolgenti per siti e app, migliorando l’esperienza utente e le conversioni."
+              "UI/UX design: Progettiamo interfacce intuitive e coinvolgenti per siti e app, migliorando l'esperienza utente e le conversioni."
             ]
           }
         ]
@@ -468,7 +467,7 @@ export const serviceDetails: ServiceDetail[] = [
         title: "Web & App Development",
         headline: "Engineering Digital Experiences That Drive Results",
         intro:
-          "In today's digital-first world, your online presence is your most powerful asset. It’s your virtual storefront, your lead-generation engine, and a primary touchpoint for your customers. Our development team builds high-performance, secure, and scalable websites and applications that are not only visually impressive but also engineered to meet your specific business objectives.",
+          "In today's digital-first world, your online presence is your most powerful asset. It's your virtual storefront, your lead-generation engine, and a primary touchpoint for your customers. Our development team builds high-performance, secure, and scalable websites and applications that are not only visually impressive but also engineered to meet your specific business objectives.",
         sections: [
           {
             title: "Our Web Development Solutions",
@@ -493,12 +492,12 @@ export const serviceDetails: ServiceDetail[] = [
         title: "Développement web & applicatif",
         headline: "Concevoir des expériences digitales performantes",
         intro:
-          "Votre présence en ligne est devenue l’actif le plus puissant de votre entreprise. Nous développons des sites et applications hautes performances, sécurisés et scalables, pensés pour atteindre vos objectifs business.",
+          "Votre présence en ligne est devenue l'actif le plus puissant de votre entreprise. Nous développons des sites et applications hautes performances, sécurisés et scalables, pensés pour atteindre vos objectifs business.",
         sections: [
           {
             title: "Nos solutions web",
             items: [
-              "Sites sur-mesure : Conception de plateformes personnalisées, du site corporate à l’application web complexe.",
+              "Sites sur-mesure : Conception de plateformes personnalisées, du site corporate à l'application web complexe.",
               "E-commerce : Boutiques en ligne robustes, ergonomiques et orientées conversion.",
               "Design responsive : Expérience optimale sur desktop, tablette et mobile."
             ]
@@ -531,10 +530,10 @@ export const serviceDetails: ServiceDetail[] = [
           {
             title: "Sviluppo app mobile e web",
             description:
-              "Supera i limiti del browser e costruisci relazioni durature con applicazioni potenti e facili da usare. Un’app ben progettata aumenta la fedeltà, semplifica i processi e apre nuove entrate.",
+              "Supera i limiti del browser e costruisci relazioni durature con applicazioni potenti e facili da usare. Un'app ben progettata aumenta la fedeltà, semplifica i processi e apre nuove entrate.",
             items: [
               "App native e ibride: Applicazioni iOS e Android ad alte prestazioni e soluzioni ibride con un unico codice per ridurre tempi e costi.",
-              "Progressive Web App: Esperienza simile a un’app direttamente dal browser, veloce, offline-ready e conveniente."
+              "Progressive Web App: Esperienza simile a un'app direttamente dal browser, veloce, offline-ready e conveniente."
             ]
           }
         ]
@@ -589,7 +588,7 @@ export const serviceDetails: ServiceDetail[] = [
         title: "Publicité & réseaux sociaux",
         headline: "Amplifiez votre message et engagez votre audience",
         intro:
-          "Touchez vos clients là où ils sont le plus actifs. Nos campagnes digitales et social media développent votre notoriété, stimulent l’engagement et génèrent des leads qualifiés.",
+          "Touchez vos clients là où ils sont le plus actifs. Nos campagnes digitales et social media développent votre notoriété, stimulent l'engagement et génèrent des leads qualifiés.",
         sections: [
           {
             title: "Nos prestations marketing",
@@ -658,7 +657,7 @@ export const serviceDetails: ServiceDetail[] = [
         title: "Production vidéo",
         headline: "Racontez votre histoire en vidéo",
         intro:
-          "La vidéo est le média le plus efficace pour capter l’attention et susciter l’émotion. Nous prenons en charge l’ensemble du processus créatif pour produire des contenus à fort impact.",
+          "La vidéo est le média le plus efficace pour capter l'attention et susciter l'émotion. Nous prenons en charge l'ensemble du processus créatif pour produire des contenus à fort impact.",
         sections: [
           {
             title: "Nos expertises",
@@ -674,14 +673,14 @@ export const serviceDetails: ServiceDetail[] = [
         title: "Produzione video",
         headline: "Racconta la tua storia attraverso il video",
         intro:
-          "Il video è il mezzo più efficace per coinvolgere ed emozionare il pubblico. Gestiamo ogni fase, dall’idea al montaggio finale, per creare contenuti di forte impatto.",
+          "Il video è il mezzo più efficace per coinvolgere ed emozionare il pubblico. Gestiamo ogni fase, dall'idea al montaggio finale, per creare contenuti di forte impatto.",
         sections: [
           {
             title: "Le nostre capacità produttive",
             items: [
               "Video corporate: Racconta cultura, missione e valori con un corporate video professionale.",
               "Video promozionali e di prodotto: Genera entusiasmo e vendite con contenuti dinamici focalizzati sulle tue offerte.",
-              "Contenuti per social media: Produciamo video brevi ottimizzati per le piattaforme social con l’obiettivo di aumentare l’engagement."
+              "Contenuti per social media: Produciamo video brevi ottimizzati per le piattaforme social con l'obiettivo di aumentare l'engagement."
             ]
           }
         ]
@@ -724,16 +723,16 @@ export const serviceDetails: ServiceDetail[] = [
         ]
       },
       fr: {
-        title: "Automatisation par l’IA",
-        headline: "Gagnez en efficacité grâce à l’intelligence artificielle",
+        title: "Automatisation par l'IA",
+        headline: "Gagnez en efficacité grâce à l'intelligence artificielle",
         intro:
-          "L’IA est un levier puissant pour automatiser les tâches répétitives, réduire les erreurs humaines et libérer du temps pour des missions à forte valeur ajoutée. Nous concevons des solutions sur-mesure adaptées à vos enjeux.",
+          "L'IA est un levier puissant pour automatiser les tâches répétitives, réduire les erreurs humaines et libérer du temps pour des missions à forte valeur ajoutée. Nous concevons des solutions sur-mesure adaptées à vos enjeux.",
         sections: [
           {
             title: "Notre accompagnement",
             items: [
               "Optimisation des processus : Analyse de vos workflows pour identifier les tâches automatisables (saisie, traitement documentaire, support client).",
-              "Outils intelligents : Déploiement de chatbots, RPA et outils d’analytique prédictive pour accélérer la prise de décision.",
+              "Outils intelligents : Déploiement de chatbots, RPA et outils d'analytique prédictive pour accélérer la prise de décision.",
               "Insights pilotés par la donnée : Exploitation de vos données en temps réel pour anticiper les tendances, comprendre le comportement client et limiter les risques."
             ]
           }
@@ -741,9 +740,9 @@ export const serviceDetails: ServiceDetail[] = [
       },
       it: {
         title: "Automazione con IA",
-        headline: "Efficienza operativa grazie all’intelligenza artificiale",
+        headline: "Efficienza operativa grazie all'intelligenza artificiale",
         intro:
-          "Sfrutta la potenza dell’IA per automatizzare attività ripetitive, ridurre gli errori e liberare il tuo team da lavori a basso valore. Progettiamo soluzioni su misura che favoriscono produttività e crescita.",
+          "Sfrutta la potenza dell'IA per automatizzare attività ripetitive, ridurre gli errori e liberare il tuo team da lavori a basso valore. Progettiamo soluzioni su misura che favoriscono produttività e crescita.",
         sections: [
           {
             title: "Cosa possiamo fare per te",
@@ -778,68 +777,72 @@ export const serviceDetails: ServiceDetail[] = [
     translations: {
       en: {
         title: "Visa & Mobility Programs",
-        headline: "Seamless Immigration and Mobility Solutions for Morocco",
+        headline: "Optimize Your Schengen & UK Visa Application",
         intro:
-          "Bringing international talent to Morocco or navigating your own move requires a clear understanding of the country's immigration laws. Our mobility experts specialize in managing the entire process for foreign professionals, ensuring a smooth and compliant transition into the Moroccan workforce.",
+          "Preparing a visa application for the Schengen Area or the United Kingdom is a demanding process where every detail matters. An incomplete or poorly structured file often leads to a refusal, creating frustration and wasting time. Our specialists assemble robust, meticulously organized applications to maximize your chances of approval and help you plan your trip with complete peace of mind.",
         sections: [
           {
-            title: "Our Immigration Services Include",
+            title: "Our Services Include",
             items: [
-              "Work Permit (Autorisation de Travail): For most foreign nationals, securing a work permit is the first essential step. As the employer, you must initiate this process through the Ministry of Labor. We manage the application, which includes justifying the need for a foreign national and providing a valid employment contract.",
-              "Long-Stay Visas: Once the work permit is approved, we guide your employees through obtaining the necessary long-stay visa from the Moroccan embassy or consulate in their country of residence.",
-              "Residence Permit (Carte de Séjour): Upon arrival in Morocco, foreign nationals must apply for a residence permit within a short timeframe. We ensure this critical step is completed correctly, finalizing their legal right to live and work in the country.",
-              "Compliance & Advisory: We keep you informed of all legal obligations for both the employer and the employee, ensuring full compliance with Moroccan immigration regulations throughout their employment."
+              "Strategic profile analysis: Comprehensive assessment of your personal, professional, and financial situation to highlight your strengths and define the most persuasive strategy for consular authorities.",
+              "Tailored file assembly: We collect, verify, and organize all required documentation, complete forms with precision, and craft compelling cover letters that clearly explain the purpose of your trip.",
+              "Administrative and legal structuring: For freelancers, entrepreneurs, and independent professionals, we advise on the most suitable legal setup to present a stable, credible profile that reassures the consulate.",
+              "Interview preparation: Focused coaching for the consular appointment or submission with TLS/VFS, anticipating potential questions so you can present your travel plan coherently and confidently.",
+              "Monitoring and compliance: Ongoing watch on consular requirements and updates to ensure your file remains perfectly compliant with current regulations at the moment of submission."
             ]
           }
         ]
       },
       fr: {
         title: "Programmes visas & mobilité",
-        headline: "Des démarches d’immigration fluides et conformes",
+        headline: "Optimisez votre demande de visa Schengen & UK",
         intro:
-          "Accueillir des talents internationaux ou s’installer soi-même au Maroc nécessite une maîtrise fine de la réglementation. Nos spécialistes gèrent l’ensemble des formalités pour assurer une transition sereine et conforme.",
+          "Préparer une demande de visa pour l'espace Schengen ou le Royaume-Uni est un processus exigeant où chaque détail compte. Un dossier mal préparé ou incomplet mène souvent à un refus, engendrant frustration et perte de temps. Nos experts se spécialisent dans le montage de dossiers solides et parfaitement structurés pour maximiser vos chances d'approbation et vous permettre de planifier votre voyage en toute sérénité.",
         sections: [
           {
             title: "Nos prestations incluent",
             items: [
-              "Autorisation de travail : Montage du dossier patronal auprès du Ministère du Travail, justification du recrutement et homogénéisation du contrat.",
-              "Visas long séjour : Accompagnement pour l’obtention du visa auprès des consulats et ambassades marocaines.",
-              "Carte de séjour : Gestion des démarches obligatoires dès l’arrivée au Maroc pour régulariser la situation du collaborateur.",
-              "Veille et conformité : Information continue sur les obligations légales de l’employeur et du salarié afin de sécuriser toute la période d’emploi."
+              "Analyse stratégique du profil : Évaluation complète de votre situation personnelle, professionnelle et financière pour déterminer les points forts de votre profil et définir la meilleure stratégie à adopter auprès des autorités consulaires.",
+              "Constitution d'un dossier sur mesure : Collecte, vérification et organisation de tous les justificatifs requis. Remplissage méticuleux des formulaires et rédaction de lettres de motivation percutantes qui expliquent clairement l'objet de votre voyage.",
+              "Structuration administrative et légale : Pour les profils freelances, entrepreneurs ou professions libérales, nous conseillons sur la forme légale la plus adaptée afin de présenter une situation stable et crédible renforçant la confiance du consulat.",
+              "Préparation à l'entretien : Coaching ciblé pour le rendez-vous consulaire ou le dépôt chez TLS/VFS, en vous préparant aux questions potentielles pour présenter votre projet de voyage de manière cohérente et assurée.",
+              "Suivi et conformité : Veille constante sur les exigences et mises à jour des consulats afin de garantir que votre dossier soit toujours parfaitement conforme lors du dépôt."
             ]
           }
         ]
       },
       it: {
         title: "Visti & programmi di mobilità",
-        headline: "Soluzioni di immigrazione semplici e conformi in Marocco",
+        headline: "Ottimizza la tua richiesta di visto Schengen & UK",
         intro:
-          "Portare talenti internazionali in Marocco o trasferirsi nel Paese richiede una conoscenza approfondita delle normative. I nostri specialisti gestiscono l’intero iter per garantire un’integrazione rapida e regolare.",
+          "Preparare una domanda di visto per l'area Schengen o per il Regno Unito è un percorso complesso in cui ogni dettaglio conta. Un fascicolo incompleto o poco convincente comporta spesso un rifiuto, con perdita di tempo e frustrazione. I nostri esperti costruiscono dossier solidi e perfettamente strutturati per massimizzare le probabilità di approvazione e consentirti di organizzare il viaggio in piena serenità.",
         sections: [
           {
-            title: "I nostri servizi di immigrazione",
+            title: "I nostri servizi includono",
             items: [
-              "Permesso di lavoro: Prepariamo e seguiamo la pratica presso il Ministero del Lavoro, giustificando l’assunzione e curando il contratto.",
-              "Visti di lungo soggiorno: Guidiamo i dipendenti nell’ottenimento del visto presso ambasciate e consolati marocchini.",
-              "Carta di soggiorno: Supporto completo per l’ottenimento del permesso di soggiorno subito dopo l’arrivo in Marocco.",
-              "Compliance e consulenza: Monitoriamo gli obblighi legali del datore di lavoro e del dipendente lungo tutto il rapporto di lavoro."
+              "Analisi strategica del profilo: Valutazione completa della situazione personale, professionale e finanziaria per evidenziare i punti di forza e definire la strategia più efficace davanti alle autorità consolari.",
+              "Preparazione del fascicolo su misura: Raccolta, verifica e organizzazione di tutta la documentazione necessaria, compilazione accurata dei moduli e redazione di lettere motivazionali incisive.",
+              "Strutturazione amministrativa e legale: Consulenza sulla forma giuridica più adatta per freelance, imprenditori e professionisti autonomi, così da presentare una posizione stabile e credibile al consolato.",
+              "Preparazione al colloquio: Coaching mirato per l'appuntamento consolare o il deposito presso TLS/VFS, affrontando le possibili domande per presentare il progetto di viaggio con sicurezza.",
+              "Monitoraggio e conformità: Aggiornamento costante sui requisiti e sulle modifiche dei consolati per garantire un fascicolo sempre perfettamente conforme al momento del deposito."
             ]
           }
         ]
       },
       ar: {
         title: "برامج التأشيرات والتنقل",
-        headline: "حلول متكاملة للهجرة والتنقل نحو المغرب",
+        headline: "حسّن ملف طلب تأشيرة شنغن والمملكة المتحدة",
         intro:
-          "يتطلب استقدام الكفاءات الدولية إلى المغرب أو الانتقال الشخصي فهماً دقيقاً للتشريعات المنظمة للهجرة. يتولى خبراؤنا إدارة العملية كاملة لضمان انتقال سلس ومتوافق مع القوانين.",
+          "يعد إعداد ملف تأشيرة إلى فضاء شنغن أو المملكة المتحدة عملية دقيقة تتطلب العناية بكل التفاصيل. فالملف الناقص أو غير المنظم يؤدي غالباً إلى رفض الطلب وما يرافقه من إحباط وهدر للوقت. يعمل خبراؤنا على بناء ملفات قوية ومنظمة بشكل احترافي لتعزيز فرص قبولك وتمكينك من التخطيط لسفرك بثقة وراحة.",
         sections: [
           {
             title: "تشمل خدماتنا",
             items: [
-              "تصريح العمل: إعداد الملف لدى وزارة الشغل وتبرير توظيف الأجنبي مع توفير عقد عمل قانوني.",
-              "التأشيرة طويلة الأمد: مواكبة الموظفين في الحصول على التأشيرة من السفارات والقنصليات المغربية.",
-              "بطاقة الإقامة: استكمال إجراءات بطاقة الإقامة فور الوصول إلى المغرب لضمان الوضع القانوني.",
-              "المتابعة القانونية: تزويدكم بكافة الالتزامات القانونية لكل من المشغل والموظف طوال مدة العمل."
+              "تحليل استراتيجي للملف الشخصي: تقييم شامل لوضعك الشخصي والمهني والمالي لتحديد عناصر القوة ووضع أفضل استراتيجية أمام القنصليات.",
+              "إعداد ملف مخصص: جمع الوثائق المطلوبة والتحقق منها وترتيبها، مع تعبئة النماذج بدقة وصياغة خطابات دافع مقنعة توضّح هدف الرحلة بوضوح.",
+              "هيكلة إدارية وقانونية: تقديم المشورة لأصحاب الأعمال والمستقلين حول الصيغة القانونية الأنسب لإبراز استقرارهم ومصداقيتهم أمام القنصلية.",
+              "التحضير للمقابلة: تدريب متخصص قبل الموعد القنصلي أو الإيداع لدى TLS/VFS على الأسئلة المحتملة لعرض مشروع السفر بثقة ووضوح.",
+              "المتابعة والامتثال: مراقبة مستمرة لمتطلبات القنصليات وتحديثاتها لضمان مطابقة ملفك لجميع الضوابط عند الإيداع."
             ]
           }
         ]
@@ -873,12 +876,12 @@ export const serviceDetails: ServiceDetail[] = [
           "Conquérir de nouveaux marchés est une étape majeure qui nécessite une stratégie solide et une exécution millimétrée. Nous vous accompagnons pour sécuriser chaque phase de votre internationalisation.",
         sections: [
           {
-            title: "Notre cadre d’intervention",
+            title: "Notre cadre d'intervention",
             items: [
-              "Études de marché & stratégie d’entrée : Identification des opportunités, choix du mode d’implantation (export, joint-venture, filiale).",
+              "Études de marché & stratégie d'entrée : Identification des opportunités, choix du mode d'implantation (export, joint-venture, filiale).",
               "Conformité cross-border : Gestion des aspects juridiques, fiscaux et réglementaires dans chaque pays cible.",
-              "Mise en place opérationnelle : Création d’entité, recherche de partenaires locaux et organisation logistique.",
-              "Localisation : Adaptation de l’offre, du service client et de la communication aux spécificités culturelles locales."
+              "Mise en place opérationnelle : Création d'entité, recherche de partenaires locaux et organisation logistique.",
+              "Localisation : Adaptation de l'offre, du service client et de la communication aux spécificités culturelles locales."
             ]
           }
         ]
@@ -887,12 +890,12 @@ export const serviceDetails: ServiceDetail[] = [
         title: "Espansione globale",
         headline: "Porta il tuo business oltre i confini nazionali",
         intro:
-          "L’ingresso in nuovi mercati richiede una pianificazione accurata e competenze multidisciplinari. Offriamo supporto strategico e operativo per accompagnarti in ogni fase dell’espansione internazionale.",
+          "L'ingresso in nuovi mercati richiede una pianificazione accurata e competenze multidisciplinari. Offriamo supporto strategico e operativo per accompagnarti in ogni fase dell'espansione internazionale.",
         sections: [
           {
             title: "Il nostro approccio",
             items: [
-              "Analisi dei mercati & strategia d’ingresso: Studio delle opportunità e definizione del percorso migliore (export, joint venture, investimento diretto).",
+              "Analisi dei mercati & strategia d'ingresso: Studio delle opportunità e definizione del percorso migliore (export, joint venture, investimento diretto).",
               "Compliance internazionale: Gestione degli aspetti legali, fiscali e normativi di ciascun Paese.",
               "Setup operativo: Costituzione di entità locali, partnership strategiche e coordinamento logistico.",
               "Localizzazione: Adattamento di prodotti, servizi e comunicazione alle esigenze culturali e linguistiche del mercato target."
