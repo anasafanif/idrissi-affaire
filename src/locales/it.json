@@ -292,6 +292,12 @@
     "loading": "Caricamento...",
     "error": "Si è verificato un errore",
     "retry": "Riprova"
+  },
+  "serviceDetail": {
+    "cta": {
+      "speakWithExpert": "Parla con un esperto",
+      "bookConsultation": "Prenota una consulenza"
+    }
   }
 }
 

@@ -201,5 +201,11 @@
     "loading": "Chargement...",
     "error": "Une erreur s'est produite",
     "retry": "Réessayer"
+  },
+  "serviceDetail": {
+    "cta": {
+      "speakWithExpert": "Échanger avec un expert",
+      "bookConsultation": "Planifier une consultation"
+    }
   }
 }

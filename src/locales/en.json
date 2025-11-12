@@ -293,5 +293,11 @@
     "loading": "Loading...",
     "error": "An error occurred",
     "retry": "Retry"
+  },
+  "serviceDetail": {
+    "cta": {
+      "speakWithExpert": "Speak with an Expert",
+      "bookConsultation": "Book a Consultation"
+    }
   }
 }
