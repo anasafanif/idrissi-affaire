@@ -105,7 +105,7 @@ export const serviceDetails: ServiceDetail[] = [
             title: "Our Process Includes",
             items: [
               "Legal Structure Advisory: We help you choose the most suitable company form for your business goals, whether it's a Limited Liability Company (SARL), a Public Limited Company (SA), or a Simplified Joint Stock Company (SAS). The SARL is the most common structure in Morocco, ideal for small and medium-sized enterprises due to its flexibility and limited liability for partners.",
-              "Name Reservation: We secure your unique company name by obtaining the \"Certificat Négatif\" from the Moroccan Office of Industrial and Commercial Property (OMPIC).",
+              "Name Reservation: We secure your unique company name by obtaining the 'Certificat Négatif' from the Moroccan Office of Industrial and Commercial Property (OMPIC).",
               "Documentation & Registration: Our team will draft your articles of association, manage the deposit of share capital, and file all necessary documents with the Commercial Registry (Registre du Commerce).",
               "Final Formalities: We make sure your company is registered for the tax ID (IF), professional tax (TP), Common Company Identifier (ICE), commercial registry (RC), and social security (CNSS via Damancom), then handle the mandatory publication in the Official Bulletin and a legal journal."
             ],
@@ -141,7 +141,7 @@ export const serviceDetails: ServiceDetail[] = [
             title: "Il nostro processo comprende",
             items: [
               "Consulenza sulla forma giuridica: Ti aiutiamo a scegliere la struttura societaria più adatta (SARL, SA, SAS). La SARL è la forma più diffusa in Marocco perché combina flessibilità e responsabilità limitata per i soci.",
-              "Prenotazione del nome: Otteniamo per te il "Certificat Négatif" presso l'OMPIC per tutelare l'unicità della tua denominazione.",
+              "Prenotazione del nome: Otteniamo per te il 'Certificat Négatif' presso l'OMPIC per tutelare l'unicità della tua denominazione.",
               "Documentazione e registrazione: Redigiamo lo statuto, gestiamo il deposito del capitale sociale e presentiamo tutte le pratiche al Registro delle imprese.",
               "Adempimenti finali: Ci occupiamo dell'iscrizione all'identificativo fiscale (IF), alla tassa professionale (TP), all'Identificativo Comune dell'Impresa (ICE), al Registro di Commercio (RC) e alla CNSS (Damancom), oltre alla pubblicazione legale su Gazzetta Ufficiale e giornale autorizzato."
             ],
