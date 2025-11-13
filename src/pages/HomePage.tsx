@@ -55,30 +55,50 @@ const heroIconMap: Record<string, LucideIcon> = {
 export function HomePage() {
   const { t } = useTranslation();
   
-  // Safely get hero highlights with fallback
-  let heroHighlights: HeroHighlight[] = [];
-  try {
-    const heroHighlightsRaw = t('home.hero.highlights', { returnObjects: true, defaultValue: [] });
-    // Handle case where translation might return key string if not loaded
-    if (Array.isArray(heroHighlightsRaw)) {
-      heroHighlights = heroHighlightsRaw
-        .filter((item): item is HeroHighlight => 
-          !!item && 
-          typeof item === 'object' && 
-          !Array.isArray(item) &&
-          'label' in item && 
-          'slug' in item &&
-          typeof item.slug === 'string' &&
-          typeof item.label === 'string'
-        )
-        .slice(0, 12); // Limit to 12 items max for safety
+  // Safely get hero highlights with comprehensive error handling
+  // This prevents any rendering errors if translations fail or are malformed
+  const heroHighlights: HeroHighlight[] = (() => {
+    try {
+      const result = t('home.hero.highlights', { returnObjects: true, defaultValue: [] });
+      
+      // Early return if not an array
+      if (!Array.isArray(result) || result.length === 0) {
+        return [];
+      }
+      
+      // Verify it's a proper array of objects (not just the key string)
+      const firstItem = result[0];
+      if (!firstItem || typeof firstItem !== 'object' || Array.isArray(firstItem)) {
+        return [];
+      }
+      
+      // Filter and validate each item
+      return result
+        .filter((item): item is HeroHighlight => {
+          if (!item || typeof item !== 'object' || Array.isArray(item)) {
+            return false;
+          }
+          if (!('label' in item) || !('slug' in item)) {
+            return false;
+          }
+          if (typeof item.slug !== 'string' || typeof item.label !== 'string') {
+            return false;
+          }
+          if (item.slug.length === 0 || item.label.length === 0) {
+            return false;
+          }
+          // Verify slug exists in icon map
+          if (!(item.slug in heroIconMap)) {
+            return false;
+          }
+          return true;
+        })
+        .slice(0, 12); // Limit to 12 items
+    } catch {
+      // Fail completely silently - component will render without highlights
+      return [];
     }
-  } catch (error) {
-    // Fail completely silently - don't log in production to avoid console spam
-    if (process.env.NODE_ENV === 'development') {
-      console.warn('Failed to load hero highlights:', error);
-    }
-  }
+  })();
   
   return (
     <MainLayout>
