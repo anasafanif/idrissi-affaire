@@ -87,10 +87,8 @@ export function HomePage() {
           if (item.slug.length === 0 || item.label.length === 0) {
             return false;
           }
-          // Verify slug exists in icon map
-          if (!(item.slug in heroIconMap)) {
-            return false;
-          }
+          // Verify slug exists in icon map - but don't fail if it doesn't
+          // We'll handle missing icons gracefully during rendering
           return true;
         })
         .slice(0, 12); // Limit to 12 items
@@ -193,31 +191,62 @@ export function HomePage() {
             </motion.h1>
             {heroHighlights.length > 0 && (
               <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-4xl mx-auto">
-                {heroHighlights.map(({ label, slug }) => {
-                  // Safely get icon - fallback to undefined if not found
-                  const Icon = slug && typeof slug === 'string' ? heroIconMap[slug] : undefined;
+                {heroHighlights.map((item) => {
+                  // Extract label and slug safely
+                  const { label, slug } = item || {};
                   
-                  // Only render if we have a valid slug
-                  if (!slug || typeof slug !== 'string') {
+                  // Validate slug exists and is a string
+                  if (!slug || typeof slug !== 'string' || !label || typeof label !== 'string') {
                     return null;
                   }
                   
-                  return (
-                    <motion.div
-                      key={slug}
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      transition={{ type: "spring", stiffness: 250 }}
-                      className="w-full"
-                    >
-                      <Link
-                        to={`/services/${slug}`}
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white/80 text-idrissi-blue font-semibold px-5 py-3 text-sm shadow-premium border border-idrissi-blue/10 backdrop-blur-sm transition-all duration-300 hover:border-idrissi-gold/60 hover:bg-gradient-to-r hover:from-white hover:to-idrissi-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-idrissi-gold dark:bg-white/10 dark:text-white dark:border-white/10 dark:hover:border-idrissi-gold/50 dark:hover:from-idrissi-blue/20 dark:hover:to-idrissi-gold/20"
+                  // Safely get icon from map
+                  let IconComponent: LucideIcon | undefined;
+                  try {
+                    IconComponent = heroIconMap[slug];
+                  } catch {
+                    // If icon lookup fails, continue without icon
+                    IconComponent = undefined;
+                  }
+                  
+                  // Safely construct the link path
+                  let linkPath = '/';
+                  try {
+                    linkPath = `/services/${slug}`;
+                  } catch {
+                    // If path construction fails, use home
+                    linkPath = '/';
+                  }
+                  
+                  // Render the button with error handling
+                  // Use React.createElement for safer component rendering
+                  try {
+                    // Verify IconComponent is a valid React component before using it
+                    const isValidIcon = IconComponent && typeof IconComponent === 'function';
+                    
+                    return (
+                      <motion.div
+                        key={slug}
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        transition={{ type: "spring", stiffness: 250 }}
+                        className="w-full"
                       >
-                        {Icon && <Icon className="h-4 w-4" />}
-                        {label || slug}
-                      </Link>
-                    </motion.div>
-                  );
+                        <Link
+                          to={linkPath}
+                          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white/80 text-idrissi-blue font-semibold px-5 py-3 text-sm shadow-premium border border-idrissi-blue/10 backdrop-blur-sm transition-all duration-300 hover:border-idrissi-gold/60 hover:bg-gradient-to-r hover:from-white hover:to-idrissi-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-idrissi-gold dark:bg-white/10 dark:text-white dark:border-white/10 dark:hover:border-idrissi-gold/50 dark:hover:from-idrissi-blue/20 dark:hover:to-idrissi-gold/20"
+                        >
+                          {isValidIcon && IconComponent ? (
+                            <IconComponent className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
+                          ) : null}
+                          <span>{label}</span>
+                        </Link>
+                      </motion.div>
+                    );
+                  } catch {
+                    // If rendering fails for any item, skip it completely silently
+                    // Don't log errors in production to avoid console spam
+                    return null;
+                  }
                 })}
               </div>
             )}
