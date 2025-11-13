@@ -19,6 +19,7 @@ import {
   Bot,
   Plane,
   Globe2,
+  Sparkles,
   LucideIcon
 } from 'lucide-react';
 import { motion } from 'framer-motion';

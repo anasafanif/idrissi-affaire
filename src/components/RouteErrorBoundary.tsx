@@ -7,34 +7,47 @@ export function RouteErrorBoundary() {
   const error = useRouteError();
 
   useEffect(() => {
-    // Report the route error
+    // Report the route error (fail silently if reporting fails)
     if (error) {
-      let errorMessage = 'Unknown route error';
-      let errorStack = '';
+      try {
+        let errorMessage = 'Unknown route error';
+        let errorStack = '';
 
-      if (isRouteErrorResponse(error)) {
-        errorMessage = `Route Error ${error.status}: ${error.statusText}`;
-        if (error.data) {
-          errorMessage += ` - ${JSON.stringify(error.data)}`;
+        if (isRouteErrorResponse(error)) {
+          errorMessage = `Route Error ${error.status}: ${error.statusText}`;
+          if (error.data) {
+            try {
+              errorMessage += ` - ${JSON.stringify(error.data)}`;
+            } catch {
+              // Ignore JSON.stringify errors
+            }
+          }
+        } else if (error instanceof Error) {
+          errorMessage = error.message;
+          errorStack = error.stack || '';
+        } else if (typeof error === 'string') {
+          errorMessage = error;
+        } else {
+          try {
+            errorMessage = JSON.stringify(error);
+          } catch {
+            errorMessage = String(error);
+          }
         }
-      } else if (error instanceof Error) {
-        errorMessage = error.message;
-        errorStack = error.stack || '';
-      } else if (typeof error === 'string') {
-        errorMessage = error;
-      } else {
-        errorMessage = JSON.stringify(error);
-      }
 
-      errorReporter.report({
-        message: errorMessage,
-        stack: errorStack,
-        url: window.location.href,
-        timestamp: new Date().toISOString(),
-        source: 'react-router',
-        error: error,
-        level: "error",
-      });
+        errorReporter.report({
+          message: errorMessage,
+          stack: errorStack,
+          url: window.location.href,
+          timestamp: new Date().toISOString(),
+          source: 'react-router',
+          error: error,
+          level: "error",
+        });
+      } catch (reportError) {
+        // Fail completely silently - don't throw errors from error reporting
+        // This prevents infinite error loops
+      }
     }
   }, [error]);
 

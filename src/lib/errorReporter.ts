@@ -585,9 +585,9 @@ class ErrorReporter {
         await this.sendError(error);
       }
     } catch (err) {
-      // If reporting fails, add errors back to queue
-      console.error("[ErrorReporter] Failed to report errors:", err);
-      this.errorQueue.unshift(...errorsToReport);
+      // Fail completely silently - don't re-add errors to queue
+      // This prevents infinite error loops and queue buildup
+      // Don't log errors from error reporter to avoid console spam
     } finally {
       this.isReporting = false;
     }
@@ -604,9 +604,8 @@ class ErrorReporter {
       });
 
       if (!response.ok) {
-        throw new Error(
-          `Failed to report error: ${response.status} ${response.statusText}`
-        );
+        // Fail silently - don't throw errors from error reporter
+        return;
       }
 
       const result = (await response.json()) as {
@@ -615,16 +614,21 @@ class ErrorReporter {
       };
 
       if (!result.success) {
-        throw new Error(result.error || "Unknown error occurred");
+        // Fail silently - don't throw errors from error reporter
+        return;
       }
 
-      console.log(
-        "[ErrorReporter] Error reported successfully:",
-        error.message
-      );
+      // Only log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log(
+          "[ErrorReporter] Error reported successfully:",
+          error.message
+        );
+      }
     } catch (err) {
-      console.error("[ErrorReporter] Failed to send error:", err);
-      throw err;
+      // Fail completely silently - never throw errors from error reporter
+      // This prevents infinite error loops
+      return;
     }
   }
 
