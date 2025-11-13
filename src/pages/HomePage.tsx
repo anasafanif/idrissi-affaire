@@ -55,8 +55,32 @@ const heroIconMap: Record<string, LucideIcon> = {
 export function HomePage() {
   const { t } = useTranslation();
   
+  // Safely get translations with fallback values
+  const heroTitle = (() => {
+    try {
+      return t('home.hero.title', { defaultValue: 'Full-Service Business & Mobility Experts' });
+    } catch {
+      return 'Full-Service Business & Mobility Experts';
+    }
+  })();
+  
+  const heroSubtitle = (() => {
+    try {
+      return t('home.hero.subtitle', { defaultValue: 'We Build Your Dream Project.' });
+    } catch {
+      return 'We Build Your Dream Project.';
+    }
+  })();
+  
+  const heroDescription = (() => {
+    try {
+      return t('home.hero.description', { defaultValue: 'Your end-to-end partner in Kenitra for business creation, digital growth, and international mobility.' });
+    } catch {
+      return 'Your end-to-end partner in Kenitra for business creation, digital growth, and international mobility.';
+    }
+  })();
+  
   // Safely get hero highlights with comprehensive error handling
-  // This prevents any rendering errors if translations fail or are malformed
   const heroHighlights: HeroHighlight[] = (() => {
     try {
       const result = t('home.hero.highlights', { returnObjects: true, defaultValue: [] });
@@ -87,8 +111,6 @@ export function HomePage() {
           if (item.slug.length === 0 || item.label.length === 0) {
             return false;
           }
-          // Verify slug exists in icon map - but don't fail if it doesn't
-          // We'll handle missing icons gracefully during rendering
           return true;
         })
         .slice(0, 12); // Limit to 12 items
@@ -178,7 +200,7 @@ export function HomePage() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                {t('home.hero.title')}
+                {heroTitle}
               </motion.span>
               <br />
               <motion.span
@@ -186,7 +208,7 @@ export function HomePage() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                {t('home.hero.subtitle')}
+                {heroSubtitle}
               </motion.span>
             </motion.h1>
             {heroHighlights.length > 0 && (
@@ -200,29 +222,22 @@ export function HomePage() {
                     return null;
                   }
                   
-                  // Safely get icon from map with fallback
-                  const IconComponent = (() => {
-                    try {
-                      if (slug && typeof slug === 'string' && slug in heroIconMap) {
-                        const icon = heroIconMap[slug];
-                        // Verify it's a valid React component
-                        if (icon && typeof icon === 'function') {
-                          return icon;
-                        }
-                      }
-                    } catch {
-                      // Silently fail if icon lookup fails
+                  // Get icon component safely - only if it exists in map
+                  let IconComponent: LucideIcon | null = null;
+                  if (slug && typeof slug === 'string') {
+                    const icon = heroIconMap[slug];
+                    if (icon && typeof icon === 'function') {
+                      IconComponent = icon;
                     }
-                    return null;
-                  })();
+                  }
                   
                   // Construct link path safely
-                  const linkPath = `/services/${encodeURIComponent(slug)}`;
+                  const linkPath = slug ? `/services/${slug}` : '/';
                   
-                  // Render button - wrap icon rendering in error boundary
+                  // Render button with conditional icon
                   return (
                     <motion.div
-                      key={`highlight-${slug}`}
+                      key={slug || `highlight-${Math.random()}`}
                       whileHover={{ scale: 1.05, y: -2 }}
                       transition={{ type: "spring", stiffness: 250 }}
                       className="w-full"
@@ -231,15 +246,13 @@ export function HomePage() {
                         to={linkPath}
                         className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white/80 text-idrissi-blue font-semibold px-5 py-3 text-sm shadow-premium border border-idrissi-blue/10 backdrop-blur-sm transition-all duration-300 hover:border-idrissi-gold/60 hover:bg-gradient-to-r hover:from-white hover:to-idrissi-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-idrissi-gold dark:bg-white/10 dark:text-white dark:border-white/10 dark:hover:border-idrissi-gold/50 dark:hover:from-idrissi-blue/20 dark:hover:to-idrissi-gold/20"
                       >
-                        {/* Render icon only if valid component exists */}
-                        {IconComponent ? (
+                        {IconComponent && (
                           <IconComponent 
                             className="h-4 w-4 flex-shrink-0" 
                             aria-hidden="true"
-                            style={{ display: 'inline-block' }}
                           />
-                        ) : null}
-                        <span className="whitespace-nowrap">{label}</span>
+                        )}
+                        <span>{label}</span>
                       </Link>
                     </motion.div>
                   );
