@@ -2,7 +2,25 @@ import { Link } from 'react-router-dom';
 import { MainLayout } from '@/components/layout/MainLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Rocket, Building, Globe, ArrowRight, CheckCircle, Sparkles, TrendingUp, Users, Target } from 'lucide-react';
+import {
+  ArrowRight,
+  Users,
+  TrendingUp,
+  Target,
+  Building2,
+  Briefcase,
+  Calculator,
+  Wallet,
+  Compass,
+  Palette,
+  Code2,
+  Megaphone,
+  Film,
+  Bot,
+  Plane,
+  Globe2,
+  LucideIcon
+} from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 const fadeIn = {
@@ -17,6 +35,21 @@ const fadeIn = {
   }),
 };
 type HeroHighlight = { label: string; slug: string };
+
+const heroIconMap: Record<string, LucideIcon> = {
+  domiciliation: Building2,
+  'company-creation': Briefcase,
+  'accounting-tax': Calculator,
+  payroll: Wallet,
+  'strategic-consulting': Compass,
+  'branding-design': Palette,
+  'web-development': Code2,
+  'ads-social-media': Megaphone,
+  'video-production': Film,
+  'ai-automation': Bot,
+  'visa-mobility-programs': Plane,
+  'global-expansion': Globe2
+};
 
 export function HomePage() {
   const { t } = useTranslation();
@@ -125,12 +158,18 @@ export function HomePage() {
                     transition={{ type: "spring", stiffness: 250 }}
                     className="w-full"
                   >
+                    {(() => {
+                      const Icon = heroIconMap[slug];
+                      return (
                     <Link
                       to={`/services/${slug}`}
-                      className="inline-flex w-full items-center justify-center rounded-full bg-white/80 text-idrissi-blue font-semibold px-5 py-3 text-sm shadow-premium border border-idrissi-blue/10 backdrop-blur-sm transition-all duration-300 hover:border-idrissi-gold/60 hover:bg-gradient-to-r hover:from-white hover:to-idrissi-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-idrissi-gold dark:bg-white/10 dark:text-white dark:border-white/10 dark:hover:border-idrissi-gold/50 dark:hover:from-idrissi-blue/20 dark:hover:to-idrissi-gold/20"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white/80 text-idrissi-blue font-semibold px-5 py-3 text-sm shadow-premium border border-idrissi-blue/10 backdrop-blur-sm transition-all duration-300 hover:border-idrissi-gold/60 hover:bg-gradient-to-r hover:from-white hover:to-idrissi-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-idrissi-gold dark:bg-white/10 dark:text-white dark:border-white/10 dark:hover:border-idrissi-gold/50 dark:hover:from-idrissi-blue/20 dark:hover:to-idrissi-gold/20"
                     >
+                        {Icon && <Icon className="h-4 w-4" />}
                       {label}
                     </Link>
+                      );
+                    })()}
                   </motion.div>
                 ))}
               </div>
