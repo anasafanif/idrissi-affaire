@@ -2,10 +2,15 @@ import { Link } from 'react-router-dom';
 import { MainLayout } from '@/components/layout/MainLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-  ArrowRight,
-  Users,
-  TrendingUp,
+import { 
+  Rocket, 
+  Building, 
+  Globe, 
+  ArrowRight, 
+  CheckCircle, 
+  Sparkles, 
+  TrendingUp, 
+  Users, 
   Target,
   Building2,
   Briefcase,
@@ -19,7 +24,6 @@ import {
   Bot,
   Plane,
   Globe2,
-  Sparkles,
   LucideIcon
 } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -37,7 +41,7 @@ const fadeIn = {
 };
 type HeroHighlight = { label: string; slug: string };
 
-const heroIconMap: Record<string, LucideIcon> = {
+const serviceIcons: Record<string, LucideIcon> = {
   domiciliation: Building2,
   'company-creation': Briefcase,
   'accounting-tax': Calculator,
@@ -49,76 +53,45 @@ const heroIconMap: Record<string, LucideIcon> = {
   'video-production': Film,
   'ai-automation': Bot,
   'visa-mobility-programs': Plane,
-  'global-expansion': Globe2
+  'global-expansion': Globe2,
+};
+
+const serviceGradients: Record<string, string> = {
+  domiciliation: 'from-idrissi-blue/20 via-idrissi-blue/10 to-transparent',
+  'company-creation': 'from-idrissi-gold/20 via-idrissi-gold/10 to-transparent',
+  'accounting-tax': 'from-sky-500/20 via-sky-500/10 to-transparent',
+  payroll: 'from-emerald-500/20 via-emerald-500/10 to-transparent',
+  'strategic-consulting': 'from-purple-500/20 via-purple-500/10 to-transparent',
+  'branding-design': 'from-rose-500/20 via-rose-500/10 to-transparent',
+  'web-development': 'from-indigo-500/20 via-indigo-500/10 to-transparent',
+  'ads-social-media': 'from-orange-500/20 via-orange-500/10 to-transparent',
+  'video-production': 'from-fuchsia-500/20 via-fuchsia-500/10 to-transparent',
+  'ai-automation': 'from-cyan-500/20 via-cyan-500/10 to-transparent',
+  'visa-mobility-programs': 'from-blue-500/20 via-blue-500/10 to-transparent',
+  'global-expansion': 'from-lime-500/20 via-lime-500/10 to-transparent',
+};
+
+const serviceAccents: Record<string, string> = {
+  domiciliation: 'text-idrissi-blue',
+  'company-creation': 'text-idrissi-gold',
+  'accounting-tax': 'text-sky-500',
+  payroll: 'text-emerald-500',
+  'strategic-consulting': 'text-purple-500',
+  'branding-design': 'text-rose-500',
+  'web-development': 'text-indigo-500',
+  'ads-social-media': 'text-orange-500',
+  'video-production': 'text-fuchsia-500',
+  'ai-automation': 'text-cyan-500',
+  'visa-mobility-programs': 'text-blue-500',
+  'global-expansion': 'text-lime-500',
 };
 
 export function HomePage() {
   const { t } = useTranslation();
-  
-  // Safely get translations with fallback values
-  const heroTitle = (() => {
-    try {
-      return t('home.hero.title', { defaultValue: 'Full-Service Business & Mobility Experts' });
-    } catch {
-      return 'Full-Service Business & Mobility Experts';
-    }
-  })();
-  
-  const heroSubtitle = (() => {
-    try {
-      return t('home.hero.subtitle', { defaultValue: 'We Build Your Dream Project.' });
-    } catch {
-      return 'We Build Your Dream Project.';
-    }
-  })();
-  
-  const heroDescription = (() => {
-    try {
-      return t('home.hero.description', { defaultValue: 'Your end-to-end partner in Kenitra for business creation, digital growth, and international mobility.' });
-    } catch {
-      return 'Your end-to-end partner in Kenitra for business creation, digital growth, and international mobility.';
-    }
-  })();
-  
-  // Safely get hero highlights with comprehensive error handling
-  const heroHighlights: HeroHighlight[] = (() => {
-    try {
-      const result = t('home.hero.highlights', { returnObjects: true, defaultValue: [] });
-      
-      // Early return if not an array
-      if (!Array.isArray(result) || result.length === 0) {
-        return [];
-      }
-      
-      // Verify it's a proper array of objects (not just the key string)
-      const firstItem = result[0];
-      if (!firstItem || typeof firstItem !== 'object' || Array.isArray(firstItem)) {
-        return [];
-      }
-      
-      // Filter and validate each item
-      return result
-        .filter((item): item is HeroHighlight => {
-          if (!item || typeof item !== 'object' || Array.isArray(item)) {
-            return false;
-          }
-          if (!('label' in item) || !('slug' in item)) {
-            return false;
-          }
-          if (typeof item.slug !== 'string' || typeof item.label !== 'string') {
-            return false;
-          }
-          if (item.slug.length === 0 || item.label.length === 0) {
-            return false;
-          }
-          return true;
-        })
-        .slice(0, 12); // Limit to 12 items
-    } catch {
-      // Fail completely silently - component will render without highlights
-      return [];
-    }
-  })();
+  const heroHighlightsRaw = t('home.hero.highlights', { returnObjects: true }) as HeroHighlight[] | HeroHighlight | undefined;
+  const heroHighlights = Array.isArray(heroHighlightsRaw)
+    ? heroHighlightsRaw.filter((item): item is HeroHighlight => !!item && typeof item === 'object' && 'label' in item && 'slug' in item)
+    : [];
   
   return (
     <MainLayout>
@@ -200,7 +173,7 @@ export function HomePage() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                {heroTitle}
+                {t('home.hero.title')}
               </motion.span>
               <br />
               <motion.span
@@ -208,51 +181,69 @@ export function HomePage() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                {heroSubtitle}
+                {t('home.hero.subtitle')}
               </motion.span>
             </motion.h1>
             {heroHighlights.length > 0 && (
-              <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-4xl mx-auto">
-                {heroHighlights.map((item) => {
-                  // Extract label and slug safely
-                  const { label, slug } = item || {};
+              <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 max-w-6xl mx-auto">
+                {heroHighlights.map(({ label, slug }, index) => {
+                  const Icon = serviceIcons[slug] || Briefcase;
+                  const gradient = serviceGradients[slug] || 'from-idrissi-blue/20 via-idrissi-blue/10 to-transparent';
+                  const accent = serviceAccents[slug] || 'text-idrissi-blue';
                   
-                  // Validate slug exists and is a string
-                  if (!slug || typeof slug !== 'string' || !label || typeof label !== 'string') {
-                    return null;
-                  }
-                  
-                  // Get icon component safely - only if it exists in map
-                  let IconComponent: LucideIcon | null = null;
-                  if (slug && typeof slug === 'string') {
-                    const icon = heroIconMap[slug];
-                    if (icon && typeof icon === 'function') {
-                      IconComponent = icon;
-                    }
-                  }
-                  
-                  // Construct link path safely
-                  const linkPath = slug ? `/services/${slug}` : '/';
-                  
-                  // Render button with conditional icon
                   return (
                     <motion.div
-                      key={slug || `highlight-${Math.random()}`}
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      transition={{ type: "spring", stiffness: 250 }}
-                      className="w-full"
+                      key={slug}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: index * 0.05 }}
+                      whileHover={{ y: -8, scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
+                      className="group"
                     >
                       <Link
-                        to={linkPath}
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white/80 text-idrissi-blue font-semibold px-5 py-3 text-sm shadow-premium border border-idrissi-blue/10 backdrop-blur-sm transition-all duration-300 hover:border-idrissi-gold/60 hover:bg-gradient-to-r hover:from-white hover:to-idrissi-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-idrissi-gold dark:bg-white/10 dark:text-white dark:border-white/10 dark:hover:border-idrissi-gold/50 dark:hover:from-idrissi-blue/20 dark:hover:to-idrissi-gold/20"
+                        to={`/services/${slug}`}
+                        className="relative block h-full min-h-[140px] rounded-2xl bg-gradient-to-br from-white/95 via-white/85 to-white/75 dark:from-black/50 dark:via-black/40 dark:to-black/30 border border-white/50 dark:border-white/15 backdrop-blur-xl p-5 sm:p-6 shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] dark:shadow-[0_4px_24px_0_rgba(0,0,0,0.4)] hover:shadow-[0_24px_64px_-12px_rgba(0,0,0,0.25)] dark:hover:shadow-[0_24px_64px_-12px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden cursor-pointer"
                       >
-                        {IconComponent && (
-                          <IconComponent 
-                            className="h-4 w-4 flex-shrink-0" 
-                            aria-hidden="true"
-                          />
-                        )}
-                        <span>{label}</span>
+                        {/* Animated background gradient on hover */}
+                        <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-30 dark:group-hover:opacity-20 transition-opacity duration-500`} />
+                        
+                        {/* Subtle dot pattern overlay */}
+                        <div 
+                          className="absolute inset-0 opacity-[0.02] dark:opacity-[0.04] group-hover:opacity-[0.04] dark:group-hover:opacity-[0.06] transition-opacity duration-500 pointer-events-none"
+                          style={{
+                            backgroundImage: `radial-gradient(circle at 1.5px 1.5px, currentColor 1px, transparent 0)`,
+                            backgroundSize: '20px 20px'
+                          }}
+                        />
+                        
+                        {/* Shine effect on hover */}
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+                        </div>
+                        
+                        {/* Content */}
+                        <div className="relative z-10 flex flex-col items-center justify-center text-center space-y-3 sm:space-y-4 h-full">
+                          {/* Icon container with premium styling */}
+                          <motion.div
+                            className={`inline-flex items-center justify-center rounded-xl bg-gradient-to-br from-white/90 to-white/70 dark:from-white/10 dark:to-white/5 p-3 border border-white/40 dark:border-white/20 ${accent} shadow-md group-hover:shadow-xl group-hover:scale-110 transition-all duration-500`}
+                            whileHover={{ rotate: [0, -5, 5, 0] }}
+                            transition={{ duration: 0.5 }}
+                          >
+                            <Icon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2.5} />
+                          </motion.div>
+                          
+                          {/* Label with premium typography */}
+                          <span className="text-xs sm:text-sm font-semibold text-idrissi-blue dark:text-white/90 leading-tight group-hover:text-idrissi-blue dark:group-hover:text-idrissi-gold transition-colors duration-300 px-1">
+                            {label}
+                          </span>
+                        </div>
+                        
+                        {/* Outer glow effect on hover */}
+                        <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradient} rounded-2xl opacity-0 group-hover:opacity-30 dark:group-hover:opacity-20 blur-md transition-opacity duration-500 -z-10`} />
+                        
+                        {/* Corner accent */}
+                        <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-idrissi-gold/0 to-idrissi-gold/0 group-hover:from-idrissi-gold/10 group-hover:to-transparent rounded-bl-full transition-all duration-500" />
                       </Link>
                     </motion.div>
                   );
@@ -260,7 +251,7 @@ export function HomePage() {
               </div>
             )}
             <motion.p 
-              className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground text-balance leading-relaxed"
+              className="mt-10 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground text-balance leading-relaxed"
               initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 }}
