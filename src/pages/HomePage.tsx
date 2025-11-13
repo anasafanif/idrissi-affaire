@@ -54,10 +54,31 @@ const heroIconMap: Record<string, LucideIcon> = {
 
 export function HomePage() {
   const { t } = useTranslation();
-  const heroHighlightsRaw = t('home.hero.highlights', { returnObjects: true }) as HeroHighlight[] | HeroHighlight | undefined;
-  const heroHighlights = Array.isArray(heroHighlightsRaw)
-    ? heroHighlightsRaw.filter((item): item is HeroHighlight => !!item && typeof item === 'object' && 'label' in item && 'slug' in item)
-    : [];
+  
+  // Safely get hero highlights with fallback
+  let heroHighlights: HeroHighlight[] = [];
+  try {
+    const heroHighlightsRaw = t('home.hero.highlights', { returnObjects: true, defaultValue: [] });
+    // Handle case where translation might return key string if not loaded
+    if (Array.isArray(heroHighlightsRaw)) {
+      heroHighlights = heroHighlightsRaw
+        .filter((item): item is HeroHighlight => 
+          !!item && 
+          typeof item === 'object' && 
+          !Array.isArray(item) &&
+          'label' in item && 
+          'slug' in item &&
+          typeof item.slug === 'string' &&
+          typeof item.label === 'string'
+        )
+        .slice(0, 12); // Limit to 12 items max for safety
+    }
+  } catch (error) {
+    // Fail completely silently - don't log in production to avoid console spam
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Failed to load hero highlights:', error);
+    }
+  }
   
   return (
     <MainLayout>
@@ -152,27 +173,32 @@ export function HomePage() {
             </motion.h1>
             {heroHighlights.length > 0 && (
               <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-4xl mx-auto">
-                {heroHighlights.map(({ label, slug }) => (
-                  <motion.div
-                    key={slug}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    transition={{ type: "spring", stiffness: 250 }}
-                    className="w-full"
-                  >
-                    {(() => {
-                      const Icon = heroIconMap[slug];
-                      return (
-                    <Link
-                      to={`/services/${slug}`}
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white/80 text-idrissi-blue font-semibold px-5 py-3 text-sm shadow-premium border border-idrissi-blue/10 backdrop-blur-sm transition-all duration-300 hover:border-idrissi-gold/60 hover:bg-gradient-to-r hover:from-white hover:to-idrissi-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-idrissi-gold dark:bg-white/10 dark:text-white dark:border-white/10 dark:hover:border-idrissi-gold/50 dark:hover:from-idrissi-blue/20 dark:hover:to-idrissi-gold/20"
+                {heroHighlights.map(({ label, slug }) => {
+                  // Safely get icon - fallback to undefined if not found
+                  const Icon = slug && typeof slug === 'string' ? heroIconMap[slug] : undefined;
+                  
+                  // Only render if we have a valid slug
+                  if (!slug || typeof slug !== 'string') {
+                    return null;
+                  }
+                  
+                  return (
+                    <motion.div
+                      key={slug}
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      transition={{ type: "spring", stiffness: 250 }}
+                      className="w-full"
                     >
+                      <Link
+                        to={`/services/${slug}`}
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white/80 text-idrissi-blue font-semibold px-5 py-3 text-sm shadow-premium border border-idrissi-blue/10 backdrop-blur-sm transition-all duration-300 hover:border-idrissi-gold/60 hover:bg-gradient-to-r hover:from-white hover:to-idrissi-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-idrissi-gold dark:bg-white/10 dark:text-white dark:border-white/10 dark:hover:border-idrissi-gold/50 dark:hover:from-idrissi-blue/20 dark:hover:to-idrissi-gold/20"
+                      >
                         {Icon && <Icon className="h-4 w-4" />}
-                      {label}
-                    </Link>
-                      );
-                    })()}
-                  </motion.div>
-                ))}
+                        {label || slug}
+                      </Link>
+                    </motion.div>
+                  );
+                })}
               </div>
             )}
             <motion.p 
