@@ -96,45 +96,123 @@ export function HomePage() {
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section className="relative bg-pattern overflow-hidden">
-        {/* Animated Background Elements */}
+      <section className="relative overflow-hidden min-h-screen">
+        {/* Dynamic Animated Background - Mesh Gradient */}
         <div className="absolute inset-0 overflow-hidden">
+          {/* Base gradient mesh */}
+          <div className="absolute inset-0 bg-gradient-to-br from-idrissi-blue/10 via-purple-500/5 to-idrissi-gold/10" />
+          
+          {/* Animated mesh blobs */}
           <motion.div
-            className="absolute -top-40 -right-40 w-80 h-80 bg-idrissi-blue/5 rounded-full blur-3xl"
+            className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-idrissi-blue/20 to-transparent rounded-full blur-3xl"
             animate={{
+              x: [0, 100, 0],
+              y: [0, 150, 0],
               scale: [1, 1.2, 1],
-              rotate: [0, 180, 360],
             }}
             transition={{
               duration: 20,
               repeat: Infinity,
-              ease: "linear"
+              ease: "easeInOut"
             }}
           />
           <motion.div
-            className="absolute -bottom-40 -left-40 w-96 h-96 bg-idrissi-gold/5 rounded-full blur-3xl"
+            className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-gradient-to-tl from-idrissi-gold/20 to-transparent rounded-full blur-3xl"
             animate={{
-              scale: [1.2, 1, 1.2],
-              rotate: [360, 180, 0],
+              x: [0, -80, 0],
+              y: [0, -120, 0],
+              scale: [1, 1.3, 1],
             }}
             transition={{
               duration: 25,
               repeat: Infinity,
-              ease: "linear"
+              ease: "easeInOut",
+              delay: 0.5
             }}
           />
           <motion.div
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-idrissi-blue/10 to-idrissi-gold/10 rounded-full blur-2xl"
+            className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-purple-500/15 to-cyan-500/10 rounded-full blur-3xl"
             animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.3, 0.6, 0.3],
+              x: [0, 60, 0],
+              y: [0, -80, 0],
+              scale: [1, 1.4, 1],
             }}
             transition={{
-              duration: 15,
+              duration: 18,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
+              delay: 1
             }}
           />
+          
+          {/* Animated grid pattern overlay */}
+          <div 
+            className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
+            style={{
+              backgroundImage: `
+                linear-gradient(rgba(0, 17, 34, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 17, 34, 0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '50px 50px',
+            }}
+          />
+          
+          {/* Floating particles */}
+          {[...Array(12)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-idrissi-gold/30 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -30, 0],
+                opacity: [0.3, 0.6, 0.3],
+                scale: [1, 1.5, 1],
+              }}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: Math.random() * 2,
+              }}
+            />
+          ))}
+          
+          {/* Animated lines */}
+          <svg className="absolute inset-0 w-full h-full opacity-10 dark:opacity-5" style={{ pointerEvents: 'none' }}>
+            <motion.path
+              d="M 0 200 Q 400 100 800 200 T 1600 200"
+              stroke="url(#gradient1)"
+              strokeWidth="2"
+              fill="none"
+              initial={{ pathLength: 0, opacity: 0 }}
+              animate={{ pathLength: 1, opacity: 1 }}
+              transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+            />
+            <motion.path
+              d="M 0 600 Q 400 500 800 600 T 1600 600"
+              stroke="url(#gradient2)"
+              strokeWidth="2"
+              fill="none"
+              initial={{ pathLength: 0, opacity: 0 }}
+              animate={{ pathLength: 1, opacity: 1 }}
+              transition={{ duration: 4, repeat: Infinity, repeatType: "reverse", delay: 1 }}
+            />
+            <defs>
+              <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#001122" stopOpacity="0" />
+                <stop offset="50%" stopColor="#966F33" stopOpacity="0.5" />
+                <stop offset="100%" stopColor="#001122" stopOpacity="0" />
+              </linearGradient>
+              <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#001122" stopOpacity="0" />
+                <stop offset="50%" stopColor="#001122" stopOpacity="0.5" />
+                <stop offset="100%" stopColor="#966F33" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -185,7 +263,7 @@ export function HomePage() {
               </motion.span>
             </motion.h1>
             {heroHighlights.length > 0 && (
-              <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 max-w-6xl mx-auto">
+              <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
                 {heroHighlights.map(({ label, slug }, index) => {
                   const Icon = serviceIcons[slug] || Briefcase;
                   const gradient = serviceGradients[slug] || 'from-idrissi-blue/20 via-idrissi-blue/10 to-transparent';
@@ -194,56 +272,112 @@ export function HomePage() {
                   return (
                     <motion.div
                       key={slug}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: index * 0.05 }}
-                      whileHover={{ y: -8, scale: 1.03 }}
-                      whileTap={{ scale: 0.97 }}
+                      initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                      animate={{ opacity: 1, scale: 1, y: 0 }}
+                      transition={{ 
+                        duration: 0.5, 
+                        delay: index * 0.06,
+                        type: "spring",
+                        stiffness: 100
+                      }}
+                      whileTap={{ scale: 0.95, rotate: [0, -2, 2, 0] }}
                       className="group"
                     >
                       <Link
                         to={`/services/${slug}`}
-                        className="relative block h-full min-h-[140px] rounded-2xl bg-gradient-to-br from-white/95 via-white/85 to-white/75 dark:from-black/50 dark:via-black/40 dark:to-black/30 border border-white/50 dark:border-white/15 backdrop-blur-xl p-5 sm:p-6 shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] dark:shadow-[0_4px_24px_0_rgba(0,0,0,0.4)] hover:shadow-[0_24px_64px_-12px_rgba(0,0,0,0.25)] dark:hover:shadow-[0_24px_64px_-12px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden cursor-pointer"
+                        className="relative block h-full min-h-[160px] sm:min-h-[180px] rounded-3xl overflow-hidden cursor-pointer active:scale-95 transition-transform duration-200"
                       >
-                        {/* Animated background gradient on hover */}
-                        <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-30 dark:group-hover:opacity-20 transition-opacity duration-500`} />
+                        {/* Animated border gradient */}
+                        <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${gradient} p-[2px] opacity-60 group-active:opacity-100 transition-opacity duration-300`}>
+                          <div className="w-full h-full rounded-3xl bg-white/95 dark:bg-black/60 backdrop-blur-2xl" />
+                        </div>
                         
-                        {/* Subtle dot pattern overlay */}
-                        <div 
-                          className="absolute inset-0 opacity-[0.02] dark:opacity-[0.04] group-hover:opacity-[0.04] dark:group-hover:opacity-[0.06] transition-opacity duration-500 pointer-events-none"
-                          style={{
-                            backgroundImage: `radial-gradient(circle at 1.5px 1.5px, currentColor 1px, transparent 0)`,
-                            backgroundSize: '20px 20px'
+                        {/* Animated background gradient - always visible on mobile */}
+                        <motion.div 
+                          className={`absolute inset-[2px] rounded-3xl bg-gradient-to-br ${gradient} opacity-20 dark:opacity-15`}
+                          animate={{
+                            opacity: [0.2, 0.35, 0.2],
+                          }}
+                          transition={{
+                            duration: 3 + index * 0.2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
                           }}
                         />
                         
-                        {/* Shine effect on hover */}
-                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-                        </div>
+                        {/* Animated border glow */}
+                        <motion.div
+                          className={`absolute -inset-1 rounded-3xl bg-gradient-to-r ${gradient} opacity-0 blur-xl`}
+                          animate={{
+                            opacity: [0, 0.4, 0],
+                          }}
+                          transition={{
+                            duration: 2 + index * 0.1,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            delay: index * 0.2
+                          }}
+                        />
                         
                         {/* Content */}
-                        <div className="relative z-10 flex flex-col items-center justify-center text-center space-y-3 sm:space-y-4 h-full">
-                          {/* Icon container with premium styling */}
+                        <div className="relative z-10 flex flex-col items-center justify-center text-center space-y-4 sm:space-y-5 h-full p-6 sm:p-7">
+                          {/* Icon with unique animated container */}
                           <motion.div
-                            className={`inline-flex items-center justify-center rounded-xl bg-gradient-to-br from-white/90 to-white/70 dark:from-white/10 dark:to-white/5 p-3 border border-white/40 dark:border-white/20 ${accent} shadow-md group-hover:shadow-xl group-hover:scale-110 transition-all duration-500`}
-                            whileHover={{ rotate: [0, -5, 5, 0] }}
-                            transition={{ duration: 0.5 }}
+                            className={`relative inline-flex items-center justify-center rounded-2xl bg-gradient-to-br from-white/90 to-white/70 dark:from-white/15 dark:to-white/5 p-4 sm:p-5 ${accent} shadow-lg`}
+                            animate={{
+                              y: [0, -4, 0],
+                              rotate: [0, 2, -2, 0],
+                            }}
+                            transition={{
+                              duration: 4 + index * 0.3,
+                              repeat: Infinity,
+                              ease: "easeInOut",
+                              delay: index * 0.2
+                            }}
+                            whileTap={{ scale: 1.2, rotate: 360 }}
                           >
-                            <Icon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2.5} />
+                            {/* Icon glow */}
+                            <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${gradient} opacity-30 blur-md`} />
+                            <Icon className="relative h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2.5} />
                           </motion.div>
                           
-                          {/* Label with premium typography */}
-                          <span className="text-xs sm:text-sm font-semibold text-idrissi-blue dark:text-white/90 leading-tight group-hover:text-idrissi-blue dark:group-hover:text-idrissi-gold transition-colors duration-300 px-1">
-                            {label}
-                          </span>
+                          {/* Label with animated underline */}
+                          <div className="relative">
+                            <span className="text-sm sm:text-base font-bold text-idrissi-blue dark:text-white leading-tight block">
+                              {label}
+                            </span>
+                            <motion.div
+                              className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r ${gradient} rounded-full`}
+                              initial={{ width: 0 }}
+                              animate={{ width: ["0%", "100%", "0%"] }}
+                              transition={{
+                                duration: 2 + index * 0.1,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                                delay: index * 0.15
+                              }}
+                            />
+                          </div>
+                          
+                          {/* Decorative corner elements */}
+                          <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-idrissi-gold/40 dark:bg-idrissi-gold/60" />
+                          <div className="absolute bottom-3 left-3 w-1.5 h-1.5 rounded-full bg-idrissi-blue/40 dark:bg-idrissi-blue/60" />
                         </div>
                         
-                        {/* Outer glow effect on hover */}
-                        <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradient} rounded-2xl opacity-0 group-hover:opacity-30 dark:group-hover:opacity-20 blur-md transition-opacity duration-500 -z-10`} />
-                        
-                        {/* Corner accent */}
-                        <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-idrissi-gold/0 to-idrissi-gold/0 group-hover:from-idrissi-gold/10 group-hover:to-transparent rounded-bl-full transition-all duration-500" />
+                        {/* Animated shine sweep - works on touch */}
+                        <motion.div
+                          className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none"
+                          initial={{ x: "-100%" }}
+                          animate={{ x: ["-100%", "200%"] }}
+                          transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "linear",
+                            delay: index * 0.2
+                          }}
+                        >
+                          <div className="w-1/3 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+                        </motion.div>
                       </Link>
                     </motion.div>
                   );
